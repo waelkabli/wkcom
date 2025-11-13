@@ -1,34 +1,68 @@
 ---
 layout: page
-title: Mediumish Template for Jekyll
+title: About Wael A. Kabli
 permalink: /about
-comments: true
+comments: false
 ---
 
 <div class="row justify-content-between">
 <div class="col-md-8 pr-5">
 
-<p>This website is built with Jekyll and Mediumish template for Jekyll. It's for demonstration purposes, no real content can be found. Mediumish template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.</p>
+<h1>Wael A. Kabli</h1>
 
-<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/mediumish-jekyll-template.png" alt="jekyll template mediumish" /></p>
-<h4>Documentation</h4>
+<p>
+Founder & CEO of <strong>Cura</strong>, Saudi Arabia’s leading digital hospital and telehealth platform.
+I work at the intersection of <strong>healthcare, technology, and human-centered design</strong> — helping organizations
+build scalable digital health services aligned with Vision 2030.
+</p>
 
-<p>Please, read the docs <a href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/">here</a>.</p>
+<p>
+Across my career, I have led digital transformation journeys, advised executives, and built products
+that solve real problems in access, quality, and efficiency across the healthcare ecosystem.
+My work spans <strong>telemedicine platforms, population health programs, virtual clinics, AI-driven insights,
+big data analytics, coaching, and consulting</strong>.
+</p>
 
-<h4>Questions or bug reports?</h4>
+<h3 class="mt-4">What I Focus On</h3>
+<ul>
+  <li>Building and scaling digital health products</li>
+  <li>Healthcare transformation & strategy</li>
+  <li>AI, telemedicine, and virtual care models</li>
+  <li>Entrepreneurship & innovation leadership</li>
+  <li>Coaching founders, leaders, and teams</li>
+  <li>Speaking at conferences, podcasts, and events</li>
+</ul>
 
-<p>Head over to our <a href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Github repository</a>!</p>
+<h3 class="mt-4">What You’ll Find on This Website</h3>
+<ul>
+  <li>Articles and essays I’ve written over the years</li>
+  <li>Videos and interviews from podcasts and events</li>
+  <li>Insights on healthtech, startups, and leadership</li>
+  <li>Information about advisory, coaching, and consulting</li>
+  <li>My CV and professional background</li>
+</ul>
+
+<p class="mt-5">
+If you’d like to collaborate, book a consulting session, or invite me to speak,  
+you can reach me through the contact options in the navigation menu.
+</p>
 
 </div>
 
 <div class="col-md-4">
-
 <div class="sticky-top sticky-top-80">
-<h5>Buy me a coffee</h5>
 
-<p>Thank you for your support! Your donation helps me to maintain and improve <a target="_blank" href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Mediumish <i class="fab fa-github"></i></a>.</p>
+<h5>Connect</h5>
+<ul class="list-unstyled">
+  <li><a href="https://www.linkedin.com/in/waelkabli" target="_blank">LinkedIn</a></li>
+  <li><a href="https://twitter.com/waelkabli" target="_blank">Twitter / X</a></li>
+  <li><a href="mailto:youremail@domain.com">Email</a></li>
+</ul>
 
-<a target="_blank" href="https://www.wowthemes.net/donate/" class="btn btn-danger">Buy me a coffee</a> <a target="_blank" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/" class="btn btn-warning">Documentation</a>
+<h5 class="mt-4">Downloads</h5>
+<ul class="list-unstyled">
+  <li><a href="{{ site.baseurl }}/assets/cv/wael-kabli-cv.pdf" target="_blank">Download CV (PDF)</a></li>
+</ul>
 
 </div>
 </div>
