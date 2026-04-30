@@ -1,0 +1,334 @@
+{
+  "meta": {
+    "title": "Wael Kabli — Serial Tech Entrepreneur & Digital Health Pioneer",
+    "siteName": "Wael Kabli",
+    "description": "Saudi serial entrepreneur, venture builder, and digital health pioneer with 20+ years at the intersection of technology, healthcare, and strategy."
+  },
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "experience": "Experience",
+    "expertise": "Expertise",
+    "education": "Education",
+    "speaking": "Speaking",
+    "media": "Media",
+    "blog": "Blog",
+    "contact": "Contact",
+    "hireMe": "Hire Me",
+    "downloadCV": "Download CV"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Wael A. Kabli",
+    "tagline": "Building the future through innovation, technology & purpose-driven leadership.",
+    "roles": [
+      "Serial Tech Entrepreneur",
+      "Digital Health Pioneer",
+      "Strategic Advisor",
+      "Venture Builder",
+      "Keynote Speaker",
+      "Startup Coach"
+    ],
+    "cta": "Let's Work Together",
+    "ctaSecondary": "Download CV",
+    "scrollHint": "Scroll to explore"
+  },
+  "stats": {
+    "years": "Years Experience",
+    "capital": "Capital Raised",
+    "projects": "Projects Delivered",
+    "users": "Users Served"
+  },
+  "about": {
+    "sectionLabel": "About Me",
+    "title": "Turning Bold Ideas Into Scaled Ventures",
+    "bio": "Saudi serial entrepreneur, venture builder, and digital health pioneer with 20+ years at the intersection of technology, healthcare, and strategy. Founder & CEO of Cura — Saudi Arabia's #1 virtual hospital and telehealth platform.",
+    "bio2": "Misk 2030 Leader with executive education from Columbia, INSEAD, ESADE, Babson, and Stanford. I advise government entities, C-suite executives, and international organizations on digital transformation and Vision 2030.",
+    "quote": "I build at the edge of technology and impact — turning bold ideas into scaled ventures that transform healthcare and unlock lasting value.",
+    "location": "Riyadh, Saudi Arabia",
+    "available": "Open to Advisory & Consulting Roles"
+  },
+  "roles": {
+    "sectionLabel": "What I Do",
+    "title": "Six Roles, One Mission",
+    "subtitle": "Operating across B2C • B2B2C • B2B • B2G",
+    "items": [
+      {
+        "icon": "briefcase",
+        "title": "Consultant",
+        "description": "Strategic advisor on digital transformation, market entry & growth — for corporates, government & investors."
+      },
+      {
+        "icon": "cpu",
+        "title": "Technologist & Visionary",
+        "description": "20+ years at the edge of AI, cloud architecture, big data & digital health — turning foresight into product."
+      },
+      {
+        "icon": "rocket",
+        "title": "Tech Entrepreneur",
+        "description": "Serial founder. Built Cura — KSA's #1 telehealth platform — and co-founded Xceed Ventures (7 products, 1 exit)."
+      },
+      {
+        "icon": "layers",
+        "title": "Venture Builder",
+        "description": "Idea to post-Series A. $7M raised. Vision-to-execution playbook across healthtech, fintech, SaaS & AI."
+      },
+      {
+        "icon": "users",
+        "title": "Advisor & Coach",
+        "description": "Board, C-suite & founder coaching. 10+ startups mentored across KAUST TAQADAM, Misk & Monsha'at."
+      },
+      {
+        "icon": "mic",
+        "title": "Thought Leader",
+        "description": "Keynote speaker, panelist & media voice on AI, digital health, Vision 2030 & the Saudi startup ecosystem."
+      }
+    ]
+  },
+  "experience": {
+    "sectionLabel": "Experience",
+    "title": "20+ Years of Building & Transforming",
+    "subtitle": "From enterprise consulting to founding Saudi Arabia's leading telehealth platform",
+    "items": [
+      {
+        "period": "2005 – 2012",
+        "company": "Microsoft Consulting Services",
+        "role": "IT Architecture & Planning Advisor",
+        "location": "EMEA",
+        "description": "Rose from intern to CIO/CTO advisor. Led 55+ enterprise transformations across healthcare, government, defense, oil & gas, telecom, and banking across EMEA.",
+        "highlight": "55+ Enterprise Projects"
+      },
+      {
+        "period": "2012 – 2016",
+        "company": "Xceed Ventures",
+        "role": "Co-Founder & Managing Partner",
+        "location": "Saudi Arabia",
+        "description": "Saudi venture studio launching 7 products in AI, Machine Learning, big data & mobility. Achieved 3 market wins and 1 acquisition. Portfolio included Sovestigate and Hader.",
+        "highlight": "7 Products • 1 Exit"
+      },
+      {
+        "period": "2016 – Present",
+        "company": "Cura Healthcare",
+        "role": "Founder & CEO",
+        "location": "Riyadh, Saudi Arabia",
+        "description": "Built KSA's #1 virtual hospital & telehealth platform. Seed to post-Series A, $7M raised, 4M+ users. Shaped national telemedicine policy across KSA, UAE & Bahrain.",
+        "highlight": "$7M Raised • 4M+ Users"
+      }
+    ]
+  },
+  "expertise": {
+    "sectionLabel": "Expertise",
+    "title": "Where Technology Meets Business Impact",
+    "items": [
+      {
+        "number": "01",
+        "title": "AI & Big Data",
+        "description": "Cloud-native architectures, machine learning pipelines, predictive analytics, & data-driven product design — rooted in enterprise-scale delivery at Microsoft."
+      },
+      {
+        "number": "02",
+        "title": "Digital Health",
+        "description": "Telehealth, virtual hospitals, holistic wellness ecosystems, clinical operations, insurance integration, and national telemedicine policy."
+      },
+      {
+        "number": "03",
+        "title": "Business & Operations",
+        "description": "Structured problem solving, org design, operating model, KPIs, pricing, go-to-market, and scale-up playbooks across B2C, B2B2C, B2B & B2G."
+      },
+      {
+        "number": "04",
+        "title": "Strategy & Financial Modeling",
+        "description": "Investor-grade financial models, DCF & unit economics, investment diligence, fundraising strategy, and board-ready executive presentations."
+      }
+    ]
+  },
+  "education": {
+    "sectionLabel": "Education",
+    "title": "Lifelong Learner",
+    "subtitle": "From KFUPM to the Ivy League",
+    "foundation": "Foundation",
+    "executive": "Executive Education",
+    "items": [
+      {
+        "school": "KFUPM",
+        "fullName": "King Fahd University of Petroleum & Minerals",
+        "program": "BSc Software Engineering",
+        "year": "2006",
+        "type": "foundation"
+      },
+      {
+        "school": "Stanford University",
+        "program": "Leading Innovation — Executive Education",
+        "year": "2013",
+        "type": "executive"
+      },
+      {
+        "school": "Babson College",
+        "program": "Entrepreneurship Growth Program",
+        "year": "2018",
+        "type": "executive"
+      },
+      {
+        "school": "INSEAD",
+        "program": "Digital Leadership Program",
+        "year": "2021",
+        "type": "executive"
+      },
+      {
+        "school": "ESADE — Misk",
+        "program": "MISK 2030 Leaders Program",
+        "year": "2023",
+        "type": "executive"
+      },
+      {
+        "school": "Aramco Taleed",
+        "program": "Strategic Leadership & Competitive Advantage",
+        "year": "2025",
+        "type": "executive"
+      },
+      {
+        "school": "Columbia Business School",
+        "program": "Foundations of Venture Capital",
+        "year": "2025",
+        "type": "executive"
+      }
+    ]
+  },
+  "services": {
+    "sectionLabel": "Services",
+    "title": "How We Can Work Together",
+    "subtitle": "Available for advisory, consulting, and board roles across government, private sector, and international organizations.",
+    "cta": "Get In Touch",
+    "items": [
+      {
+        "icon": "building2",
+        "title": "Executive Consultant",
+        "description": "Strategic advisory on digital transformation, market entry, fundraising, and growth. For corporates, government entities & investors.",
+        "tags": ["Strategy", "Digital Transformation", "Growth"]
+      },
+      {
+        "icon": "users2",
+        "title": "Board Advisor",
+        "description": "Board-level advisory for technology and healthcare companies. Governance, strategic direction, and accountability.",
+        "tags": ["Governance", "Healthcare", "Tech"]
+      },
+      {
+        "icon": "target",
+        "title": "Startup Mentor",
+        "description": "Early-stage mentoring for founders navigating product-market fit, fundraising, and scale. 10+ startups mentored.",
+        "tags": ["Startups", "Fundraising", "PMF"]
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Executive Coach",
+        "description": "One-on-one coaching for C-suite executives and senior leaders navigating transformation, team building, and vision execution.",
+        "tags": ["Leadership", "C-Suite", "Coaching"]
+      },
+      {
+        "icon": "mic2",
+        "title": "Keynote Speaker",
+        "description": "Available for keynotes, panels, and moderation. Topics: AI & Digital Health, Vision 2030, Entrepreneurship, Leadership.",
+        "tags": ["AI", "Digital Health", "Vision 2030"]
+      }
+    ]
+  },
+  "speaking": {
+    "sectionLabel": "Speaking",
+    "title": "Selected Engagements",
+    "subtitle": "20+ speaking engagements across Forbes, Misk, KAUST, Monsha'at, and international forums.",
+    "items": [
+      { "event": "GREAT Futures London", "org": "UK Government / GREAT Britain Campaign", "year": "2025" },
+      { "event": "Misk Launchpad Activation Week", "org": "Misk Foundation — Speaker & Mentor", "year": "2025" },
+      { "event": "Judge — IPSAR Accelerator & Council of Health Insurance", "org": "IPSAR / MOH", "year": "2025" },
+      { "event": "Biban 24 — The Future of AI in Healthcare", "org": "MonshaatSA", "year": "2024" },
+      { "event": "Forbes ME Healthcare Innovation Circle", "org": "Forbes Middle East — Moderator & Speaker", "year": "2024" },
+      { "event": "Global Health Forum, Riyadh", "org": "Innovation in the Path to Healing", "year": "2024" },
+      { "event": "Judge — Esameyoon Award (Commercial Track)", "org": "Esameyoon", "year": "2023–2024" },
+      { "event": "Customer Experience Live", "org": "Anywhere Service Delivery", "year": "2023" },
+      { "event": "Health in the Digital Age Conference", "org": "Virtual Medical Academy — Moderator", "year": "2022" },
+      { "event": "Saudi Society for Health Administration", "org": "Crisis & Technology", "year": "2021" },
+      { "event": "Misk Talk — Future of Health", "org": "Misk Foundation", "year": "2020–Present" },
+      { "event": "KAUST Taqadam — The Entrepreneurial Journey", "org": "KAUST", "year": "2020" }
+    ]
+  },
+  "media": {
+    "sectionLabel": "Media",
+    "title": "Featured In",
+    "subtitle": "Talks, interviews & press coverage",
+    "videos": [
+      {
+        "title": "How I Reached Microsoft",
+        "description": "From a high school computer hobby to Microsoft, then entrepreneurship — a story of turning curiosity into technology-driven businesses.",
+        "url": "https://www.youtube.com/watch?v=l5i3m_XESc8",
+        "thumbnail": "https://img.youtube.com/vi/l5i3m_XESc8/maxresdefault.jpg",
+        "source": "Faragh"
+      },
+      {
+        "title": "Cura: Building a Telehealth Platform",
+        "description": "The story behind building Cura from a 2015 idea to a telemedicine platform tackling long wait times and expanding healthcare access.",
+        "url": "https://www.youtube.com/watch?v=bnDeR0W02A4",
+        "thumbnail": "https://img.youtube.com/vi/bnDeR0W02A4/maxresdefault.jpg",
+        "source": "Entrepreneurship"
+      }
+    ],
+    "press": [
+      {
+        "title": "Leaders of the Healthcare Revolution",
+        "publication": "Fortune Magazine",
+        "year": "2023",
+        "type": "magazine"
+      },
+      {
+        "title": "GREAT Futures London",
+        "publication": "UK Government / GREAT Britain Campaign",
+        "year": "2025",
+        "type": "speaking"
+      },
+      {
+        "title": "Sayidaty Show — Healthcare Model",
+        "publication": "Rotana TV",
+        "year": "2020",
+        "type": "tv"
+      }
+    ]
+  },
+  "blog": {
+    "sectionLabel": "Blog",
+    "title": "Thoughts & Insights",
+    "subtitle": "Articles, ideas, and perspectives on technology, entrepreneurship, and digital health.",
+    "readMore": "Read More",
+    "viewAll": "View All Posts",
+    "article": "Article",
+    "micro": "Note",
+    "noPostsYet": "Posts coming soon.",
+    "backToBlog": "← Back to Blog",
+    "publishedOn": "Published on",
+    "minuteRead": "min read",
+    "filterAll": "All",
+    "filterArticles": "Articles",
+    "filterMicro": "Notes"
+  },
+  "contact": {
+    "sectionLabel": "Contact",
+    "title": "Let's Build Something That Matters",
+    "subtitle": "Open to keynotes, advisory roles, coaching engagements & strategic partnerships.",
+    "name": "Full Name",
+    "email": "Email Address",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "sent": "Message Sent!",
+    "sentDesc": "Thank you for reaching out. I'll get back to you within 48 hours.",
+    "location": "Riyadh, Saudi Arabia",
+    "phone": "+966 56 4000 083",
+    "emailAddress": "contact@waelkabli.com",
+    "linkedin": "linkedin.com/in/waelkablli",
+    "orConnect": "Or connect directly"
+  },
+  "footer": {
+    "tagline": "Scale Innovation That Matters.",
+    "rights": "All rights reserved.",
+    "madeWith": "Built with purpose."
+  }
+}

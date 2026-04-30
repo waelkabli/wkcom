@@ -1,26 +1,171 @@
 @import "tailwindcss";
 
+/* ─── Google Fonts ─────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* ─── Thmanyah Arabic Font ──────────────────────── */
+@font-face {
+  font-family: 'Thmanyah';
+  src: url('https://font.thmanyah.com/api/v1/fonts/2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Thmanyah';
+  src: url('https://font.thmanyah.com/api/v1/fonts/3') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* ─── Brand Tokens ──────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --brand-red:         #ff325d;
+  --brand-purple:      #2d185c;
+  --brand-white:       #fcfcfc;
+  --brand-pink:        #ff6585;
+  --brand-crimson:     #fe0035;
+  --brand-deep-purple: #412384;
+  --brand-light-bg:    #f8f7ff;
+  --brand-border:      #e8e4f5;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-red:         var(--brand-red);
+  --color-brand-purple:      var(--brand-purple);
+  --color-brand-white:       var(--brand-white);
+  --color-brand-pink:        var(--brand-pink);
+  --color-brand-crimson:     var(--brand-crimson);
+  --color-brand-deep-purple: var(--brand-deep-purple);
+  --color-brand-light:       var(--brand-light-bg);
+  --font-sans:               'Plus Jakarta Sans', sans-serif;
+  --font-arabic:             'Thmanyah', sans-serif;
+  --font-heading:            'Poppins', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* ─── Base ──────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--brand-white);
+  color: var(--brand-purple);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
+
+[dir="rtl"] body,
+[dir="rtl"] * {
+  font-family: 'Thmanyah', sans-serif;
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] .font-heading {
+  font-family: 'Thmanyah', sans-serif;
+}
+
+[dir="ltr"] h1,
+[dir="ltr"] h2,
+[dir="ltr"] h3,
+[dir="ltr"] h4,
+[dir="ltr"] .font-heading {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ─── Selection ─────────────────────────────────── */
+::selection {
+  background: var(--brand-red);
+  color: white;
+}
+
+/* ─── Scrollbar ─────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--brand-light-bg); }
+::-webkit-scrollbar-thumb { background: var(--brand-red); border-radius: 3px; }
+
+/* ─── Prose (blog content) ──────────────────────── */
+.prose {
+  color: var(--brand-purple);
+  max-width: 72ch;
+}
+.prose h1, .prose h2, .prose h3 {
+  color: var(--brand-purple);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+[dir="rtl"] .prose h1,
+[dir="rtl"] .prose h2,
+[dir="rtl"] .prose h3 {
+  font-family: 'Thmanyah', sans-serif;
+}
+.prose a { color: var(--brand-red); text-decoration: underline; }
+.prose blockquote {
+  border-left: 4px solid var(--brand-red);
+  padding-left: 1rem;
+  color: var(--brand-deep-purple);
+  font-style: italic;
+}
+[dir="rtl"] .prose blockquote {
+  border-left: none;
+  border-right: 4px solid var(--brand-red);
+  padding-left: 0;
+  padding-right: 1rem;
+}
+.prose code {
+  background: var(--brand-light-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+/* ─── Animations ────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.6; }
+}
+
+.animate-fade-up    { animation: fadeUp 0.7s ease forwards; }
+.animate-fade-in    { animation: fadeIn 0.5s ease forwards; }
+.animate-slide-left { animation: slideInLeft 0.7s ease forwards; }
+.animate-slide-right{ animation: slideInRight 0.7s ease forwards; }
+.animate-pulse-slow { animation: pulse-slow 3s ease infinite; }
+
+/* ─── Hexagon clip ──────────────────────────────── */
+.hex-clip {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* ─── Section utility ───────────────────────────── */
+.section-padding { padding: 5rem 1.5rem; }
+@media (min-width: 768px) { .section-padding { padding: 6rem 2rem; } }
+
+/* ─── Gradient text ─────────────────────────────── */
+.text-gradient {
+  background: linear-gradient(135deg, var(--brand-red) 0%, var(--brand-deep-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── RTL timeline fix ──────────────────────────── */
+[dir="rtl"] .timeline-dot { right: -0.625rem; left: auto; }
+[dir="ltr"] .timeline-dot { left: -0.625rem; right: auto; }
