@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import { MapPin, Phone, Mail, Link2, Send, CheckCircle } from 'lucide-react';
+import { MapPin, Link2, Send, CheckCircle } from 'lucide-react';
 
 export default function Contact() {
   const t = useTranslations('contact');
@@ -23,8 +23,6 @@ export default function Contact() {
 
   const contacts = [
     { icon: MapPin, label: t('location'), href: null },
-    { icon: Phone, label: t('phone'), href: `tel:${t('phone')}` },
-    { icon: Mail, label: t('emailAddress'), href: `mailto:${t('emailAddress')}` },
     { icon: Link2, label: t('linkedin'), href: 'https://linkedin.com/in/waelkablli' },
   ];
 
