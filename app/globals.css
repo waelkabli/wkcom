@@ -6,14 +6,32 @@
 /* ─── Thmanyah Arabic Font ──────────────────────── */
 @font-face {
   font-family: 'Thmanyah';
-  src: url('https://font.thmanyah.com/api/v1/fonts/2') format('woff2');
+  src: url('/fonts/thmanyahsans-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Thmanyah';
+  src: url('/fonts/thmanyahsans-Regular.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: 'Thmanyah';
-  src: url('https://font.thmanyah.com/api/v1/fonts/3') format('woff2');
+  src: url('/fonts/thmanyahsans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Thmanyah';
+  src: url('/fonts/thmanyahsans-Bold.woff2') format('woff2');
   font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Thmanyah';
+  src: url('/fonts/thmanyahsans-Black.woff2') format('woff2');
+  font-weight: 900;
   font-display: swap;
 }
 
