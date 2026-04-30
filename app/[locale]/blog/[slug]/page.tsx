@@ -106,7 +106,7 @@ export default async function BlogPostPage({ params }: Props) {
               <img src="/images/wael-profile.jpg" alt="Wael" className="w-full h-full object-cover" />
             </div>
             <div className={isAr ? 'text-right' : ''}>
-              <div className="font-bold">{isAr ? 'وائل عبدالله كابلي' : 'Wael A. Kabli'}</div>
+              <div className="font-bold">{isAr ? 'وائل كابلي' : 'Wael A. Kabli'}</div>
               <div className="text-white/60 text-sm">{isAr ? 'رائد أعمال تقني • مستشار • رائد الصحة الرقمية' : 'Serial Tech Entrepreneur • Advisor • Digital Health Pioneer'}</div>
               <a href={`/${locale}#contact`} className="text-[#ff325d] text-xs mt-1 inline-block hover:underline">
                 {isAr ? 'تواصل معه' : 'Get in touch'}
