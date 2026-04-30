@@ -97,12 +97,20 @@ export default function Hero() {
                 {t('cta')}
               </a>
               <a
-                href="/cv/WaelKabli-CV.pdf"
+                href="/cv/WaelKabli-ExecCV.pdf"
                 download
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white font-semibold hover:border-white/60 hover:bg-white/10 transition-all"
               >
                 <Download size={16} />
                 {t('ctaSecondary')}
+              </a>
+              <a
+                href="/cv/WaelKabli-CV.pdf"
+                download
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/20 text-white/70 text-sm hover:border-white/40 hover:text-white hover:bg-white/5 transition-all"
+              >
+                <Download size={14} />
+                {t('ctaTertiary')}
               </a>
             </div>
           </div>
