@@ -134,10 +134,6 @@ export default function Hero() {
                     (e.target as HTMLImageElement).style.display = 'none';
                   }}
                 />
-                {/* Fallback initials */}
-                <div className="absolute inset-0 flex items-center justify-center text-white text-5xl font-black opacity-30">
-                  WK
-                </div>
               </div>
             </div>
           </div>
