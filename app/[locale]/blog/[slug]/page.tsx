@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { Calendar, Clock, ArrowLeft, Tag } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import type { Metadata } from 'next';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -16,6 +17,50 @@ export async function generateStaticParams() {
   );
 }
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const post = getPostBySlug(slug, locale as 'ar' | 'en');
+  if (!post) return {};
+
+  const isAr = locale === 'ar';
+  const canonicalUrl = `https://waelkabli.com/${locale}/blog/${slug}`;
+  const ogImage = post.coverImage
+    ? { url: post.coverImage, width: 1200, height: 630, alt: post.title ?? '' }
+    : { url: '/images/wael-profile.jpg', width: 800, height: 800, alt: post.title ?? '' };
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        ar: `/ar/blog/${slug}`,
+        en: `/en/blog/${slug}`,
+      },
+    },
+    authors: [{ name: isAr ? 'وائل كابلي' : 'Wael A. Kabli', url: 'https://waelkabli.com' }],
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: canonicalUrl,
+      siteName: isAr ? 'وائل كابلي' : 'Wael Kabli',
+      locale: isAr ? 'ar_SA' : 'en_US',
+      type: 'article',
+      publishedTime: post.date,
+      authors: ['https://waelkabli.com'],
+      tags: post.tags,
+      images: [ogImage],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      creator: '@waelkabli',
+      images: [ogImage.url],
+    },
+  };
+}
+
 export default async function BlogPostPage({ params }: Props) {
   const { locale, slug } = await params;
   const post = getPostBySlug(slug, locale as 'ar' | 'en');
@@ -24,8 +69,43 @@ export default async function BlogPostPage({ params }: Props) {
   const t = await getTranslations('blog');
   const isAr = locale === 'ar';
 
+  // JSON-LD for blog post (Article schema)
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      '@type': 'Person',
+      name: 'Wael A. Kabli',
+      url: 'https://waelkabli.com',
+      sameAs: ['https://linkedin.com/in/waelkablli'],
+    },
+    publisher: {
+      '@type': 'Person',
+      name: 'Wael A. Kabli',
+      url: 'https://waelkabli.com',
+    },
+    url: `https://waelkabli.com/${locale}/blog/${slug}`,
+    inLanguage: locale === 'ar' ? 'ar' : 'en',
+    image: post.coverImage
+      ? `https://waelkabli.com${post.coverImage}`
+      : 'https://waelkabli.com/images/wael-profile.jpg',
+    keywords: post.tags?.join(', '),
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://waelkabli.com/${locale}/blog/${slug}`,
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Navigation />
       <main className="min-h-screen bg-[#f8f7ff] pt-20">
         {/* Back link */}

@@ -94,7 +94,7 @@ export default function About() {
             <div className="space-y-3">
               {[
                 isAr ? 'مؤسس ورئيس تنفيذي لكيورا — المستشفى الافتراضي الأول في السعودية' : 'Founder & CEO of Cura — KSA\'s #1 Virtual Hospital',
-                isAr ? 'قائد ميسك 2030 • تعليم تنفيذي من كولومبيا وستانفورد وإنسياد' : 'Misk 2030 Leader • Columbia, Stanford, INSEAD',
+                isAr ? 'قائد مسك 2030 • تعليم تنفيذي من كولومبيا وستانفورد وإنسياد' : 'Misk 2030 Leader • Columbia, Stanford, INSEAD',
                 isAr ? 'دائرة الابتكار الصحي — فوربس الشرق الأوسط' : 'Forbes Middle East Healthcare Innovation Circle',
               ].map((item) => (
                 <div key={item} className={`flex items-start gap-3 ${isAr ? 'flex-row-reverse' : ''}`}>

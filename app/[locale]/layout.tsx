@@ -16,23 +16,46 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'meta' });
+  const isAr = locale === 'ar';
+  const canonicalUrl = `https://waelkabli.com/${locale}`;
+
   return {
     title: { default: t('title'), template: `%s | ${t('siteName')}` },
     description: t('description'),
     metadataBase: new URL('https://waelkabli.com'),
-    alternates: { canonical: '/', languages: { ar: '/ar', en: '/en' } },
+    alternates: {
+      canonical: canonicalUrl,
+      languages: { ar: '/ar', en: '/en' },
+    },
+    keywords: isAr
+      ? ['وائل كابلي', 'رائد أعمال', 'الصحة الرقمية', 'كيورا', 'مسك 2030', 'ريادة الأعمال', 'رؤية 2030', 'متحدث', 'مستشار']
+      : ['Wael Kabli', 'serial entrepreneur', 'digital health', 'Cura', 'Misk 2030', 'Saudi startup', 'Vision 2030', 'telehealth', 'venture builder', 'speaker', 'strategic advisor'],
+    authors: [{ name: isAr ? 'وائل كابلي' : 'Wael A. Kabli', url: 'https://waelkabli.com' }],
+    creator: isAr ? 'وائل كابلي' : 'Wael A. Kabli',
+    publisher: isAr ? 'وائل كابلي' : 'Wael A. Kabli',
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+    },
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: 'https://waelkabli.com',
+      url: canonicalUrl,
       siteName: t('siteName'),
-      locale: locale === 'ar' ? 'ar_SA' : 'en_US',
-      type: 'website',
+      locale: isAr ? 'ar_SA' : 'en_US',
+      alternateLocale: isAr ? 'en_US' : 'ar_SA',
+      type: 'profile',
+      firstName: 'Wael',
+      lastName: 'Kabli',
+      username: 'waelkabli',
     },
     twitter: {
       card: 'summary_large_image',
       title: t('title'),
       description: t('description'),
+      creator: '@waelkabli',
+      site: '@waelkabli',
     },
   };
 }
