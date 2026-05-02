@@ -8,7 +8,7 @@ export default function Education() {
   const locale = useLocale();
   const isAr = locale === 'ar';
   const items = t.raw('items') as Array<{
-    school: string; fullName?: string; program: string; year: string; type: string;
+    school: string; logo?: string; fullName?: string; program: string; year: string; type: string;
   }>;
 
   const foundation = items.filter((i) => i.type === 'foundation');
@@ -27,7 +27,7 @@ export default function Education() {
           <p className="text-[#2d185c]/60 text-lg">{t('subtitle')}</p>
         </div>
 
-        <div className={`grid grid-cols-1 lg:grid-cols-3 gap-8 ${isAr ? '' : ''}`}>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Foundation */}
           <div>
             <div className={`flex items-center gap-2 mb-4 ${isAr ? 'flex-row-reverse' : ''}`}>
@@ -43,6 +43,14 @@ export default function Education() {
               >
                 <div className="absolute top-0 right-0 w-20 h-20 hex-clip bg-[#ff325d]/20 translate-x-6 -translate-y-6" />
                 <div className={`relative z-10 ${isAr ? 'text-right' : ''}`}>
+                  {/* Logo */}
+                  {item.logo && (
+                    <div className={`mb-3 ${isAr ? 'flex justify-end' : ''}`}>
+                      <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center overflow-hidden p-1.5">
+                        <img src={item.logo} alt={item.school} className="w-full h-full object-contain" />
+                      </div>
+                    </div>
+                  )}
                   <div className="text-[#ff325d] font-black text-3xl font-heading mb-1">{item.year}</div>
                   <div className="font-bold text-xl mb-1">{item.school}</div>
                   {item.fullName && <div className="text-white/60 text-xs mb-3">{item.fullName}</div>}
@@ -67,9 +75,17 @@ export default function Education() {
                   className="group bg-[#f8f7ff] rounded-2xl p-5 border border-[#e8e4f5] hover:border-[#ff325d]/30 hover:shadow-md transition-all"
                 >
                   <div className={`flex items-start justify-between gap-2 ${isAr ? 'flex-row-reverse' : ''}`}>
-                    <div className={isAr ? 'text-right' : ''}>
-                      <div className={`font-bold text-[#2d185c] mb-1 ${isAr ? '' : 'font-heading'}`}>{item.school}</div>
-                      <div className="text-[#2d185c]/65 text-sm leading-relaxed">{item.program}</div>
+                    <div className={`flex items-center gap-3 flex-1 min-w-0 ${isAr ? 'flex-row-reverse' : ''}`}>
+                      {/* Logo */}
+                      {item.logo && (
+                        <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-white border border-[#e8e4f5] flex items-center justify-center overflow-hidden p-1">
+                          <img src={item.logo} alt={item.school} className="w-full h-full object-contain" />
+                        </div>
+                      )}
+                      <div className={`min-w-0 ${isAr ? 'text-right' : ''}`}>
+                        <div className={`font-bold text-[#2d185c] mb-1 ${isAr ? '' : 'font-heading'}`}>{item.school}</div>
+                        <div className="text-[#2d185c]/65 text-sm leading-relaxed">{item.program}</div>
+                      </div>
                     </div>
                     <div className="flex-shrink-0 px-2.5 py-1 rounded-full bg-[#ff325d] text-white text-xs font-bold">
                       {item.year}

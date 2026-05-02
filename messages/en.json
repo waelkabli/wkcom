@@ -20,7 +20,7 @@
   "hero": {
     "greeting": "Hello, I'm",
     "name": "Wael A. Kabli",
-    "tagline": "Building the future through innovation, technology & purpose-driven leadership.",
+    "tagline": "Serial Entrepreneur | Misk 2030 Leader | Tech & Strategy Expert | Digital Health Innovator | Venture Builder | Speaker",
     "roles": [
       "Serial Tech Entrepreneur",
       "Digital Health Pioneer",
@@ -94,6 +94,7 @@
       {
         "period": "2005 – 2012",
         "company": "Microsoft Consulting Services",
+        "logo": "/images/microsoft-logo.png",
         "role": "IT Architecture & Planning Advisor",
         "location": "EMEA",
         "description": "Rose from intern to CIO/CTO advisor. Led 55+ enterprise transformations across healthcare, government, defense, oil & gas, telecom, and banking across EMEA.",
@@ -102,6 +103,7 @@
       {
         "period": "2012 – 2016",
         "company": "Xceed Ventures",
+        "logo": "/images/exceed-logo.jpg",
         "role": "Co-Founder & Managing Partner",
         "location": "Saudi Arabia",
         "description": "Saudi venture studio launching 7 products in AI, Machine Learning, big data & mobility. Achieved 3 market wins and 1 acquisition. Portfolio included Sovestigate and Hader.",
@@ -110,6 +112,7 @@
       {
         "period": "2016 – Present",
         "company": "Cura Healthcare",
+        "logo": "/images/cura-logo.png",
         "role": "Founder & CEO",
         "location": "Riyadh, Saudi Arabia",
         "description": "Built KSA's #1 virtual hospital & telehealth platform. Seed to post-Series A, $7M raised, 4M+ users. Shaped national telemedicine policy across KSA, UAE & Bahrain.",
@@ -152,6 +155,7 @@
     "items": [
       {
         "school": "KFUPM",
+        "logo": "/images/kfupm-logo.png",
         "fullName": "King Fahd University of Petroleum & Minerals",
         "program": "BSc Software Engineering",
         "year": "2006",
@@ -159,36 +163,42 @@
       },
       {
         "school": "Stanford University",
+        "logo": "/images/stanford-logo.png",
         "program": "Leading Innovation — Executive Education",
         "year": "2013",
         "type": "executive"
       },
       {
         "school": "Babson College",
+        "logo": "/images/babson-logo.png",
         "program": "Entrepreneurship Growth Program",
         "year": "2018",
         "type": "executive"
       },
       {
         "school": "INSEAD",
+        "logo": "/images/insead-logo.png",
         "program": "Digital Leadership Program",
         "year": "2021",
         "type": "executive"
       },
       {
         "school": "ESADE — Misk",
-        "program": "MISK 2030 Leaders Program",
+        "logo": "/images/esade-logo.png",
+        "program": "Misk 2030 Leaders Program",
         "year": "2023",
         "type": "executive"
       },
       {
         "school": "Aramco Taleed",
+        "logo": "/images/taleed-logo.png",
         "program": "Strategic Leadership & Competitive Advantage",
         "year": "2025",
         "type": "executive"
       },
       {
         "school": "Columbia Business School",
+        "logo": "/images/columbia-logo.png",
         "program": "Foundations of Venture Capital",
         "year": "2025",
         "type": "executive"
@@ -238,7 +248,7 @@
     "title": "Selected Engagements",
     "subtitle": "20+ speaking engagements across Forbes, Misk, KAUST, Monsha'at, and international forums.",
     "items": [
-      { "event": "GREAT Futures London", "org": "UK Government / GREAT Britain Campaign", "year": "2025" },
+      { "event": "GREAT Futures London", "org": "UK Government / GREAT Britain Campaign", "year": "2025", "url": "https://company.cura.healthcare/en/cura-orchestrator-for-payors/" },
       { "event": "Misk Launchpad Activation Week", "org": "Misk Foundation — Speaker & Mentor", "year": "2025" },
       { "event": "Judge — IPSAR Accelerator & Council of Health Insurance", "org": "IPSAR / MOH", "year": "2025" },
       { "event": "Biban 24 — The Future of AI in Healthcare", "org": "MonshaatSA", "year": "2024" },
@@ -276,20 +286,23 @@
       {
         "title": "Leaders of the Healthcare Revolution",
         "publication": "Fortune Magazine",
-        "year": "2023",
-        "type": "magazine"
+        "year": "2022",
+        "type": "magazine",
+        "url": "https://company.cura.healthcare/wp-content/uploads/2024/08/Fotune-Magazine-Feb-Mar-2022-Agents-of-Change-Cura.pdf"
       },
       {
         "title": "GREAT Futures London",
         "publication": "UK Government / GREAT Britain Campaign",
         "year": "2025",
-        "type": "speaking"
+        "type": "speaking",
+        "url": "https://company.cura.healthcare/en/cura-orchestrator-for-payors/"
       },
       {
         "title": "Sayidaty Show — Healthcare Model",
         "publication": "Rotana TV",
-        "year": "2020",
-        "type": "tv"
+        "year": "2017",
+        "type": "tv",
+        "url": "https://company.cura.healthcare/ar/sayyidatyrotana2017/"
       }
     ]
   },

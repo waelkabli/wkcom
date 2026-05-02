@@ -7,7 +7,7 @@ export default function Experience() {
   const locale = useLocale();
   const isAr = locale === 'ar';
   const items = t.raw('items') as Array<{
-    period: string; company: string; role: string;
+    period: string; company: string; logo?: string; role: string;
     location: string; description: string; highlight: string;
   }>;
 
@@ -38,11 +38,23 @@ export default function Experience() {
 
                 {/* Card */}
                 <div className="flex-1 bg-[#f8f7ff] rounded-2xl p-6 border border-[#e8e4f5] hover:border-[#ff325d]/20 hover:shadow-md transition-all group">
-                  <div className={`flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3 ${isAr ? 'sm:flex-row-reverse' : ''}`}>
-                    <div className={isAr ? 'text-right' : ''}>
-                      <span className="text-xs font-semibold text-[#ff325d] tracking-wide uppercase">{item.period}</span>
-                      <h3 className={`text-xl font-bold text-[#2d185c] mt-0.5 ${isAr ? '' : 'font-heading'}`}>{item.company}</h3>
-                      <p className="text-[#412384] font-medium text-sm">{item.role}</p>
+                  <div className={`flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-3 ${isAr ? 'sm:flex-row-reverse' : ''}`}>
+                    <div className={`flex items-center gap-3 ${isAr ? 'flex-row-reverse' : ''}`}>
+                      {/* Company logo */}
+                      {item.logo && (
+                        <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-white border border-[#e8e4f5] flex items-center justify-center overflow-hidden p-1">
+                          <img
+                            src={item.logo}
+                            alt={item.company}
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                      )}
+                      <div className={isAr ? 'text-right' : ''}>
+                        <span className="text-xs font-semibold text-[#ff325d] tracking-wide uppercase">{item.period}</span>
+                        <h3 className={`text-xl font-bold text-[#2d185c] mt-0.5 ${isAr ? '' : 'font-heading'}`}>{item.company}</h3>
+                        <p className="text-[#412384] font-medium text-sm">{item.role}</p>
+                      </div>
                     </div>
                     <div className="flex-shrink-0">
                       <span className="inline-block px-3 py-1.5 rounded-full bg-[#ff325d] text-white text-xs font-bold">

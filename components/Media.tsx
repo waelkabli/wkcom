@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import { Play, Newspaper, Tv, Mic } from 'lucide-react';
+import { Play, Newspaper, Tv, Mic, ExternalLink } from 'lucide-react';
 
 export default function Media() {
   const t = useTranslations('media');
@@ -12,7 +12,7 @@ export default function Media() {
     title: string; description: string; url: string; thumbnail: string; source: string;
   }>;
   const press = t.raw('press') as Array<{
-    title: string; publication: string; year: string; type: string;
+    title: string; publication: string; year: string; type: string; url?: string;
   }>;
 
   const pressIcons: Record<string, React.ElementType> = {
@@ -45,21 +45,38 @@ export default function Media() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {press.map((item, i) => {
             const Icon = pressIcons[item.type] || Newspaper;
-            return (
+            const inner = (
+              <div className={`flex items-start gap-3 ${isAr ? 'flex-row-reverse' : ''}`}>
+                <div className="w-10 h-10 rounded-xl bg-[#ff325d]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#ff325d] transition-colors">
+                  <Icon size={18} className="text-[#ff325d] group-hover:text-white transition-colors" />
+                </div>
+                <div className={`flex-1 ${isAr ? 'text-right' : ''}`}>
+                  <div className="font-semibold text-[#2d185c] text-sm leading-snug">{item.title}</div>
+                  <div className="text-[#ff325d] text-xs font-medium mt-0.5">{item.publication}</div>
+                  <div className="text-[#2d185c]/50 text-xs mt-0.5">{item.year}</div>
+                </div>
+                {item.url && (
+                  <ExternalLink size={14} className="flex-shrink-0 text-[#2d185c]/30 group-hover:text-[#ff325d] transition-colors mt-0.5" />
+                )}
+              </div>
+            );
+
+            return item.url ? (
+              <a
+                key={i}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-white rounded-2xl p-5 border border-[#e8e4f5] hover:border-[#ff325d]/30 hover:shadow-md transition-all block"
+              >
+                {inner}
+              </a>
+            ) : (
               <div
                 key={i}
                 className="group bg-white rounded-2xl p-5 border border-[#e8e4f5] hover:border-[#ff325d]/30 hover:shadow-md transition-all"
               >
-                <div className={`flex items-start gap-3 ${isAr ? 'flex-row-reverse' : ''}`}>
-                  <div className="w-10 h-10 rounded-xl bg-[#ff325d]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#ff325d] transition-colors">
-                    <Icon size={18} className="text-[#ff325d] group-hover:text-white transition-colors" />
-                  </div>
-                  <div className={isAr ? 'text-right' : ''}>
-                    <div className="font-semibold text-[#2d185c] text-sm leading-snug">{item.title}</div>
-                    <div className="text-[#ff325d] text-xs font-medium mt-0.5">{item.publication}</div>
-                    <div className="text-[#2d185c]/50 text-xs mt-0.5">{item.year}</div>
-                  </div>
-                </div>
+                {inner}
               </div>
             );
           })}
