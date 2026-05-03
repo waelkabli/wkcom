@@ -6,7 +6,12 @@ const FROM_EMAIL = 'onboarding@resend.dev'; // Change to noreply@waelkabli.com a
 
 export async function POST(req: NextRequest) {
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.error('RESEND_API_KEY is not set');
+      return NextResponse.json({ error: 'Email service not configured' }, { status: 503 });
+    }
+    const resend = new Resend(apiKey);
     const { name, email, subject, message, locale } = await req.json();
 
     if (!name || !email || !subject || !message) {
