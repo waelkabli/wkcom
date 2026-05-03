@@ -248,18 +248,101 @@
     "title": "Selected Engagements",
     "subtitle": "20+ speaking engagements across Forbes, Misk, KAUST, Monsha'at, and international forums.",
     "items": [
-      { "event": "GREAT Futures London", "org": "UK Government / GREAT Britain Campaign", "year": "2025", "url": "https://company.cura.healthcare/en/cura-orchestrator-for-payors/" },
-      { "event": "Misk Launchpad Activation Week", "org": "Misk Foundation — Speaker & Mentor", "year": "2025" },
-      { "event": "Judge — IPSAR Accelerator & Council of Health Insurance", "org": "IPSAR / MOH", "year": "2025" },
-      { "event": "Biban 24 — The Future of AI in Healthcare", "org": "MonshaatSA", "year": "2024" },
-      { "event": "Forbes ME Healthcare Innovation Circle", "org": "Forbes Middle East — Moderator & Speaker", "year": "2024" },
-      { "event": "Global Health Forum, Riyadh", "org": "Innovation in the Path to Healing", "year": "2024" },
-      { "event": "Judge — Esameyoon Award (Commercial Track)", "org": "Esameyoon", "year": "2023–2024" },
-      { "event": "Customer Experience Live", "org": "Anywhere Service Delivery", "year": "2023" },
-      { "event": "Health in the Digital Age Conference", "org": "Virtual Medical Academy — Moderator", "year": "2022" },
-      { "event": "Saudi Society for Health Administration", "org": "Crisis & Technology", "year": "2021" },
-      { "event": "Misk Talk — Future of Health", "org": "Misk Foundation", "year": "2020–Present" },
-      { "event": "KAUST Taqadam — The Entrepreneurial Journey", "org": "KAUST", "year": "2020" }
+      {
+        "event": "Forbes Middle East Healthcare Innovation Circle",
+        "org": "Moderator & Speaker — Led executive panels at the Global Health Forum in Riyadh on AI, operational efficiency, transparency, and patient-centered care with leaders from Oracle Health and Solventum",
+        "year": "2024–Present"
+      },
+      {
+        "event": "Global Health Forum – Innovation in the Path to Healing",
+        "org": "Moderator — Facilitated discussions with leaders from Philips, Amgen, and Lean Business Services on predictive care, personalized medicine, and national digital health systems",
+        "year": "2024"
+      },
+      {
+        "event": "GREAT Futures London",
+        "org": "Speaker — Represented Cura and presented Saudi–UK collaboration in healthcare; launched Cura Orchestrator for payors to improve cost, access, and outcomes",
+        "year": "2025"
+      },
+      {
+        "event": "Misk Launchpad Activation Week",
+        "org": "Special Guest Speaker & Mentor — Delivered insights on startup growth, regulation, and scaling; mentored founders on B2G sales and ecosystem challenges",
+        "year": "2025"
+      },
+      {
+        "event": "IPSAR Accelerator Demo Day",
+        "org": "Judge — Evaluated innovative healthcare startups and provided strategic feedback on scalability, business models, and impact",
+        "year": "2025"
+      },
+      {
+        "event": "Esameyoon Award – Commercial Track",
+        "org": "Judge — Assessed startups on innovation, scalability, and market impact; guided founders with strategic insights",
+        "year": "2023–2024"
+      },
+      {
+        "event": "Biban 24 – The Future of AI in Healthcare",
+        "org": "Speaker — Explored AI-driven personalization, diagnostics, and transformation of healthcare systems aligned with Vision 2030",
+        "year": "2024"
+      },
+      {
+        "event": "Customer Experience Live",
+        "org": "Speaker — Discussed digital transformation and AI in delivering seamless, high-value customer experiences anytime, anywhere",
+        "year": "2023"
+      },
+      {
+        "event": "Misk Community – Digital Health & Innovation",
+        "org": "Speaker — Highlighted technology-driven healthcare models improving accessibility, efficiency, and patient outcomes",
+        "year": "2023"
+      },
+      {
+        "event": "Monsha’at Advisory",
+        "org": "Advisor — Guided startups in digital health and entrepreneurship, supporting scalable and impactful business models",
+        "year": "2023"
+      },
+      {
+        "event": "Health in the Digital Age Conference",
+        "org": "Moderator — Led discussions on AI, emerging technologies, and the future of digital healthcare",
+        "year": "2022"
+      },
+      {
+        "event": "Innovation Ecosystem Forum",
+        "org": "Speaker — Addressed startup challenges, scaling strategies, and the role of innovation in economic growth",
+        "year": "2022"
+      },
+      {
+        "event": "Saudi Society for Health Administration Conference",
+        "org": "Speaker — Discussed technology’s role in crisis management, emergency response, and healthcare resilience",
+        "year": "2021"
+      },
+      {
+        "event": "Misk Talk – Future of Health",
+        "org": "Speaker — Shared perspectives on digital transformation, innovation, and the future of healthcare systems",
+        "year": "2020–Present"
+      },
+      {
+        "event": "Saudi Entrepreneurship World Cup",
+        "org": "Speaker — Inspired entrepreneurs on building, scaling, and navigating startup challenges",
+        "year": "2020–Present"
+      },
+      {
+        "event": "Principles of Health Informatics",
+        "org": "Speaker — Introduced healthcare professionals to data, analytics, and health informatics fundamentals",
+        "year": "2020–Present"
+      },
+      {
+        "event": "Udacity – Introduction to Healthcare",
+        "org": "Speaker — Delivered foundational healthcare knowledge to large-scale digital learning cohorts",
+        "year": "2020–Present"
+      },
+      {
+        "event": "KAUST Taqadam – The Journey",
+        "org": "Speaker — Shared entrepreneurial journey building Cura and lessons in scaling startups",
+        "year": "2020–Present"
+      },
+      {
+        "event": "Telemedicine in Saudi Arabia",
+        "org": "Speaker — Explored evolution of telehealth, access to care, and integration with traditional healthcare systems",
+        "year": "2019–Present"
+      }
     ]
   },
   "media": {
