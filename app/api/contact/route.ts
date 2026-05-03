@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
 const TO_EMAIL = 'contact@waelkabli.com';
-const FROM_EMAIL = 'onboarding@resend.dev'; // Change to noreply@waelkabli.com after verifying domain in Resend
+const FROM_EMAIL = 'noreply@waelkabli.com';
 
 export async function POST(req: NextRequest) {
   try {
