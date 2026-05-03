@@ -2,23 +2,32 @@
 
 import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import { MapPin, Link2, Send, CheckCircle } from 'lucide-react';
+import { MapPin, Link2, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 export default function Contact() {
   const t = useTranslations('contact');
   const locale = useLocale();
   const isAr = locale === 'ar';
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
-    // Simulate send — replace with your email API
-    await new Promise((r) => setTimeout(r, 1200));
-    setStatus('sent');
-    setForm({ name: '', email: '', subject: '', message: '' });
-    setTimeout(() => setStatus('idle'), 5000);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form, locale }),
+      });
+      if (!res.ok) throw new Error('Failed');
+      setStatus('sent');
+      setForm({ name: '', email: '', subject: '', message: '' });
+      setTimeout(() => setStatus('idle'), 6000);
+    } catch {
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 5000);
+    }
   };
 
   const contacts = [
@@ -90,6 +99,16 @@ export default function Contact() {
                 <CheckCircle size={48} className="text-[#ff325d]" />
                 <h3 className={`text-white font-bold text-xl ${isAr ? '' : 'font-heading'}`}>{t('sent')}</h3>
                 <p className="text-white/60">{t('sentDesc')}</p>
+              </div>
+            ) : status === 'error' ? (
+              <div className="flex flex-col items-center justify-center h-full gap-4 py-16 text-center">
+                <AlertCircle size={48} className="text-orange-400" />
+                <h3 className={`text-white font-bold text-xl ${isAr ? '' : 'font-heading'}`}>
+                  {isAr ? 'حدث خطأ' : 'Something went wrong'}
+                </h3>
+                <p className="text-white/60">
+                  {isAr ? 'الرجاء المحاولة مرة أخرى أو التواصل مباشرة عبر LinkedIn.' : 'Please try again or reach out directly via LinkedIn.'}
+                </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
