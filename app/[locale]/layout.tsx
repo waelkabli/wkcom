@@ -79,7 +79,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-full flex flex-col antialiased">
+      <body className={`min-h-full flex flex-col antialiased ${locale === 'ar' ? 'font-arabic' : 'font-sans'}`}>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

@@ -114,6 +114,9 @@ body {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
 }
+[dir="rtl"] .prose,
+[dir="rtl"] .prose p,
+[dir="rtl"] .prose li,
 [dir="rtl"] .prose h1,
 [dir="rtl"] .prose h2,
 [dir="rtl"] .prose h3 {
