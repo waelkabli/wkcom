@@ -5,7 +5,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { Calendar, Clock, ArrowLeft, Tag } from 'lucide-react';
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown, { type Components } from 'react-markdown';
 import type { Metadata } from 'next';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -60,6 +60,32 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
   };
 }
+
+function getYouTubeId(text: string): string | null {
+  const m = text.trim().match(/^https?:\/\/(?:www\.)?(?:youtu\.be\/|youtube\.com\/watch\?v=)([a-zA-Z0-9_-]{11})/);
+  return m ? m[1] : null;
+}
+
+const mdComponents: Components = {
+  p({ children }) {
+    const text = typeof children === 'string' ? children : '';
+    const vid = text ? getYouTubeId(text) : null;
+    if (vid) {
+      return (
+        <div className="my-6 aspect-video rounded-xl overflow-hidden">
+          <iframe
+            src={`https://www.youtube.com/embed/${vid}`}
+            className="w-full h-full"
+            allowFullScreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            title="YouTube video"
+          />
+        </div>
+      );
+    }
+    return <p>{children}</p>;
+  },
+};
 
 export default async function BlogPostPage({ params }: Props) {
   const { locale, slug } = await params;
@@ -175,7 +201,7 @@ export default async function BlogPostPage({ params }: Props) {
 
           {/* Content */}
           <div className="prose prose-lg max-w-none">
-            <ReactMarkdown>{post.content}</ReactMarkdown>
+            <ReactMarkdown components={mdComponents}>{post.content}</ReactMarkdown>
           </div>
         </article>
 
