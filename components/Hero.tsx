@@ -112,6 +112,14 @@ export default function Hero() {
                 <Download size={14} />
                 {t('ctaTertiary')}
               </a>
+              <a
+                href="/cv/Wael-Portifolio-02.pdf"
+                download
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-[#ff325d]/40 text-[#ff6585] text-sm hover:border-[#ff325d]/70 hover:text-white hover:bg-[#ff325d]/10 transition-all"
+              >
+                <Download size={14} />
+                {t('ctaPortfolio')}
+              </a>
             </div>
           </div>
 
