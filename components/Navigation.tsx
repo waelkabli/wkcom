@@ -29,13 +29,13 @@ export default function Navigation() {
   };
 
   const navLinks = [
-    { href: '#about', label: t('about') },
-    { href: '#services', label: t('services') },
-    { href: '#experience', label: t('experience') },
-    { href: '#expertise', label: t('expertise') },
-    { href: '#media', label: t('media') },
+    { href: `/${locale}#about`, label: t('about') },
+    { href: `/${locale}#services`, label: t('services') },
+    { href: `/${locale}#experience`, label: t('experience') },
+    { href: `/${locale}#expertise`, label: t('expertise') },
+    { href: `/${locale}#media`, label: t('media') },
     { href: `/${locale}/blog`, label: t('blog') },
-    { href: '#contact', label: t('contact') },
+    { href: `/${locale}#contact`, label: t('contact') },
   ];
 
   return (
