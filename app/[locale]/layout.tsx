@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import Script from 'next/script';
 import type { Metadata } from 'next';
 
 type Props = {
@@ -80,6 +81,13 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
       </head>
       <body className={`min-h-full flex flex-col antialiased ${locale === 'ar' ? 'font-arabic' : 'font-sans'}`}>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-6P6YEKTLZX" strategy="afterInteractive" />
+        <Script id="ga4-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-6P6YEKTLZX');
+        `}</Script>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
