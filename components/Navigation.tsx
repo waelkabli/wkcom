@@ -14,6 +14,7 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const isAr = locale === 'ar';
+  const isHome = pathname === `/${locale}` || pathname === `/${locale}/`;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -40,7 +41,7 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled
+        scrolled || !isHome
           ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-[#e8e4f5]'
           : 'bg-transparent'
       }`}
@@ -59,7 +60,7 @@ export default function Navigation() {
               <line x1="45" y1="59" x2="60" y2="59" stroke="#ff325d" strokeWidth="3"/>
               <line x1="60" y1="59" x2="60" y2="79" stroke="#ff325d" strokeWidth="3"/>
             </svg>
-            <span className={`font-bold text-lg group-hover:text-[#ff325d] transition-colors ${scrolled ? 'text-[#2d185c]' : 'text-white'} ${isAr ? '' : 'font-heading'}`}>
+            <span className={`font-bold text-lg group-hover:text-[#ff325d] transition-colors ${(scrolled || !isHome) ? 'text-[#2d185c]' : 'text-white'} ${isAr ? '' : 'font-heading'}`}>
               {isAr ? 'وائل كابلي' : 'Wael Kabli'}
             </span>
           </Link>
@@ -70,7 +71,7 @@ export default function Navigation() {
               <a
                 key={l.href}
                 href={l.href}
-                className={`text-sm font-medium hover:text-[#ff325d] transition-colors ${scrolled ? 'text-[#2d185c]/70' : 'text-white/90'}`}
+                className={`text-sm font-medium hover:text-[#ff325d] transition-colors ${(scrolled || !isHome) ? 'text-[#2d185c]/70' : 'text-white/90'}`}
               >
                 {l.label}
               </a>
@@ -82,7 +83,7 @@ export default function Navigation() {
             {/* Language toggle */}
             <button
               onClick={toggleLocale}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-sm font-medium hover:border-[#ff325d] hover:text-[#ff325d] transition-all ${scrolled ? 'border-[#2d185c]/20 text-[#2d185c]' : 'border-white/50 text-white'}`}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-sm font-medium hover:border-[#ff325d] hover:text-[#ff325d] transition-all ${(scrolled || !isHome) ? 'border-[#2d185c]/20 text-[#2d185c]' : 'border-white/50 text-white'}`}
             >
               <span className="text-base">{isAr ? '🇺🇸' : '🇸🇦'}</span>
               <span>{isAr ? 'EN' : 'عربي'}</span>
@@ -97,10 +98,10 @@ export default function Navigation() {
 
           {/* Mobile hamburger */}
           <div className="flex lg:hidden items-center gap-2">
-            <button onClick={toggleLocale} className={`text-sm font-medium px-2 py-1 border rounded-full transition-colors ${scrolled ? 'text-[#2d185c] border-[#2d185c]/20' : 'text-white border-white/50'}`}>
+            <button onClick={toggleLocale} className={`text-sm font-medium px-2 py-1 border rounded-full transition-colors ${(scrolled || !isHome) ? 'text-[#2d185c] border-[#2d185c]/20' : 'text-white border-white/50'}`}>
               {isAr ? 'EN' : 'عربي'}
             </button>
-            <button onClick={() => setOpen(!open)} className={`p-2 transition-colors ${scrolled ? 'text-[#2d185c]' : 'text-white'}`}>
+            <button onClick={() => setOpen(!open)} className={`p-2 transition-colors ${(scrolled || !isHome) ? 'text-[#2d185c]' : 'text-white'}`}>
               {open ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
