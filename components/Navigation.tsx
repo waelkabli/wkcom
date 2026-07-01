@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
+import { trackEvent } from './AnalyticsTracker';
 
 export default function Navigation() {
   const t = useTranslations('nav');
@@ -90,6 +91,7 @@ export default function Navigation() {
             </button>
             <a
               href="#contact"
+              onClick={() => trackEvent('contract_me_click', { location: 'desktop_nav' })}
               className="px-4 py-2 rounded-full bg-[#ff325d] text-white text-sm font-semibold hover:bg-[#fe0035] transition-colors shadow-sm"
             >
               {t('hireMe')}
@@ -125,7 +127,7 @@ export default function Navigation() {
             <div className="pt-2">
               <a
                 href="#contact"
-                onClick={() => setOpen(false)}
+                onClick={() => { setOpen(false); trackEvent('contract_me_click', { location: 'mobile_nav' }); }}
                 className="block text-center py-2.5 px-4 rounded-full bg-[#ff325d] text-white font-semibold hover:bg-[#fe0035] transition-colors"
               >
                 {t('hireMe')}

@@ -12,6 +12,7 @@ import BlogPreview from '@/components/BlogPreview';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import VisitorTracker from '@/components/VisitorTracker';
+import AnalyticsTracker from '@/components/AnalyticsTracker';
 
 // JSON-LD structured data for AI and search engines
 const personSchema = {
@@ -97,6 +98,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
       <VisitorTracker />
+      <AnalyticsTracker />
       <Navigation />
       <main>
         <Hero />
