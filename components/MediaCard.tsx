@@ -1,12 +1,17 @@
 'use client';
 
 import { useState } from 'react';
-import { Play, Mic, Tv, Newspaper, Share2, ExternalLink } from 'lucide-react';
+import { Play, Mic, Tv, Newspaper, Share2, ExternalLink, Calendar } from 'lucide-react';
 import type { MediaItem } from '@/lib/media';
 
 function extractYouTubeId(url: string): string | null {
   const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([A-Za-z0-9_-]{11})/);
   return match ? match[1] : null;
+}
+
+function formatDate(dateStr: string, isAr: boolean): string {
+  const date = new Date(dateStr + 'T00:00:00');
+  return date.toLocaleDateString(isAr ? 'ar-SA' : 'en-US', { month: 'short', year: 'numeric' });
 }
 
 const TYPE_ICONS: Record<string, React.ElementType> = {
@@ -24,6 +29,15 @@ const ACTION_LABELS: Record<string, { ar: string; en: string }> = {
   social: { ar: 'عرض', en: 'View' },
 };
 
+function DateBadge({ date, isAr }: { date: string; isAr: boolean }) {
+  return (
+    <span className={`inline-flex items-center gap-1 text-[#2d185c]/40 text-xs ${isAr ? 'flex-row-reverse' : ''}`}>
+      <Calendar size={10} />
+      {formatDate(date, isAr)}
+    </span>
+  );
+}
+
 export default function MediaCard({ item, isAr }: { item: MediaItem; isAr: boolean }) {
   if (item.mediaType === 'video') {
     return <VideoCard item={item} isAr={isAr} />;
@@ -37,8 +51,9 @@ function VideoCard({ item, isAr }: { item: MediaItem; isAr: boolean }) {
   const thumbnail = item.thumbnail || (ytId ? `https://img.youtube.com/vi/${ytId}/hqdefault.jpg` : '');
   const actionLabel = ACTION_LABELS.video[isAr ? 'ar' : 'en'];
 
-  const inner = (
+  return (
     <div className="group rounded-2xl overflow-hidden border border-[#e8e4f5] bg-white hover:shadow-lg transition-all h-full flex flex-col">
+      {/* Thumbnail / Player */}
       <div className="relative aspect-video bg-[#2d185c] overflow-hidden flex-shrink-0">
         {playing && ytId ? (
           <iframe
@@ -64,12 +79,20 @@ function VideoCard({ item, isAr }: { item: MediaItem; isAr: boolean }) {
                 <Play size={20} className="text-white ms-1" fill="white" />
               </button>
             </div>
+            {/* Platform badge */}
             <div className={`absolute top-3 ${isAr ? 'left-3' : 'right-3'} px-2.5 py-1 rounded-full bg-black/60 text-white text-xs font-medium`}>
               {item.platform}
+            </div>
+            {/* Date badge */}
+            <div className={`absolute bottom-3 ${isAr ? 'right-3' : 'left-3'} px-2.5 py-1 rounded-full bg-black/60 text-white/80 text-xs flex items-center gap-1`}>
+              <Calendar size={10} />
+              {formatDate(item.date, isAr)}
             </div>
           </>
         )}
       </div>
+
+      {/* Info */}
       <div className={`p-4 flex flex-col flex-1 ${isAr ? 'text-right' : ''}`}>
         <h3 className={`font-bold text-[#2d185c] text-sm mb-1 leading-snug ${isAr ? '' : 'font-heading'}`}>{item.title}</h3>
         {item.excerpt && <p className="text-[#2d185c]/60 text-xs leading-relaxed flex-1">{item.excerpt}</p>}
@@ -87,47 +110,78 @@ function VideoCard({ item, isAr }: { item: MediaItem; isAr: boolean }) {
       </div>
     </div>
   );
-
-  return inner;
 }
 
 function IconCard({ item, isAr }: { item: MediaItem; isAr: boolean }) {
   const Icon = TYPE_ICONS[item.mediaType] || Newspaper;
   const actionLabel = ACTION_LABELS[item.mediaType]?.[isAr ? 'ar' : 'en'] ?? (isAr ? 'عرض' : 'View');
 
-  const content = (
-    <div className={`flex items-start gap-3 ${isAr ? 'flex-row-reverse' : ''}`}>
-      <div className="w-10 h-10 rounded-xl bg-[#ff325d]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#ff325d] transition-colors">
-        <Icon size={18} className="text-[#ff325d] group-hover:text-white transition-colors" />
-      </div>
-      <div className={`flex-1 min-w-0 ${isAr ? 'text-right' : ''}`}>
-        <div className="text-[#ff325d] text-xs font-semibold mb-0.5">{item.platform}</div>
-        <div className="font-semibold text-[#2d185c] text-sm leading-snug line-clamp-2">{item.title}</div>
+  const inner = (
+    <div className="group rounded-2xl overflow-hidden border border-[#e8e4f5] bg-white hover:shadow-md hover:border-[#ff325d]/30 transition-all h-full flex flex-col">
+      {/* Thumbnail if available, else coloured icon banner */}
+      {item.thumbnail ? (
+        <div className="relative aspect-video overflow-hidden flex-shrink-0 bg-[#2d185c]">
+          <img
+            src={item.thumbnail}
+            alt={item.title}
+            className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+          />
+          {/* Platform badge */}
+          <div className={`absolute top-3 ${isAr ? 'left-3' : 'right-3'} px-2.5 py-1 rounded-full bg-black/60 text-white text-xs font-medium`}>
+            {item.platform}
+          </div>
+          {/* Date badge */}
+          <div className={`absolute bottom-3 ${isAr ? 'right-3' : 'left-3'} px-2.5 py-1 rounded-full bg-black/60 text-white/80 text-xs flex items-center gap-1`}>
+            <Calendar size={10} />
+            {formatDate(item.date, isAr)}
+          </div>
+          {/* Type icon overlay */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+              <Icon size={20} className="text-white" />
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className="px-4 pt-4 pb-2 flex-shrink-0">
+          <div className={`flex items-center justify-between ${isAr ? 'flex-row-reverse' : ''}`}>
+            <div className="w-10 h-10 rounded-xl bg-[#ff325d]/10 flex items-center justify-center group-hover:bg-[#ff325d] transition-colors">
+              <Icon size={18} className="text-[#ff325d] group-hover:text-white transition-colors" />
+            </div>
+            <DateBadge date={item.date} isAr={isAr} />
+          </div>
+        </div>
+      )}
+
+      {/* Content */}
+      <div className={`px-4 pb-4 flex flex-col flex-1 ${item.thumbnail ? 'pt-3' : 'pt-0'} ${isAr ? 'text-right' : ''}`}>
+        <div className="text-[#ff325d] text-xs font-semibold mb-1">{item.platform}</div>
+        <div className="font-semibold text-[#2d185c] text-sm leading-snug line-clamp-2 flex-1">{item.title}</div>
         {item.excerpt && (
           <p className="text-[#2d185c]/60 text-xs leading-relaxed mt-1 line-clamp-2">{item.excerpt}</p>
         )}
-        {item.date && (
-          <div className="text-[#2d185c]/40 text-xs mt-1">{new Date(item.date).getFullYear()}</div>
-        )}
-        {item.mediaUrl && (
-          <div className="mt-2">
+        <div className={`flex items-center justify-between mt-3 ${isAr ? 'flex-row-reverse' : ''}`}>
+          {item.thumbnail && <DateBadge date={item.date} isAr={isAr} />}
+          {item.mediaUrl ? (
             <span className="inline-flex items-center gap-1 text-[#ff325d] text-xs font-medium group-hover:underline">
               {actionLabel}
               <ExternalLink size={10} />
             </span>
-          </div>
-        )}
+          ) : (
+            <span />
+          )}
+        </div>
       </div>
     </div>
   );
 
-  const className = "group bg-white rounded-2xl p-4 border border-[#e8e4f5] hover:border-[#ff325d]/30 hover:shadow-md transition-all block";
+  const className = "block h-full";
 
   return item.mediaUrl ? (
     <a href={item.mediaUrl} target="_blank" rel="noopener noreferrer" className={className}>
-      {content}
+      {inner}
     </a>
   ) : (
-    <div className={className}>{content}</div>
+    <div className={className}>{inner}</div>
   );
 }
