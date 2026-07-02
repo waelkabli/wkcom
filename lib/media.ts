@@ -50,7 +50,7 @@ export function getMediaBySlug(slug: string, locale: 'ar' | 'en'): MediaItem | n
   let thumbnail: string | undefined = data.thumbnail;
   if (!thumbnail && (data.mediaType === 'video')) {
     const ytId = extractYouTubeId(mediaUrl);
-    if (ytId) thumbnail = `https://img.youtube.com/vi/${ytId}/maxresdefault.jpg`;
+    if (ytId) thumbnail = `https://img.youtube.com/vi/${ytId}/hqdefault.jpg`;
   }
 
   return {

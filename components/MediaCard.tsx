@@ -34,7 +34,7 @@ export default function MediaCard({ item, isAr }: { item: MediaItem; isAr: boole
 function VideoCard({ item, isAr }: { item: MediaItem; isAr: boolean }) {
   const [playing, setPlaying] = useState(false);
   const ytId = extractYouTubeId(item.mediaUrl);
-  const thumbnail = item.thumbnail || (ytId ? `https://img.youtube.com/vi/${ytId}/maxresdefault.jpg` : '');
+  const thumbnail = item.thumbnail || (ytId ? `https://img.youtube.com/vi/${ytId}/hqdefault.jpg` : '');
   const actionLabel = ACTION_LABELS.video[isAr ? 'ar' : 'en'];
 
   const inner = (

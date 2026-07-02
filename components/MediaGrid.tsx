@@ -26,9 +26,6 @@ export default function MediaGrid({ items, isAr }: { items: MediaItem[]; isAr: b
 
   const filtered = active === 'all' ? items : items.filter((i) => i.mediaType === active);
 
-  const videos = filtered.filter((i) => i.mediaType === 'video');
-  const rest = filtered.filter((i) => i.mediaType !== 'video');
-
   return (
     <div>
       {/* Filter bar */}
@@ -60,25 +57,11 @@ export default function MediaGrid({ items, isAr }: { items: MediaItem[]; isAr: b
           {isAr ? 'لا توجد عناصر.' : 'No items found.'}
         </p>
       ) : (
-        <>
-          {/* Video grid — 3 cols to keep cards compact */}
-          {videos.length > 0 && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
-              {videos.map((item) => (
-                <MediaCard key={item.slug} item={item} isAr={isAr} />
-              ))}
-            </div>
-          )}
-
-          {/* Icon cards — 2 cols on md, 3 on lg */}
-          {rest.length > 0 && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {rest.map((item) => (
-                <MediaCard key={item.slug} item={item} isAr={isAr} />
-              ))}
-            </div>
-          )}
-        </>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {filtered.map((item) => (
+            <MediaCard key={item.slug} item={item} isAr={isAr} />
+          ))}
+        </div>
       )}
     </div>
   );
