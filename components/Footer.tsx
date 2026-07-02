@@ -30,6 +30,7 @@ export default async function Footer() {
               { href: '#services', label: tn('services') },
               { href: '#experience', label: tn('experience') },
               { href: `/${locale}/blog`, label: tn('blog') },
+              { href: `/${locale}/media`, label: tn('media') },
               { href: '#contact', label: tn('contact') },
             ].map((l) => (
               <a

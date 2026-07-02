@@ -22,6 +22,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
       alternates: { languages: { ar: `${base}/ar/blog`, en: `${base}/en/blog` } },
     },
+    {
+      url: `${base}/${locale}/media`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+      alternates: { languages: { ar: `${base}/ar/media`, en: `${base}/en/media` } },
+    },
   ]);
 
   // Blog post pages

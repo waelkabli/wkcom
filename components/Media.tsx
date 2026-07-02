@@ -81,6 +81,16 @@ export default function Media() {
             );
           })}
         </div>
+
+        {/* View All CTA */}
+        <div className="text-center mt-10">
+          <a
+            href={`/${locale}/media`}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-[#2d185c] text-[#2d185c] font-semibold hover:bg-[#2d185c] hover:text-white transition-all text-sm"
+          >
+            {isAr ? 'عرض جميع الظهورات الإعلامية' : 'View All Media Appearances →'}
+          </a>
+        </div>
       </div>
     </section>
   );

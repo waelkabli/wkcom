@@ -216,31 +216,51 @@
         "icon": "building2",
         "title": "Executive Consultant",
         "description": "Strategic advisory on digital transformation, market entry, fundraising, and growth. For corporates, government entities & investors.",
-        "tags": ["Strategy", "Digital Transformation", "Growth"]
+        "tags": [
+          "Strategy",
+          "Digital Transformation",
+          "Growth"
+        ]
       },
       {
         "icon": "users2",
         "title": "Board Advisor",
         "description": "Board-level advisory for technology and healthcare companies. Governance, strategic direction, and accountability.",
-        "tags": ["Governance", "Healthcare", "Tech"]
+        "tags": [
+          "Governance",
+          "Healthcare",
+          "Tech"
+        ]
       },
       {
         "icon": "target",
         "title": "Startup Mentor",
         "description": "Early-stage mentoring for founders navigating product-market fit, fundraising, and scale. 10+ startups mentored.",
-        "tags": ["Startups", "Fundraising", "PMF"]
+        "tags": [
+          "Startups",
+          "Fundraising",
+          "PMF"
+        ]
       },
       {
         "icon": "lightbulb",
         "title": "Executive Coach",
         "description": "One-on-one coaching for C-suite executives and senior leaders navigating transformation, team building, and vision execution.",
-        "tags": ["Leadership", "C-Suite", "Coaching"]
+        "tags": [
+          "Leadership",
+          "C-Suite",
+          "Coaching"
+        ]
       },
       {
         "icon": "mic2",
         "title": "Keynote Speaker",
         "description": "Available for keynotes, panels, and moderation. Topics: AI & Digital Health, Vision 2030, Entrepreneurship, Leadership.",
-        "tags": ["AI", "Digital Health", "Vision 2030"]
+        "tags": [
+          "AI",
+          "Digital Health",
+          "Vision 2030"
+        ]
       }
     ]
   },
@@ -426,5 +446,27 @@
     "tagline": "Scale Innovation That Matters.",
     "rights": "All rights reserved.",
     "madeWith": "Built with purpose."
+  },
+  "mediaPage": {
+    "sectionLabel": "Media",
+    "title": "Media & Press",
+    "subtitle": "Interviews, podcasts, TV appearances, and press coverage",
+    "filterAll": "All",
+    "filterVideo": "Video",
+    "filterPodcast": "Podcasts",
+    "filterTv": "TV / News",
+    "filterPress": "Press",
+    "filterSocial": "Social",
+    "watchNow": "Watch Now",
+    "listenNow": "Listen Now",
+    "readNow": "Read Now",
+    "viewNow": "View",
+    "mediaKit": "Media Kit",
+    "mediaKitSubtitle": "Photos for press and editorial use",
+    "permissionNotice": "These images may only be used with explicit written permission.",
+    "permissionContact": "Contact waelkabli@gmail.com to request usage rights.",
+    "headshot": "Professional Headshot",
+    "avatar": "Avatar",
+    "download": "Download"
   }
 }

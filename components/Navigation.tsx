@@ -34,7 +34,7 @@ export default function Navigation() {
     { href: `/${locale}#services`, label: t('services') },
     { href: `/${locale}#experience`, label: t('experience') },
     { href: `/${locale}#expertise`, label: t('expertise') },
-    { href: `/${locale}#media`, label: t('media') },
+    { href: `/${locale}/media`, label: t('media') },
     { href: `/${locale}/blog`, label: t('blog') },
     { href: `/${locale}#contact`, label: t('contact') },
   ];
