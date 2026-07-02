@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { ArrowDown, Download } from 'lucide-react';
+import { trackEvent } from './AnalyticsTracker';
 
 export default function Hero() {
   const t = useTranslations('hero');
@@ -99,6 +100,7 @@ export default function Hero() {
               <a
                 href="/cv/WaelKabli-ExecCV.pdf"
                 download
+                onClick={() => trackEvent('cv_download', { file: 'exec_cv' })}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white font-semibold hover:border-white/60 hover:bg-white/10 transition-all"
               >
                 <Download size={16} />
@@ -107,6 +109,7 @@ export default function Hero() {
               <a
                 href="/cv/WaelKabli-CV.pdf"
                 download
+                onClick={() => trackEvent('cv_download', { file: 'cv' })}
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/20 text-white/70 text-sm hover:border-white/40 hover:text-white hover:bg-white/5 transition-all"
               >
                 <Download size={14} />
@@ -115,6 +118,7 @@ export default function Hero() {
               <a
                 href="/cv/Wael-Portifolio-02.pdf"
                 download
+                onClick={() => trackEvent('cv_download', { file: 'portfolio' })}
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-[#ff325d]/40 text-[#ff6585] text-sm hover:border-[#ff325d]/70 hover:text-white hover:bg-[#ff325d]/10 transition-all"
               >
                 <Download size={14} />
