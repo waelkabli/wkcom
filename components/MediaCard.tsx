@@ -50,11 +50,17 @@ function VideoCard({ item, isAr }: { item: MediaItem; isAr: boolean }) {
   const ytId = extractYouTubeId(item.mediaUrl);
   const thumbnail = item.thumbnail || (ytId ? `https://img.youtube.com/vi/${ytId}/hqdefault.jpg` : '');
   const actionLabel = ACTION_LABELS.video[isAr ? 'ar' : 'en'];
+  const href = item.mediaUrl || '#';
 
   return (
     <div className="group rounded-2xl overflow-hidden border border-[#e8e4f5] bg-white hover:shadow-lg transition-all h-full flex flex-col">
-      {/* Thumbnail / Player */}
-      <div className="relative aspect-video bg-[#2d185c] overflow-hidden flex-shrink-0">
+      {/* Thumbnail — clicking outside play button opens external link */}
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative aspect-video bg-[#2d185c] overflow-hidden flex-shrink-0 block"
+      >
         {playing && ytId ? (
           <iframe
             src={`https://www.youtube.com/embed/${ytId}?autoplay=1`}
@@ -73,7 +79,11 @@ function VideoCard({ item, isAr }: { item: MediaItem; isAr: boolean }) {
             )}
             <div className="absolute inset-0 bg-[#2d185c]/40 flex items-center justify-center">
               <button
-                onClick={() => ytId && setPlaying(true)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  if (ytId) setPlaying(true);
+                }}
                 className="w-14 h-14 rounded-full bg-[#ff325d] flex items-center justify-center hover:scale-110 hover:bg-[#fe0035] transition-all shadow-lg shadow-[#ff325d]/40"
               >
                 <Play size={20} className="text-white ms-1" fill="white" />
@@ -90,15 +100,22 @@ function VideoCard({ item, isAr }: { item: MediaItem; isAr: boolean }) {
             </div>
           </>
         )}
-      </div>
+      </a>
 
       {/* Info */}
       <div className={`p-4 flex flex-col flex-1 ${isAr ? 'text-right' : ''}`}>
-        <h3 className={`font-bold text-[#2d185c] text-sm mb-1 leading-snug ${isAr ? '' : 'font-heading'}`}>{item.title}</h3>
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`font-bold text-[#2d185c] text-sm mb-1 leading-snug hover:text-[#ff325d] transition-colors ${isAr ? '' : 'font-heading'}`}
+        >
+          {item.title}
+        </a>
         {item.excerpt && <p className="text-[#2d185c]/60 text-xs leading-relaxed flex-1">{item.excerpt}</p>}
         {item.mediaUrl && (
           <a
-            href={item.mediaUrl}
+            href={href}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 mt-3 text-[#ff325d] text-xs font-medium hover:underline"
@@ -115,27 +132,25 @@ function VideoCard({ item, isAr }: { item: MediaItem; isAr: boolean }) {
 function IconCard({ item, isAr }: { item: MediaItem; isAr: boolean }) {
   const Icon = TYPE_ICONS[item.mediaType] || Newspaper;
   const actionLabel = ACTION_LABELS[item.mediaType]?.[isAr ? 'ar' : 'en'] ?? (isAr ? 'عرض' : 'View');
+  const href = item.mediaUrl || undefined;
 
   const inner = (
     <div className="group rounded-2xl overflow-hidden border border-[#e8e4f5] bg-white hover:shadow-md hover:border-[#ff325d]/30 transition-all h-full flex flex-col">
-      {/* Thumbnail if available, else coloured icon banner */}
       {item.thumbnail ? (
+        /* Thumbnail banner */
         <div className="relative aspect-video overflow-hidden flex-shrink-0 bg-[#2d185c]">
           <img
             src={item.thumbnail}
             alt={item.title}
             className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
           />
-          {/* Platform badge */}
           <div className={`absolute top-3 ${isAr ? 'left-3' : 'right-3'} px-2.5 py-1 rounded-full bg-black/60 text-white text-xs font-medium`}>
             {item.platform}
           </div>
-          {/* Date badge */}
           <div className={`absolute bottom-3 ${isAr ? 'right-3' : 'left-3'} px-2.5 py-1 rounded-full bg-black/60 text-white/80 text-xs flex items-center gap-1`}>
             <Calendar size={10} />
             {formatDate(item.date, isAr)}
           </div>
-          {/* Type icon overlay */}
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
               <Icon size={20} className="text-white" />
@@ -156,17 +171,33 @@ function IconCard({ item, isAr }: { item: MediaItem; isAr: boolean }) {
       {/* Content */}
       <div className={`px-4 pb-4 flex flex-col flex-1 ${item.thumbnail ? 'pt-3' : 'pt-0'} ${isAr ? 'text-right' : ''}`}>
         <div className="text-[#ff325d] text-xs font-semibold mb-1">{item.platform}</div>
-        <div className="font-semibold text-[#2d185c] text-sm leading-snug line-clamp-2 flex-1">{item.title}</div>
+        {href ? (
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-[#2d185c] text-sm leading-snug line-clamp-2 flex-1 hover:text-[#ff325d] transition-colors"
+          >
+            {item.title}
+          </a>
+        ) : (
+          <div className="font-semibold text-[#2d185c] text-sm leading-snug line-clamp-2 flex-1">{item.title}</div>
+        )}
         {item.excerpt && (
           <p className="text-[#2d185c]/60 text-xs leading-relaxed mt-1 line-clamp-2">{item.excerpt}</p>
         )}
         <div className={`flex items-center justify-between mt-3 ${isAr ? 'flex-row-reverse' : ''}`}>
           {item.thumbnail && <DateBadge date={item.date} isAr={isAr} />}
-          {item.mediaUrl ? (
-            <span className="inline-flex items-center gap-1 text-[#ff325d] text-xs font-medium group-hover:underline">
+          {href ? (
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-[#ff325d] text-xs font-medium hover:underline"
+            >
               {actionLabel}
               <ExternalLink size={10} />
-            </span>
+            </a>
           ) : (
             <span />
           )}
@@ -175,13 +206,11 @@ function IconCard({ item, isAr }: { item: MediaItem; isAr: boolean }) {
     </div>
   );
 
-  const className = "block h-full";
-
-  return item.mediaUrl ? (
-    <a href={item.mediaUrl} target="_blank" rel="noopener noreferrer" className={className}>
+  return href ? (
+    <a href={href} target="_blank" rel="noopener noreferrer" className="block h-full">
       {inner}
     </a>
   ) : (
-    <div className={className}>{inner}</div>
+    <div className="block h-full">{inner}</div>
   );
 }
