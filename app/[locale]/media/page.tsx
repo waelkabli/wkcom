@@ -1,12 +1,57 @@
-import { getAllMedia } from '@/lib/media';
+import { getAllMedia, extractYouTubeId } from '@/lib/media';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import MediaGrid from '@/components/MediaGrid';
 import MediaKit from '@/components/MediaKit';
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
+import type { MediaItem } from '@/lib/media';
 
 type Props = { params: Promise<{ locale: string }> };
+
+function buildMediaSchema(items: MediaItem[]) {
+  const graph: object[] = [];
+
+  for (const item of items) {
+    const ytId = extractYouTubeId(item.mediaUrl);
+
+    if (item.mediaType === 'video' || item.mediaType === 'tv') {
+      const thumbnailUrl =
+        item.thumbnail ||
+        (ytId ? `https://img.youtube.com/vi/${ytId}/hqdefault.jpg` : undefined);
+
+      const entry: Record<string, unknown> = {
+        '@type': 'VideoObject',
+        name: item.title,
+        description: item.excerpt,
+        thumbnailUrl,
+        uploadDate: item.date,
+        url: item.mediaUrl,
+      };
+      if (ytId) entry.embedUrl = `https://www.youtube.com/embed/${ytId}`;
+
+      graph.push(entry);
+    } else if (item.mediaType === 'podcast') {
+      graph.push({
+        '@type': 'PodcastEpisode',
+        name: item.title,
+        description: item.excerpt,
+        datePublished: item.date,
+        url: item.mediaUrl,
+        image: item.thumbnail,
+        partOfSeries: {
+          '@type': 'PodcastSeries',
+          name: item.platform,
+        },
+      });
+    }
+  }
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': graph,
+  };
+}
 
 export async function generateStaticParams() {
   return [{ locale: 'ar' }, { locale: 'en' }];
@@ -51,8 +96,14 @@ export default async function MediaPage({ params }: Props) {
   const items = getAllMedia(locale as 'ar' | 'en');
   const isAr = locale === 'ar';
 
+  const schema = buildMediaSchema(items);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <Navigation />
       <main className="min-h-screen bg-[#f8f7ff] pt-20">
         {/* Header */}

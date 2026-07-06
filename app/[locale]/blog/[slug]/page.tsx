@@ -25,12 +25,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const isAr = locale === 'ar';
   const canonicalUrl = `https://waelkabli.com/${locale}/blog/${slug}`;
-  const ogImage = post.coverImage
-    ? { url: post.coverImage, width: 1200, height: 630, alt: post.title ?? '' }
-    : { url: '/images/wael-profile.jpg', width: 800, height: 800, alt: post.title ?? '' };
 
   return {
-    title: post.title,
+    title: post.seoTitle ?? post.title,
     description: post.excerpt,
     alternates: {
       canonical: canonicalUrl,
@@ -51,14 +48,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.date,
       authors: ['https://waelkabli.com'],
       tags: post.tags,
-      images: [ogImage],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.excerpt,
       creator: '@waelkabli',
-      images: [ogImage.url],
     },
   };
 }
@@ -104,7 +99,7 @@ export default async function BlogPostPage({ params }: Props) {
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.updatedAt ?? post.date,
     author: {
       '@type': 'Person',
       name: 'Wael A. Kabli',

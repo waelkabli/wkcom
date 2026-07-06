@@ -8,9 +8,11 @@ export interface Post {
   slug: string;
   type: PostType;
   title?: string;
+  seoTitle?: string;
   excerpt?: string;
   content: string;
   date: string;
+  updatedAt?: string;
   tags?: string[];
   coverImage?: string;
   readingTime?: number;
@@ -52,9 +54,11 @@ export function getPostBySlug(slug: string, locale: 'ar' | 'en'): Post | null {
     slug,
     type: (data.type as PostType) || 'article',
     title: data.title,
+    seoTitle: data.seoTitle,
     excerpt: data.excerpt,
     content,
     date: data.date || new Date().toISOString().slice(0, 10),
+    updatedAt: data.updatedAt,
     tags: data.tags || [],
     coverImage: data.coverImage,
     readingTime: estimateReadingTime(content),

@@ -20,7 +20,7 @@ export interface MediaItem {
 
 const MEDIA_DIR = path.join(process.cwd(), 'content', 'media');
 
-function extractYouTubeId(url: string): string | null {
+export function extractYouTubeId(url: string): string | null {
   const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([A-Za-z0-9_-]{11})/);
   return match ? match[1] : null;
 }
