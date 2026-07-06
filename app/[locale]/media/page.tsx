@@ -69,7 +69,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : 'Interviews, podcasts, TV appearances, and press coverage featuring Wael Kabli.',
     alternates: {
       canonical: canonicalUrl,
-      languages: { ar: '/ar/media', en: '/en/media' },
+      languages: { ar: '/ar/media', en: '/en/media', 'x-default': '/en/media' },
     },
     openGraph: {
       title: isAr ? 'الإعلام والصحافة — وائل كابلي' : 'Media & Press — Wael Kabli',
