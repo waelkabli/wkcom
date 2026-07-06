@@ -11,6 +11,8 @@ export default async function OgImage({ params }: Props) {
   const { locale } = await params;
   const isAr = locale === 'ar';
 
+  const photoData = await fetch(new URL('/images/wael-profile.jpg', 'https://waelkabli.com')).then((r) => r.arrayBuffer());
+
   const name    = isAr ? 'وائل كابلي' : 'Wael A. Kabli';
   const title   = isAr
     ? 'رائد أعمال تقني متسلسل • رائد الصحة الرقمية'
@@ -137,7 +139,7 @@ export default async function OgImage({ params }: Props) {
           </div>
         </div>
 
-        {/* Right: profile photo placeholder / avatar */}
+        {/* Right: profile photo */}
         <div
           style={{
             display: 'flex',
@@ -147,23 +149,21 @@ export default async function OgImage({ params }: Props) {
             zIndex: 10,
           }}
         >
-          <div
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={photoData as unknown as string}
+            alt="Wael A. Kabli"
+            width={220}
+            height={220}
             style={{
               width: 220,
               height: 220,
               borderRadius: '50%',
-              background: 'linear-gradient(135deg, #412384, #ff325d)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
+              objectFit: 'cover',
+              objectPosition: 'top',
               border: '4px solid rgba(255,50,93,0.5)',
-              fontSize: 80,
-              color: 'white',
-              fontWeight: 900,
             }}
-          >
-            WK
-          </div>
+          />
         </div>
       </div>
     ),

@@ -2,6 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import { MapPin, CheckCircle2, Quote } from 'lucide-react';
+import Image from 'next/image';
 
 export default function About() {
   const t = useTranslations('about');
@@ -23,8 +24,8 @@ export default function About() {
 
                 <div className={`relative z-10 ${isAr ? 'text-right' : ''}`}>
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-14 h-14 rounded-full overflow-hidden bg-[#412384] border-2 border-[#ff325d]/40">
-                      <img src="/images/wael-profile.jpg" alt="Wael" className="w-full h-full object-cover object-top" />
+                    <div className="w-14 h-14 rounded-full overflow-hidden bg-[#412384] border-2 border-[#ff325d]/40 relative">
+                      <Image src="/images/wael-profile.jpg" alt="Wael" fill sizes="56px" className="object-cover object-top" />
                     </div>
                     <div>
                       <div className="font-bold text-lg">{isAr ? 'وائل كابلي' : 'Wael Kabli'}</div>

@@ -4,6 +4,21 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Script from 'next/script';
 import type { Metadata } from 'next';
+import { Poppins, Plus_Jakarta_Sans } from 'next/font/google';
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  display: 'swap',
+  variable: '--font-poppins',
+});
+
+const jakartaSans = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-jakarta-sans',
+});
 
 type Props = {
   children: React.ReactNode;
@@ -26,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     metadataBase: new URL('https://waelkabli.com'),
     alternates: {
       canonical: canonicalUrl,
-      languages: { ar: '/ar', en: '/en' },
+      languages: { ar: '/ar', en: '/en', 'x-default': '/en' },
     },
     keywords: isAr
       ? ['وائل كابلي', 'رائد أعمال', 'الصحة الرقمية', 'كيورا', 'مسك 2030', 'ريادة الأعمال', 'رؤية 2030', 'متحدث', 'مستشار']
@@ -70,16 +85,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
 
   return (
-    <html lang={locale} dir={dir} className="h-full scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://font.thmanyah.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang={locale} dir={dir} className={`h-full scroll-smooth ${poppins.variable} ${jakartaSans.variable}`}>
       <body className={`min-h-full flex flex-col antialiased ${locale === 'ar' ? 'font-arabic' : 'font-sans'}`}>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-6P6YEKTLZX" strategy="afterInteractive" />
         <Script id="ga4-init" strategy="afterInteractive">{`

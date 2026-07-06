@@ -33,9 +33,8 @@ const personSchema = {
   nationality: { '@type': 'Country', name: 'Saudi Arabia' },
   address: { '@type': 'PostalAddress', addressLocality: 'Riyadh', addressCountry: 'SA' },
   sameAs: [
-    'https://linkedin.com/in/waelkablli',
-    'https://waelkabli.com/en',
-    'https://waelkabli.com/ar',
+    'https://linkedin.com/in/waelkabli',
+    'https://twitter.com/waelkabli',
   ],
   alumniOf: [
     { '@type': 'EducationalOrganization', name: 'Columbia University' },

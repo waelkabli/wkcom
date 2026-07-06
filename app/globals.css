@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
-/* ─── Google Fonts ─────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
-
 /* ─── Thmanyah Arabic Font ──────────────────────── */
 @font-face {
   font-family: 'Thmanyah';
@@ -55,9 +52,9 @@
   --color-brand-crimson:     var(--brand-crimson);
   --color-brand-deep-purple: var(--brand-deep-purple);
   --color-brand-light:       var(--brand-light-bg);
-  --font-sans:               'Plus Jakarta Sans', sans-serif;
+  --font-sans:               var(--font-jakarta-sans), sans-serif;
   --font-arabic:             'Thmanyah', sans-serif;
-  --font-heading:            'Poppins', sans-serif;
+  --font-heading:            var(--font-poppins), sans-serif;
 }
 
 /* ─── Base ──────────────────────────────────────── */
@@ -68,13 +65,13 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--brand-white);
   color: var(--brand-purple);
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-jakarta-sans), sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 [dir="rtl"] body,
 [dir="rtl"] * {
-  font-family: 'Thmanyah', sans-serif;
+  font-family: 'Thmanyah', var(--font-jakarta-sans), sans-serif;
 }
 
 [dir="rtl"] h1,
@@ -82,7 +79,7 @@ body {
 [dir="rtl"] h3,
 [dir="rtl"] h4,
 [dir="rtl"] .font-heading {
-  font-family: 'Thmanyah', sans-serif;
+  font-family: 'Thmanyah', var(--font-jakarta-sans), sans-serif;
 }
 
 [dir="ltr"] h1,
@@ -90,7 +87,7 @@ body {
 [dir="ltr"] h3,
 [dir="ltr"] h4,
 [dir="ltr"] .font-heading {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-poppins), sans-serif;
 }
 
 /* ─── Selection ─────────────────────────────────── */
@@ -111,7 +108,7 @@ body {
 }
 .prose h1, .prose h2, .prose h3 {
   color: var(--brand-purple);
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-poppins), sans-serif;
   font-weight: 700;
 }
 [dir="rtl"] .prose,
@@ -120,7 +117,7 @@ body {
 [dir="rtl"] .prose h1,
 [dir="rtl"] .prose h2,
 [dir="rtl"] .prose h3 {
-  font-family: 'Thmanyah', sans-serif;
+  font-family: 'Thmanyah', var(--font-jakarta-sans), sans-serif;
 }
 .prose a { color: var(--brand-red); text-decoration: underline; }
 .prose blockquote {

@@ -2,6 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import { GraduationCap, Award } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Education() {
   const t = useTranslations('education');
@@ -46,8 +47,8 @@ export default function Education() {
                   {/* Logo */}
                   {item.logo && (
                     <div className={`mb-3 ${isAr ? 'flex justify-end' : ''}`}>
-                      <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center overflow-hidden p-1.5">
-                        <img src={item.logo} alt={item.school} className="w-full h-full object-contain" />
+                      <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center overflow-hidden p-1.5 relative">
+                        <Image src={item.logo} alt={item.school} fill sizes="48px" className="object-contain p-1.5" />
                       </div>
                     </div>
                   )}
@@ -78,8 +79,8 @@ export default function Education() {
                     <div className={`flex items-center gap-3 flex-1 min-w-0 ${isAr ? 'flex-row-reverse' : ''}`}>
                       {/* Logo */}
                       {item.logo && (
-                        <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-white border border-[#e8e4f5] flex items-center justify-center overflow-hidden p-1">
-                          <img src={item.logo} alt={item.school} className="w-full h-full object-contain" />
+                        <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-white border border-[#e8e4f5] flex items-center justify-center overflow-hidden p-1 relative">
+                          <Image src={item.logo} alt={item.school} fill sizes="36px" className="object-contain p-1" />
                         </div>
                       )}
                       <div className={`min-w-0 ${isAr ? 'text-right' : ''}`}>

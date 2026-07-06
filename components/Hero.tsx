@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { ArrowDown, Download } from 'lucide-react';
+import Image from 'next/image';
 import { trackEvent } from './AnalyticsTracker';
 
 export default function Hero() {
@@ -138,13 +139,13 @@ export default function Hero() {
               <div className="absolute -bottom-4 -left-4 w-8 h-8 hex-clip bg-[#ff6585]" />
               {/* Image container */}
               <div className="absolute inset-6 rounded-full overflow-hidden bg-[#412384] border-4 border-[#ff325d]/40">
-                <img
+                <Image
                   src="/images/wael-profile.jpg"
                   alt="Wael A. Kabli"
-                  className="w-full h-full object-cover object-top"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = 'none';
-                  }}
+                  fill
+                  sizes="(max-width: 640px) 192px, (max-width: 1024px) 208px, 240px"
+                  className="object-cover object-top"
+                  priority
                 />
               </div>
             </div>

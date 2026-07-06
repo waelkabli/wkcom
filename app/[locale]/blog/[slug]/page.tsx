@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { Calendar, Clock, ArrowLeft, Tag } from 'lucide-react';
 import ReactMarkdown, { type Components } from 'react-markdown';
+import NextImage from 'next/image';
 import type { Metadata } from 'next';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -36,6 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         ar: `/ar/blog/${slug}`,
         en: `/en/blog/${slug}`,
+        'x-default': `/en/blog/${slug}`,
       },
     },
     authors: [{ name: isAr ? 'وائل كابلي' : 'Wael A. Kabli', url: 'https://waelkabli.com' }],
@@ -107,7 +109,7 @@ export default async function BlogPostPage({ params }: Props) {
       '@type': 'Person',
       name: 'Wael A. Kabli',
       url: 'https://waelkabli.com',
-      sameAs: ['https://linkedin.com/in/waelkablli'],
+      sameAs: ['https://linkedin.com/in/waelkabli'],
     },
     publisher: {
       '@type': 'Person',
@@ -148,8 +150,8 @@ export default async function BlogPostPage({ params }: Props) {
         {/* Cover image */}
         {post.coverImage && (
           <div className="max-w-4xl mx-auto px-4 mt-6">
-            <div className="rounded-2xl overflow-hidden aspect-video">
-              <img src={post.coverImage} alt={post.title} className="w-full h-full object-cover" />
+            <div className="rounded-2xl overflow-hidden aspect-video relative">
+              <NextImage src={post.coverImage} alt={post.title ?? ''} fill sizes="(max-width: 768px) 100vw, 896px" className="object-cover" />
             </div>
           </div>
         )}
@@ -208,8 +210,8 @@ export default async function BlogPostPage({ params }: Props) {
         {/* Author card */}
         <div className="max-w-3xl mx-auto px-4 pb-16">
           <div className={`flex items-center gap-4 p-5 rounded-2xl bg-[#2d185c] text-white ${isAr ? 'flex-row-reverse' : ''}`}>
-            <div className="w-14 h-14 rounded-full overflow-hidden bg-[#412384] border-2 border-[#ff325d]/40 flex-shrink-0">
-              <img src="/images/wael-profile.jpg" alt="Wael" className="w-full h-full object-cover" />
+            <div className="w-14 h-14 rounded-full overflow-hidden bg-[#412384] border-2 border-[#ff325d]/40 flex-shrink-0 relative">
+              <NextImage src="/images/wael-profile.jpg" alt="Wael" fill sizes="56px" className="object-cover" />
             </div>
             <div className={isAr ? 'text-right' : ''}>
               <div className="font-bold">{isAr ? 'وائل كابلي' : 'Wael A. Kabli'}</div>

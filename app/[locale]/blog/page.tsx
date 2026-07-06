@@ -13,13 +13,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonicalUrl = `https://waelkabli.com/${locale}/blog`;
 
   return {
-    title: isAr ? 'المدونة' : 'Blog',
+    title: isAr
+      ? 'مقالات وائل كابلي | ريادة الأعمال والصحة الرقمية'
+      : 'Blog — Entrepreneurship, Digital Health & Leadership',
     description: isAr
       ? 'مقالات وأفكار من وائل كابلي عن ريادة الأعمال، الصحة الرقمية، القيادة، والابتكار.'
       : 'Articles and insights from Wael Kabli on entrepreneurship, digital health, leadership, and innovation.',
     alternates: {
       canonical: canonicalUrl,
-      languages: { ar: '/ar/blog', en: '/en/blog' },
+      languages: { ar: '/ar/blog', en: '/en/blog', 'x-default': '/en/blog' },
     },
     openGraph: {
       title: isAr ? 'المدونة — وائل كابلي' : 'Blog — Wael Kabli',
