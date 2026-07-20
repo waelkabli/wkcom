@@ -106,7 +106,7 @@ body {
   color: var(--brand-purple);
   max-width: 72ch;
 }
-.prose h1, .prose h2, .prose h3 {
+.prose h1, .prose h2, .prose h3, .prose h4 {
   color: var(--brand-purple);
   font-family: var(--font-poppins), sans-serif;
   font-weight: 700;
@@ -116,15 +116,53 @@ body {
 [dir="rtl"] .prose li,
 [dir="rtl"] .prose h1,
 [dir="rtl"] .prose h2,
-[dir="rtl"] .prose h3 {
+[dir="rtl"] .prose h3,
+[dir="rtl"] .prose h4 {
   font-family: 'Thmanyah', var(--font-jakarta-sans), sans-serif;
 }
-.prose a { color: var(--brand-red); text-decoration: underline; }
+
+/* Spacing */
+.prose p {
+  margin-bottom: 1.35em;
+  line-height: 1.85;
+}
+.prose h2 {
+  font-size: 1.45em;
+  margin-top: 2.25em;
+  margin-bottom: 0.75em;
+  line-height: 1.35;
+}
+.prose h3 {
+  font-size: 1.2em;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+  line-height: 1.4;
+}
+.prose h4 {
+  font-size: 1.05em;
+  margin-top: 1.75em;
+  margin-bottom: 0.5em;
+}
+.prose ul, .prose ol {
+  margin-top: 0.75em;
+  margin-bottom: 1.25em;
+  padding-left: 1.6em;
+}
+[dir="rtl"] .prose ul,
+[dir="rtl"] .prose ol {
+  padding-left: 0;
+  padding-right: 1.6em;
+}
+.prose li {
+  margin-bottom: 0.5em;
+  line-height: 1.75;
+}
 .prose blockquote {
   border-left: 4px solid var(--brand-red);
   padding-left: 1rem;
   color: var(--brand-deep-purple);
   font-style: italic;
+  margin: 1.75em 0;
 }
 [dir="rtl"] .prose blockquote {
   border-left: none;
@@ -132,6 +170,16 @@ body {
   padding-left: 0;
   padding-right: 1rem;
 }
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--brand-border);
+  margin: 2.5em 0;
+}
+.prose img {
+  border-radius: 0.75rem;
+  margin: 1.75em auto;
+}
+.prose a { color: var(--brand-red); text-decoration: underline; }
 .prose code {
   background: var(--brand-light-bg);
   padding: 0.2em 0.4em;

@@ -48,12 +48,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.date,
       authors: ['https://waelkabli.com'],
       tags: post.tags,
+      images: post.coverImage
+        ? [{ url: `https://waelkabli.com${post.coverImage}`, width: 1200, height: 630, alt: post.title ?? '' }]
+        : [{ url: 'https://waelkabli.com/images/wael-profile.jpg', width: 400, height: 400, alt: isAr ? 'وائل كابلي' : 'Wael A. Kabli' }],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.excerpt,
       creator: '@waelkabli',
+      images: post.coverImage
+        ? [`https://waelkabli.com${post.coverImage}`]
+        : ['https://waelkabli.com/images/wael-profile.jpg'],
     },
   };
 }
@@ -61,6 +67,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 function getYouTubeId(text: string): string | null {
   const m = text.trim().match(/^https?:\/\/(?:www\.)?(?:youtu\.be\/|youtube\.com\/watch\?v=)([a-zA-Z0-9_-]{11})/);
   return m ? m[1] : null;
+}
+
+function stripCoverImageFromContent(content: string, coverImage?: string): string {
+  if (!coverImage) return content;
+  const escaped = coverImage.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return content.replace(new RegExp(`!\\[[^\\]]*\\]\\(${escaped}\\)[ \t]*\\r?\\n?`), '').trimStart();
 }
 
 const mdComponents: Components = {
@@ -91,6 +103,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   const t = await getTranslations('blog');
   const isAr = locale === 'ar';
+  const cleanContent = stripCoverImageFromContent(post.content, post.coverImage);
 
   // JSON-LD for blog post (Article schema)
   const articleSchema = {
@@ -173,20 +186,20 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
 
           {post.title && (
-            <h1 className={`text-3xl sm:text-4xl font-black text-[#2d185c] mb-4 leading-tight ${isAr ? '' : 'font-heading'}`}>
+            <h1 className={`text-3xl sm:text-4xl font-black text-[#2d185c] mb-5 leading-tight ${isAr ? '' : 'font-heading'}`}>
               {post.title}
             </h1>
           )}
 
           {post.excerpt && (
-            <p className="text-[#2d185c]/65 text-lg leading-relaxed mb-6 border-s-4 border-[#ff325d] ps-4 italic">
+            <p className="text-[#2d185c]/65 text-lg leading-relaxed mb-8 border-s-4 border-[#ff325d] ps-4 italic">
               {post.excerpt}
             </p>
           )}
 
           {/* Tags */}
           {post.tags && post.tags.length > 0 && (
-            <div className={`flex flex-wrap gap-2 mb-8 ${isAr ? 'flex-row-reverse' : ''}`}>
+            <div className={`flex flex-wrap gap-2 mb-10 ${isAr ? 'flex-row-reverse' : ''}`}>
               {post.tags.map((tag) => (
                 <span key={tag} className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-white border border-[#e8e4f5] text-[#412384] text-xs font-medium">
                   <Tag size={10} />
@@ -198,7 +211,7 @@ export default async function BlogPostPage({ params }: Props) {
 
           {/* Content */}
           <div className="prose prose-lg max-w-none">
-            <ReactMarkdown components={mdComponents}>{post.content}</ReactMarkdown>
+            <ReactMarkdown components={mdComponents}>{cleanContent}</ReactMarkdown>
           </div>
         </article>
 
