@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getPostBySlug, getPostSlugs } from '@/lib/blog';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import PhotoGallery from '@/components/PhotoGallery';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { Calendar, Clock, ArrowLeft, Tag } from 'lucide-react';
 import ReactMarkdown, { type Components } from 'react-markdown';
@@ -93,6 +94,26 @@ const mdComponents: Components = {
       );
     }
     return <p>{children}</p>;
+  },
+  // Strip the <pre> wrapper if the child is a custom component (e.g. PhotoGallery)
+  pre({ children }) {
+    const child = Array.isArray(children) ? children[0] : children;
+    if (child && typeof child === 'object' && 'type' in child && typeof (child as { type: unknown }).type === 'function') {
+      return <>{children}</>;
+    }
+    return <pre>{children}</pre>;
+  },
+  code({ className, children }) {
+    const lang = className?.replace('language-', '') ?? '';
+    if (lang === 'gallery') {
+      const lines = String(children).trim().split('\n').filter(Boolean);
+      const images = lines.map((line) => {
+        const [src, ...altParts] = line.split('|');
+        return { src: src.trim(), alt: altParts.join('|').trim() };
+      });
+      return <PhotoGallery images={images} />;
+    }
+    return <code className={className}>{children}</code>;
   },
 };
 
