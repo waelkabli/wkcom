@@ -104,14 +104,50 @@ These are like Twitter/X posts — brief, punchy, direct.
 - Reference them as `/images/posts/your-image.jpg` (absolute from `/public`)
 - Only set an image in the frontmatter `coverImage` — do NOT repeat it in the body
 - For inline images inside the post (different from cover), use standard markdown: `![Alt text](/images/posts/other-image.jpg)`
+- Name image files with the post slug as prefix: `wil-eu-gcc-1.jpg`, `wil-eu-gcc-2.jpg`, etc.
+
+---
+
+## Photo Gallery (multiple photos)
+
+Use a `gallery` fenced code block. Each line is `image-path|Alt text`:
+
+````mdx
+```gallery
+/images/posts/my-post-2.jpg|Caption describing the photo
+/images/posts/my-post-3.jpg|Another caption
+/images/posts/my-post-4.jpg|Third photo caption
+```
+````
+
+- The gallery renders as a responsive grid with a fullscreen lightbox (prev/next arrows, keyboard nav, dot pagination)
+- Grid adapts automatically: 2 images → 2 columns, 3 → 3 columns, 4 → 2×2
+- Clicking any thumbnail opens the lightbox; Esc closes it, ← → navigate
+- GA events fire on `gallery_open` and `gallery_navigate` automatically
+- **Do NOT include the `coverImage` photo in the gallery** — it already appears as the hero at the top
+
+---
+
+## YouTube Videos
+
+Paste a bare YouTube URL on its own line (no markdown link syntax). It embeds automatically:
+
+```mdx
+## Event Video
+
+https://youtu.be/VIDEO_ID
+```
+
+Both `youtu.be/` and `youtube.com/watch?v=` formats are supported. The `?si=` tracking parameter is fine to include — it's stripped automatically.
 
 ---
 
 ## Checklist before publishing
 
 - [ ] Both Arabic and English versions created
-- [ ] Cover image set only in frontmatter (not repeated in body)
+- [ ] Cover image set only in frontmatter (not repeated in body or gallery)
 - [ ] Excerpt is one sharp sentence
-- [ ] Tags match between AR/EN versions
+- [ ] Tags match between AR/EN versions (translated)
 - [ ] Date is correct (YYYY-MM-DD)
 - [ ] Slug is the same for both language files
+- [ ] Image files are in `public/images/posts/` with slug-prefixed names
