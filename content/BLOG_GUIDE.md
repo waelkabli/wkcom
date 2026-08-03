@@ -138,7 +138,57 @@ Paste a bare YouTube URL on its own line (no markdown link syntax). It embeds au
 https://youtu.be/VIDEO_ID
 ```
 
-Both `youtu.be/` and `youtube.com/watch?v=` formats are supported. The `?si=` tracking parameter is fine to include — it's stripped automatically.
+Supported formats:
+- `youtu.be/VIDEO_ID` — short link
+- `youtube.com/watch?v=VIDEO_ID` — regular video (renders 16:9 widescreen)
+- `youtube.com/shorts/VIDEO_ID` — Short (renders portrait 9:16, centered, phone-width)
+
+The `?si=` tracking parameter is fine to include — it's stripped automatically.
+
+### YouTube Shorts
+
+Shorts embed in a centered portrait container (320px wide, 9:16). Use a `## Watch` heading (EN) or `## شاهد` (AR) to frame it:
+
+```mdx
+## Watch
+
+https://youtube.com/shorts/VIDEO_ID
+```
+
+```mdx
+## شاهد
+
+https://youtube.com/shorts/VIDEO_ID
+```
+
+### Template: Article with Embedded Short
+
+Use this structure when the post has an accompanying Short:
+
+```mdx
+---
+type: article
+title: "Your Title"
+excerpt: "One-sentence summary."
+date: "2025-11-01"
+tags: ["Tag1"]
+coverImage: "/images/posts/your-image.jpg"
+---
+
+Opening paragraph.
+
+## Section heading
+
+Body content...
+
+## Watch
+
+https://youtube.com/shorts/VIDEO_ID
+```
+
+- Place the Short **at the end** of the article as the final section
+- In Arabic, use `## شاهد` instead of `## Watch`
+- Don't add any descriptive text between the heading and the URL — the embed speaks for itself
 
 ---
 

@@ -65,9 +65,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-function getYouTubeId(text: string): string | null {
-  const m = text.trim().match(/^https?:\/\/(?:www\.)?(?:youtu\.be\/|youtube\.com\/watch\?v=)([a-zA-Z0-9_-]{11})/);
-  return m ? m[1] : null;
+function getYouTubeEmbed(text: string): { id: string; isShort: boolean } | null {
+  const trimmed = text.trim();
+  const shorts = trimmed.match(/^https?:\/\/(?:www\.)?youtube\.com\/shorts\/([a-zA-Z0-9_-]{11})/);
+  if (shorts) return { id: shorts[1], isShort: true };
+  const regular = trimmed.match(/^https?:\/\/(?:www\.)?(?:youtu\.be\/|youtube\.com\/watch\?v=)([a-zA-Z0-9_-]{11})/);
+  if (regular) return { id: regular[1], isShort: false };
+  return null;
 }
 
 function stripCoverImageFromContent(content: string, coverImage?: string): string {
@@ -79,12 +83,25 @@ function stripCoverImageFromContent(content: string, coverImage?: string): strin
 const mdComponents: Components = {
   p({ children }) {
     const text = typeof children === 'string' ? children : '';
-    const vid = text ? getYouTubeId(text) : null;
-    if (vid) {
+    const embed = text ? getYouTubeEmbed(text) : null;
+    if (embed) {
+      if (embed.isShort) {
+        return (
+          <div className="my-6 mx-auto w-full max-w-[320px] aspect-[9/16] rounded-xl overflow-hidden">
+            <iframe
+              src={`https://www.youtube.com/embed/${embed.id}`}
+              className="w-full h-full"
+              allowFullScreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              title="YouTube Short"
+            />
+          </div>
+        );
+      }
       return (
         <div className="my-6 aspect-video rounded-xl overflow-hidden">
           <iframe
-            src={`https://www.youtube.com/embed/${vid}`}
+            src={`https://www.youtube.com/embed/${embed.id}`}
             className="w-full h-full"
             allowFullScreen
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
