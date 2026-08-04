@@ -32,7 +32,7 @@ export default function BlogComments({ locale, slug }: Props) {
       document.head.appendChild(link);
     }
 
-    let instance: { destroy: () => void } | undefined;
+    let instance: { destroy: () => void } | null | undefined;
 
     import('@waline/client').then(({ init }) => {
       if (!containerRef.current) return;
