@@ -1,7 +1,8 @@
 'use client';
 
+import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
-import { Building2, Users2, Target, Lightbulb, Mic2 } from 'lucide-react';
+import { Building2, Users2, Target, Lightbulb, Mic2, ArrowRight } from 'lucide-react';
 
 const ICONS: Record<string, React.ElementType> = {
   building2: Building2,
@@ -9,6 +10,14 @@ const ICONS: Record<string, React.ElementType> = {
   target: Target,
   lightbulb: Lightbulb,
   mic2: Mic2,
+};
+
+const SERVICE_SLUGS: Record<string, string> = {
+  building2: 'executive-consultant',
+  users2: 'board-advisor',
+  target: 'startup-mentor',
+  lightbulb: 'executive-coach',
+  mic2: 'keynote-speaker',
 };
 
 export default function Services() {
@@ -39,7 +48,7 @@ export default function Services() {
             return (
               <div
                 key={i}
-                className={`group rounded-2xl p-6 border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                className={`group rounded-2xl p-6 border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col ${
                   featured
                     ? 'bg-[#2d185c] border-transparent text-white'
                     : 'bg-white border-[#e8e4f5] hover:border-[#ff325d]/30'
@@ -56,7 +65,7 @@ export default function Services() {
                   {item.description}
                 </p>
 
-                <div className={`flex flex-wrap gap-2 ${isAr ? 'justify-end' : ''}`}>
+                <div className={`flex flex-wrap gap-2 mb-5 ${isAr ? 'justify-end' : ''}`}>
                   {item.tags.map((tag) => (
                     <span
                       key={tag}
@@ -69,6 +78,20 @@ export default function Services() {
                       {tag}
                     </span>
                   ))}
+                </div>
+
+                <div className="mt-auto">
+                  <Link
+                    href={`/${locale}/services/${SERVICE_SLUGS[item.icon] ?? ''}`}
+                    className={`inline-flex items-center gap-1.5 text-sm font-semibold transition-colors ${
+                      featured
+                        ? 'text-[#ff325d] hover:text-white'
+                        : 'text-[#ff325d] hover:text-[#2d185c]'
+                    } ${isAr ? 'flex-row-reverse' : ''}`}
+                  >
+                    {isAr ? 'اعرف أكثر' : 'Learn More'}
+                    <ArrowRight size={14} className={isAr ? 'rotate-180' : ''} />
+                  </Link>
                 </div>
               </div>
             );

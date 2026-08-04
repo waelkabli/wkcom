@@ -4,6 +4,8 @@ import { getPostBySlug, getPostSlugs } from '@/lib/blog';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import PhotoGallery from '@/components/PhotoGallery';
+import ShareButtons from '@/components/ShareButtons';
+import GiscusComments from '@/components/GiscusComments';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { Calendar, Clock, ArrowLeft, Tag } from 'lucide-react';
 import ReactMarkdown, { type Components } from 'react-markdown';
@@ -253,8 +255,15 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </article>
 
+        {/* Share buttons */}
+        <div className="max-w-3xl mx-auto px-4 pb-8">
+          <div className="border-t border-[#e8e4f5] pt-8">
+            <ShareButtons url={`/${locale}/blog/${slug}`} title={post.title ?? ''} locale={locale as 'ar' | 'en'} />
+          </div>
+        </div>
+
         {/* Author card */}
-        <div className="max-w-3xl mx-auto px-4 pb-16">
+        <div className="max-w-3xl mx-auto px-4 pb-8">
           <div className={`flex items-center gap-4 p-5 rounded-2xl bg-[#2d185c] text-white ${isAr ? 'flex-row-reverse' : ''}`}>
             <div className="w-14 h-14 rounded-full overflow-hidden bg-[#412384] border-2 border-[#ff325d]/40 flex-shrink-0 relative">
               <NextImage src="/images/wael-profile.jpg" alt="Wael" fill sizes="56px" className="object-cover" />
@@ -267,6 +276,11 @@ export default async function BlogPostPage({ params }: Props) {
               </a>
             </div>
           </div>
+        </div>
+
+        {/* Comments & reactions (Giscus) */}
+        <div className="max-w-3xl mx-auto px-4 pb-16">
+          <GiscusComments locale={locale as 'ar' | 'en'} />
         </div>
       </main>
       <Footer />

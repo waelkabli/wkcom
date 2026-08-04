@@ -77,10 +77,14 @@ export default function BlogList({ posts }: { posts: Post[] }) {
                   {post.readingTime && (
                     <span className="flex items-center gap-1"><Clock size={11} />{post.readingTime} {t('minuteRead')}</span>
                   )}
-                  {post.tags?.map((tag) => (
-                    <span key={tag} className="px-1.5 py-0.5 rounded-full bg-[#f8f7ff] border border-[#e8e4f5]">#{tag}</span>
-                  ))}
                 </div>
+                {post.tags && post.tags.length > 0 && (
+                  <div className={`flex flex-wrap gap-1.5 mt-1.5 ${isAr ? 'flex-row-reverse' : ''}`}>
+                    {post.tags.map((tag) => (
+                      <span key={tag} className="px-1.5 py-0.5 rounded-full bg-[#f8f7ff] border border-[#e8e4f5] text-[#2d185c]/40 text-xs">#{tag}</span>
+                    ))}
+                  </div>
+                )}
               </div>
 
               <div className="flex-shrink-0 self-center">

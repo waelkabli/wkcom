@@ -46,14 +46,25 @@ export default async function Footer() {
           {/* Social */}
           <div className={`flex items-center gap-3 ${isAr ? 'flex-row-reverse' : ''}`}>
             {[
-              { href: 'https://linkedin.com/in/waelkablli', label: 'in' },
-              { href: 'https://x.com/waelkabli', label: '𝕏' },
+              { href: 'https://linkedin.com/in/waelkablli', label: 'in', title: 'LinkedIn' },
+              { href: 'https://x.com/waelkabli', label: '𝕏', title: 'X / Twitter' },
+              { href: 'https://www.youtube.com/waelkabli', title: 'YouTube', label: (
+                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              )},
+              { href: 'https://www.tiktok.com/@waelkabli', title: 'TikTok', label: (
+                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.97a8.27 8.27 0 0 0 4.83 1.54V7.07a4.84 4.84 0 0 1-1.06-.38z"/>
+                </svg>
+              )},
             ].map((s) => (
               <a
-                key={s.label}
+                key={s.title}
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                title={s.title}
                 className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#ff325d] flex items-center justify-center text-white/60 hover:text-white font-bold text-sm transition-all"
               >
                 {s.label}
