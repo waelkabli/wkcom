@@ -5,7 +5,8 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import PhotoGallery from '@/components/PhotoGallery';
 import ShareButtons from '@/components/ShareButtons';
-import GiscusComments from '@/components/GiscusComments';
+import ReactionBar from '@/components/ReactionBar';
+import BlogComments from '@/components/BlogComments';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { Calendar, Clock, ArrowLeft, Tag } from 'lucide-react';
 import ReactMarkdown, { type Components } from 'react-markdown';
@@ -278,9 +279,18 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </div>
 
-        {/* Comments & reactions (Giscus) */}
+        {/* Emoji reactions */}
+        <div className="max-w-3xl mx-auto px-4 pb-8">
+          <div className="border-t border-[#e8e4f5] pt-8">
+            <ReactionBar slug={slug} locale={locale as 'ar' | 'en'} />
+          </div>
+        </div>
+
+        {/* Comments (Waline) */}
         <div className="max-w-3xl mx-auto px-4 pb-16">
-          <GiscusComments locale={locale as 'ar' | 'en'} />
+          <div className="border-t border-[#e8e4f5] pt-8">
+            <BlogComments slug={slug} locale={locale as 'ar' | 'en'} />
+          </div>
         </div>
       </main>
       <Footer />
