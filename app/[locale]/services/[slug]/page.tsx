@@ -116,10 +116,10 @@ export default async function ServicePage({ params }: Props) {
                   {isAr ? 'ابدأ المحادثة' : 'Start a Conversation'}
                 </a>
                 <a
-                  href="mailto:waelkabli@gmail.com"
+                  href={`/${locale}#contact`}
                   className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full border-2 border-[#2d185c] text-[#2d185c] font-semibold text-sm hover:bg-[#2d185c] hover:text-white transition-all whitespace-nowrap"
                 >
-                  waelkabli@gmail.com
+                  {isAr ? 'نموذج التواصل' : 'Contact Form'}
                 </a>
               </div>
             </div>
@@ -335,10 +335,10 @@ export default async function ServicePage({ params }: Props) {
                 {isAr ? 'تواصل معي' : 'Contact Me'}
               </a>
               <a
-                href="mailto:waelkabli@gmail.com"
+                href={`/${locale}#contact`}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border-2 border-white/40 text-white font-semibold text-base hover:bg-white/10 transition-all"
               >
-                waelkabli@gmail.com
+                {isAr ? 'نموذج التواصل' : 'Contact Form'}
               </a>
             </div>
           </div>
