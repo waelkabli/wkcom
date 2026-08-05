@@ -44,7 +44,7 @@ export async function POST(req: NextRequest, { params }: Params) {
 
   const { error } = await supabase
     .from('comments')
-    .insert({ slug, nick, content });
+    .insert({ slug, nick, content, approved: true });
 
   if (error) return NextResponse.json({ error: 'Failed to save' }, { status: 500 });
 
