@@ -29,7 +29,17 @@ $$ LANGUAGE plpgsql;
 -- CREATE POLICY "anyone can update" ON reactions FOR UPDATE USING (true);
 
 -- ──────────────────────────────────────────────
--- Waline comment tables
--- Waline creates these automatically on first run — no manual setup needed.
--- Just connect Waline to this Supabase project via DATABASE_URL (see README).
+-- Comments table (custom system, replaces Waline)
 -- ──────────────────────────────────────────────
+CREATE TABLE IF NOT EXISTS comments (
+  id         UUID        DEFAULT gen_random_uuid() PRIMARY KEY,
+  slug       TEXT        NOT NULL,
+  nick       TEXT,
+  content    TEXT        NOT NULL,
+  approved   BOOLEAN     DEFAULT false,
+  created_at TIMESTAMPTZ DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS comments_slug_approved_idx ON comments(slug, approved);
+
+-- To approve a comment: flip approved = true in Supabase Table Editor

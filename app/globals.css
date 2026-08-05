@@ -236,17 +236,3 @@ body {
 [dir="rtl"] .timeline-dot { right: -0.625rem; left: auto; }
 [dir="ltr"] .timeline-dot { left: -0.625rem; right: auto; }
 
-/* ─── Waline comments brand overrides ──────────── */
-.wl-panel,
-.waline-wrapper {
-  --waline-theme-color:   var(--brand-red);
-  --waline-active-color:  var(--brand-red);
-  --waline-bgcolor:       var(--brand-light-bg);
-  --waline-bgcolor-light: #ffffff;
-  --waline-color:         var(--brand-purple);
-  --waline-border-color:  var(--brand-border);
-  --waline-border:        1px solid var(--brand-border);
-  --waline-avatar-size:   2.5rem;
-  --waline-m-avatar-size: 2rem;
-  --waline-font-size:     0.9375rem;
-}
