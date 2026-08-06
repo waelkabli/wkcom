@@ -10,11 +10,40 @@ Create an `.mdx` file in the correct language folder:
 
 ---
 
+## Content Types
+
+There are two values for the `type` frontmatter field. Within `article`, the format varies by the media it carries.
+
+### `micro` — Short thought
+
+A single idea, no title. Like a long tweet. No cover image, no sections. Just the thought.
+
+### `article` — Full post
+
+A titled post with an excerpt. Articles come in four formats based on media:
+
+| Format | Has `coverImage`? | Has YouTube embed? | Has gallery? | When to use |
+|---|---|---|---|---|
+| **Text** | No | No | No | Pure writing — no supporting media |
+| **Cover image** | Yes | No | No | One strong visual sets the scene |
+| **Video** | No | Yes | No | The video *is* the content; text frames it |
+| **Photo essay** | Yes | No | Yes | Event recap, trip, or visual story with multiple photos |
+| **Mixed** | Yes | Yes | Yes | Rich post combining cover + embedded video + gallery |
+
+Rules:
+- Cover image and gallery photos are mutually exclusive within the gallery block — never repeat the cover in the gallery
+- Video articles: embed goes at the end as the last section (`## Watch` / `## شاهد`)
+- Text articles can still have inline images (`![alt](/images/posts/...)`) — these are one-offs, not galleries
+- Any format can be combined with a YouTube Short at the end
+
+---
+
 ## Frontmatter
 
 ```mdx
 ---
 type: article          # "article" for full posts, "micro" for short thoughts
+format: cover-image    # article only — see Content Types table: text | cover-image | video | photo-essay | mixed
 title: "Post Title"
 seoTitle: "Optional shorter SEO title"   # omit if same as title
 excerpt: "One-sentence summary shown in listings and used as OG description."
