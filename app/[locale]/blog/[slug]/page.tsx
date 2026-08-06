@@ -11,6 +11,7 @@ import { getLocale, getTranslations } from 'next-intl/server';
 import { Calendar, Clock, ArrowLeft, Tag } from 'lucide-react';
 import ReactMarkdown, { type Components } from 'react-markdown';
 import NextImage from 'next/image';
+import ViewCounter from '@/components/ViewCounter';
 import type { Metadata } from 'next';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -224,6 +225,7 @@ export default async function BlogPostPage({ params }: Props) {
                 {post.readingTime} {t('minuteRead')}
               </span>
             )}
+            <ViewCounter slug={slug} />
           </div>
 
           {post.title && (

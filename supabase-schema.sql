@@ -43,3 +43,45 @@ CREATE TABLE IF NOT EXISTS comments (
 CREATE INDEX IF NOT EXISTS comments_slug_approved_idx ON comments(slug, approved);
 
 -- To approve a comment: flip approved = true in Supabase Table Editor
+
+-- ──────────────────────────────────────────────
+-- Reaction event log (for daily digest emails)
+-- ──────────────────────────────────────────────
+CREATE TABLE IF NOT EXISTS reaction_logs (
+  id         UUID        DEFAULT gen_random_uuid() PRIMARY KEY,
+  slug       TEXT        NOT NULL,
+  emoji      TEXT        NOT NULL,
+  action     TEXT        NOT NULL,  -- 'add' or 'remove'
+  created_at TIMESTAMPTZ DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS reaction_logs_created_at_idx ON reaction_logs(created_at);
+
+-- ──────────────────────────────────────────────
+-- Page view counts
+-- ──────────────────────────────────────────────
+CREATE TABLE IF NOT EXISTS page_views (
+  slug       TEXT        PRIMARY KEY,
+  count      INTEGER     NOT NULL DEFAULT 0,
+  updated_at TIMESTAMPTZ DEFAULT now()
+);
+
+-- ⚠️  IMPORTANT: Run the block above first (it creates the tables).
+-- Supabase injects RLS statements after CREATE TABLE which break dollar-quoted
+-- functions if they're in the same query. Paste only the block below into a
+-- NEW query and run it separately.
+
+-- ── Run this as a SEPARATE query ───────────────
+CREATE OR REPLACE FUNCTION increment_page_view(p_slug TEXT)
+RETURNS INTEGER AS $$
+DECLARE
+  new_count INTEGER;
+BEGIN
+  INSERT INTO page_views (slug, count)
+  VALUES (p_slug, 1)
+  ON CONFLICT (slug)
+  DO UPDATE SET count = page_views.count + 1, updated_at = now()
+  RETURNING count INTO new_count;
+  RETURN new_count;
+END;
+$$ LANGUAGE plpgsql;
