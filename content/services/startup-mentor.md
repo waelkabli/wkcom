@@ -1,5 +1,6 @@
 ---
 slug: startup-mentor
+showPrices: false
 icon: target
 
 title:

@@ -1,5 +1,6 @@
 ---
 slug: keynote-speaker
+showPrices: false
 icon: mic2
 
 title:

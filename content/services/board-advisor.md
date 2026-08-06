@@ -1,5 +1,6 @@
 ---
 slug: board-advisor
+showPrices: false
 icon: users2
 
 title:

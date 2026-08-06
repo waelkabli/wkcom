@@ -13,6 +13,7 @@ export interface Package {
 
 export interface ServiceData {
   slug: string;
+  showPrices?: boolean;
   icon: string;
   title: { ar: string; en: string };
   tagline: { ar: string; en: string };

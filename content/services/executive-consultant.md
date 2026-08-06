@@ -1,5 +1,6 @@
 ---
 slug: executive-consultant
+showPrices: false
 icon: building2
 
 title:

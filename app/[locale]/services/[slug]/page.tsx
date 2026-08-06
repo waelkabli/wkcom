@@ -257,6 +257,7 @@ export default async function ServicePage({ params }: Props) {
                     </p>
                   </div>
 
+                  {service.showPrices !== false && (
                   <div className="mb-5">
                     <span className={`text-3xl font-black ${pkg.featured ? 'text-[#ff325d]' : 'text-[#2d185c]'}`}>
                       {t(pkg.price)}
@@ -265,6 +266,7 @@ export default async function ServicePage({ params }: Props) {
                       / {t(pkg.period)}
                     </span>
                   </div>
+                  )}
 
                   <ul className="space-y-2 mb-6 flex-1">
                     {pkg.includes.map((item, j) => (
@@ -289,11 +291,13 @@ export default async function ServicePage({ params }: Props) {
               ))}
             </div>
 
+            {service.showPrices !== false && (
             <p className={`text-center text-[#2d185c]/40 text-xs mt-8 ${isAr ? '' : ''}`}>
               {isAr
                 ? 'الأسعار تُذكر بالريال السعودي. يمكن تعديل النطاقات بناءً على طبيعة المشروع والمدة.'
                 : 'Prices in SAR. Scope and duration may adjust the final rate. All engagements start with a no-commitment call.'}
             </p>
+            )}
           </div>
         </section>
 

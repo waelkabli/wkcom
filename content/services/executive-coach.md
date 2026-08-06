@@ -1,5 +1,6 @@
 ---
 slug: executive-coach
+showPrices: false
 icon: lightbulb
 
 title:
