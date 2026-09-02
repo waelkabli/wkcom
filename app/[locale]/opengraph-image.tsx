@@ -18,7 +18,7 @@ export default async function OgImage({ params }: Props) {
     ? 'رائد أعمال تقني متسلسل • رائد الصحة الرقمية'
     : 'Serial Tech Entrepreneur  •  Digital Health Pioneer';
   const tagline = isAr
-    ? 'رائد أعمال متسلسل | قائد مسك 2030 | مبتكر في الصحة الرقمية'
+    ? 'رائد أعمال ومؤسس لعدة شركات تقنية | من قادة مسك 2030 وعضو المجلس السعودي للقادة | مستثمر في البيانات الضخمة والذكاء الاصطناعي والصحة الرقمية | كوتش | متحدث'
     : 'Misk 2030 Leader  |  Founder & CEO of Cura  |  Speaker & Advisor';
   const site = 'waelkabli.com';
 
