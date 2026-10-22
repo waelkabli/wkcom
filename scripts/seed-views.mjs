@@ -55,7 +55,9 @@ const lines = csv.split('\n').map(l => l.trim()).filter(Boolean);
 // The data header row contains "Page path" or "Page path and screen class"
 let headerIdx = -1;
 for (let i = 0; i < lines.length; i++) {
-  if (lines[i].toLowerCase().includes('page path')) {
+  const lower = lines[i].toLowerCase();
+  // Must be a real data row (has commas) not a comment line
+  if (!lines[i].startsWith('#') && lower.includes('page path') && lines[i].includes(',')) {
     headerIdx = i;
     break;
   }
