@@ -1,366 +1,434 @@
-# Health Transformation: 13 Proposed Article Rewrites
+# Health Transformation: 13 Articles From Experience to Decisions
 
-**Wael Kabli | English edition | Editorial review: 22 October 2026**
+**Wael Kabli | Revised English edition: 23 October 2026**
 
-These are English adaptations of the revised Arabic articles, presented in the same order. Each develops a distinct argument through an operating example and a practical implication. The existing Arabic page is identified for editorial tracking. Contextual references within the articles lead to English sources, including the English edition of Wael's blog.
+These articles draw on my account of building Cura in Rimthan and my explanation of Saudi health transformation in Thmanyah's Fajr podcast. They adapt the latest Arabic edition into English. Each article includes its relevant clip, a suggested insertion point, and supporting footage where useful. An editing guide follows the articles.
 
-**Podcast source:** Wael Kabli's interview on Thmanyah's Fajr podcast, transcribed in `Thmanya-Alfajr-National-Insurance(1).srt`. The project's `Rimthan-Investing-In-Telemedicine.srt` contains an esports transcript. The health analysis therefore draws on the Fajr interview. Timestamps follow that transcript. The articles develop the ideas further through analysis and recommendations.
+**Podcast sources:** `Rimthan-Investing-In-Telemedicine(1).srt` and `Thmanya-Alfajr-National-Insurance(2).srt`.
 
-## Series index
+**Video editing note:** Timestamps come from the transcripts. Rimthan is divided into blocks of approximately 30 seconds. The ranges locate the material; listening to the recording is necessary to place the final cut at a complete sentence. The Arabic cues in the editing guide help locate the passage in the original audio. Articles extend the podcast ideas through further analysis and recommendations.
 
-| # | Proposed title | Podcast clip | Distinct contribution |
-|---:|---|---|---|
-| 1 | National Health Insurance: How Will We Pay Providers? | 03:30 to 04:45 | Payment incentives, population needs, and fair funding |
-| 2 | The Payer Needs Accountability Too | 14:49 to 15:16 | Responsibility for pricing, approvals, and payment timing |
-| 3 | Who Looks After People Before They Reach the Hospital? | 12:41 to 13:38 | Finding health needs beyond recorded visits |
-| 4 | Health Transformation Requires Leaders With Authority to Act | 13:27 to 14:49 | Transferring decision authority while keeping services running |
-| 5 | Follow a Spending Decision to Test a Health Cluster's Independence | 04:48 to 05:28 | Cash management, costing, and spending authority |
-| 6 | Regulatory Change Reshapes How Health Companies Do Business | 26:39 to 27:33 | Understanding institutional responsibilities and commercial decisions |
-| 7 | Who Follows the Patient After the Referral? | 15:44 to 16:35 | Responsibility between services and measurement across the care pathway |
-| 8 | Sending a Patient Outside the Cluster Can Be the Right Decision | 17:33 to 18:57 | Referral incentives and the patient's interests |
-| 9 | Who Pays Today for a Disease We Prevent Years Later? | 21:27 to 22:51 | Funding horizons, health gains, and financial returns |
-| 10 | Your Address Helps Define Who Answers for Your Care | 18:57 to 20:08 | Geographic accountability and equitable access |
-| 11 | Health Coverage Is Tested at the First Appointment | 23:07 to 24:02 | Distinguishing capacity shortages from problems using existing capacity |
-| 12 | Who Will Renew Your Digital Health Contract? | 17:13 to 18:57 | Evidence, operating costs, and the economics of renewal |
-| 13 | What Should Saudi Arabia Learn From Other Health Systems? | 24:19 to 25:31 | Conditions for adapting and testing international approaches |
+## Series and clip index
 
----
+**Primary-clip balance:** 7 Fajr clips for articles 1, 2, 3, 5, 8, 10, and 13; 6 Rimthan clips for articles 4, 6, 7, 9, 11, and 12. The selection balances health-policy explanation with operating experience according to each article's subject.
 
-## 1. National Health Insurance: How Will We Pay Providers?
-
-**Existing Arabic page:** https://www.waelkabli.com/ar/blog/nhi-changes-money-before-service  
-**Podcast clip:** 03:30 to 04:45
-
-When we discussed national health insurance on the podcast, I started with how money moves through the system. Understanding that flow helps explain the changes we should expect in care.
-
-Payment influences a provider's decisions. Paying for each visit and procedure gives additional activity a financial return. Giving an organization a budget to care for a defined population creates a financial reason to invest in follow-up, early intervention, and costs over a longer period. Both arrangements require safeguards for the quality of treatment.
-
-This is where [**purchasing care according to population needs and provider performance**](https://www.who.int/activities/promoting-strategic-purchasing) becomes important. The purchaser chooses the services, the providers, and the payment terms. Those choices eventually reach the clinic through staff time, available services, and follow-up priorities.
-
-Consider two hypothetical health clusters serving the same number of people. One serves a larger share of older residents and people with chronic conditions. The other serves a younger population with fewer healthcare needs. An equal allocation per person gives those clusters different abilities to meet their responsibilities. Fair funding requires an understanding of health needs alongside population size.
-
-Then comes measurement. Lower spending deserves an explanation. Better follow-up? Better purchasing? Care postponed? Each explanation leads to a different judgment, even when the financial report shows the same saving.
-
-I would assess a funding model through three things together: what was spent, what care the patient received, and what changed in the patient's health. A contract that puts pressure on costs also needs measures of access and quality.
-
-The rules and contracts in force at each stage determine the actual payment and settlement arrangements. My test for the design is straightforward: does the payment method give the provider a stronger reason to deliver the care the patient needs?
+| # | Article | Main podcast | From | To | Clip subject |
+|---:|---|---|---|---|---|
+| 1 | National Health Insurance: What Behavior Will We Pay For? | Fajr | 03:30 | 04:45 | Allocating funds according to population and services |
+| 2 | The Payer Shares Responsibility for Care Quality | Fajr | 14:49 | 15:16 | Separating regulatory and care-delivery roles |
+| 3 | Who Looks After People Before They Reach the Clinic? | Fajr | 12:41 | 13:38 | Clusters, populations, and the transfer of responsibilities |
+| 4 | Building a Health System While Delivering Care | Rimthan | 01:01:24 | 01:03:54 | Bringing operating experience into the Seha project |
+| 5 | A Cluster's Independence Is Tested by Its First Purchasing Decision | Fajr | 04:48 | 05:28 | Financial and organizational requirements for independence |
+| 6 | Understanding Regulatory Responsibilities Is Part of Building a Health Product | Rimthan | 01:04:54 | 01:07:24 | Facility regulation, clinical practice, and institutional roles |
+| 7 | Patients Need a Complete Care Pathway | Rimthan | 14:30 | 17:58 | Connecting consultations, prescriptions, tests, and related services |
+| 8 | A Good Referral May Take the Patient Outside the Cluster | Fajr | 17:33 | 18:57 | Care outside the cluster and its potential financial consequences |
+| 9 | Prevention Needs Someone to Follow the Next Reading | Rimthan | 49:26 | 51:26 | Measurements, clinical follow-up, and connected services |
+| 10 | An Address Helps Define Responsibility for Access to Care | Fajr | 18:57 | 20:08 | Geographic catchments and the relationship between residence and care |
+| 11 | Health Coverage Starts With an Appointment You Can Get | Rimthan | 20:58 | 21:58 | Lean's birth and the experience of waiting for care |
+| 12 | Who Will Renew Your Digital Health Contract? | Rimthan | 36:26 | 37:56 | Users beginning to expect a reliable service |
+| 13 | What Should We Take From Other Health Systems? | Fajr | 24:19 | 25:31 | Similar mechanisms and different national designs |
 
 ---
 
-## 2. The Payer Needs Accountability Too
+## 1. National Health Insurance: What Behavior Will We Pay For?
 
-**Existing Arabic page:** https://www.waelkabli.com/ar/blog/payer-must-hold-provider-accountable  
-**Podcast clip:** 14:49 to 15:16
+**Original Arabic page:** https://www.waelkabli.com/ar/blog/nhi-changes-money-before-service  
+**Main clip:** Fajr, **03:30 to 04:45**.  
+**Suggested placement:** After the first paragraph.  
+**Additional experience clip:** Rimthan, **38:26 to 40:26**, covering investment, paying doctors, and pricing experiments.
 
-We expect hospitals to answer for the quality and cost of care. The organization purchasing that care should answer for its decisions as well.
+In Cura's early days, we tried different consultation prices. At one stage, we settled on a flat price of around SAR 40. I wanted users to understand and try the service, with fewer decisions to make when choosing a doctor. It was a decision suited to a particular stage of the company.
 
-A payer sets prices, contract terms, and the services it purchases. It also shapes approval requirements, claims reviews, and payment schedules. Each decision affects a provider's ability to operate.
+Pricing reveals what an organization is trying to achieve. A price that encourages someone to try a new service serves one purpose. Paying doctors in a way that supports their availability and commitment serves another. As the service grows, the calculation changes again.
 
-Take a hypothetical home-care contract. The provider is responsible for qualified staff, timely visits, and delivery of the care plan. It needs a price that supports the required quality, clear rules for accepting claims, and a payment schedule it can plan around. Problems in that relationship can reach the patient as delayed or interrupted care.
+That was my starting point when explaining national health insurance: how will money be allocated, and what will a provider be paid for?
 
-The [**Saudi Model of Care**](https://www.health.sa/en/model-of-care) describes the intended separation of regulatory, funding, and care-delivery roles. The value of that separation becomes visible when we can identify which party controls a problem and hold it responsible for resolving it.
+Pay for each visit, and visit volume enters the financial calculation. Fund an organization to care for a defined population over time, and prevention, follow-up, and the cost of complications become part of that calculation. Each method creates incentives and requires safeguards for patients and care quality.
 
-A referral delay might begin with a shortage of appointments. It might arise from a lengthy approval process. The original contract might have purchased too little capacity. Combining these situations under one indicator makes it harder to choose the right response.
+The World Health Organization describes [**strategic purchasing**](https://www.who.int/activities/promoting-strategic-purchasing) through funding decisions informed by population needs and provider performance. This gives the purchaser a demanding job: defining the care required, selecting providers, and designing the payment and its conditions.
 
-I would measure payer performance alongside provider performance: decision times, payment reliability, clarity of rejection reasons, and speed of dispute resolution. Providers should answer for access, quality, outcomes, and appropriate use of resources. This is a recommendation for how accountability should work across the relationship.
+Consider two clusters serving the same number of residents. One serves a larger share of older people and patients with complex needs. Equal funding per person would give those clusters different abilities to deliver care. Fair allocation requires an understanding of who is being served and what care they need.
 
-The patient also needs a named party to resolve interruptions while a dispute is being settled. Treatment needs continue during claims reviews and exchanges of correspondence.
+The results also need interpretation. Lower costs may come from better purchasing or follow-up. They may also come from postponed care. Financial performance should be read alongside access times and what happened to patients' health.
 
-A useful care contract assigns responsibility to the party able to control it and provides a fast route through disagreements. That gives hospital leaders a fair basis for accountability and brings purchasing decisions closer to their consequences for patients.
+The [**intended institutional roles in Saudi health transformation**](https://www.health.sa/en/model-of-care) distinguish funding from care delivery. The funding function succeeds when it rewards the behavior we want: appropriate treatment, timely access, and follow-up that protects the result.
 
----
-
-## 3. Who Looks After People Before They Reach the Hospital?
-
-**Existing Arabic page:** https://www.waelkabli.com/ar/blog/health-cluster-starts-from-population  
-**Podcast clip:** 12:41 to 13:38
-
-A person entering a clinic leaves a record: a visit, a diagnosis, a test, a prescription. Understanding someone who keeps postponing care requires a different effort.
-
-This matters to the idea of health clusters. A [**cluster's responsibility for its population**](https://www.health.sa/en/clusters) includes prevention and awareness alongside treatment. Its responsibility therefore extends to residents who need care before they become regular patients.
-
-Consider a person unfamiliar with their health risks, an older resident with transport difficulties, or an employee whose working hours make appointments difficult. Each example shows how health needs can differ from the demand recorded in a booking system.
-
-Planning from past visits alone can favor people already able to reach services. Understanding the population brings people who need help accessing care into the picture.
-
-In practice, that starts with identifying the population and understanding age, health conditions, and location. Connecting this information to service use requires appropriate permissions and privacy safeguards. A cluster can then identify groups that would benefit from early outreach, home care, or appointments outside usual hours.
-
-For chronic disease care, visit counts help plan clinics. Knowing whose follow-up has lapsed, whose tests are overdue, and who has returned to emergency care adds information closer to the responsibility for health.
-
-This should change how leadership performance is reviewed. A useful report shows activity, the needs that remain outside services, and the steps taken to reach those residents. It also shows differences between neighborhoods and population groups. A single average can combine very different experiences.
-
-If a cluster is responsible for population health, initiating contact becomes part of its work. Some of its most important results will come from reaching someone early enough to change the care they need later.
+When I examine a payment method, I start with the decision it encourages doctors and managers to make. That is how a financial arrangement reaches the patient.
 
 ---
 
-## 4. Health Transformation Requires Leaders With Authority to Act
+## 2. The Payer Shares Responsibility for Care Quality
 
-**Existing Arabic page:** https://www.waelkabli.com/ar/blog/health-transformation-institutional-build  
-**Podcast clip:** 13:27 to 14:49
+**Original Arabic page:** https://www.waelkabli.com/ar/blog/payer-must-hold-provider-accountable  
+**Main clip:** Fajr, **14:49 to 15:16**.  
+**Suggested placement:** After the paragraph explaining the separation of funding, regulation, and care delivery.  
+**Supporting Rimthan clip:** Rimthan, **41:26 to 43:56**, for the insurance experience described at the opening.
 
-Imagine a health cluster leader asked to reduce waiting times. The options are clear: extend clinic hours, redeploy a team, or purchase services from another provider. Improving the result depends on having the authority and resources to put one of those options into practice.
+We began working on relationships with insurers at Cura in 2017. We had a service, doctors, and users. Establishing a route through which insurance could cover that service was another undertaking with its own requirements.
 
-This is the part of institution building that interests me: the relationship between what we ask leaders to achieve and what we place within their control.
+In Rimthan, I explained how financial regulation and healthcare regulation met in that relationship. We needed arrangements that allowed the parties to contract, pay, and deliver care. Change accelerated during the pandemic. We worked with the Council of Health Insurance to help enable that route and reached agreements with insurers.
 
-On the podcast, I described the creation of clusters and Health Holding, followed by the work required to prepare clusters for independence. [**Health Holding's description of the transformation**](https://www.health.sa/en/model-of-care) sets out the intended roles of the ministry, the funder, and the provider. Read from an operating perspective, it raises a specific question: which decisions will move closer to the delivery of care?
+That experience belongs to an earlier stage of the market. What stays with me is how readiness for a service is distributed across several parties. The doctor can deliver a consultation, the platform can run it, and the payer needs a clear way to purchase it.
 
-Transferring a responsibility requires knowledge, authority, and accountability to move with it. Teams need to know what they can approve, what they should escalate, and when to expect an answer. Leaders need cost and quality data, supported by people able to contract, operate, and monitor services.
+The payer therefore shares responsibility for care quality. Its decisions determine the services purchased, their price, approval conditions, and how claims are reviewed and paid. These choices affect continuity and the provider's ability to maintain the required team.
 
-Care continues throughout the transition. Patients need medicines and appointments. Employees need clarity about their responsibilities. Suppliers need to know who approves their invoices. Managing the transition therefore becomes part of maintaining care quality.
+Take a hypothetical home-care service. The provider is responsible for qualified staff, the visit, and the care plan. It needs a contract that purchases capacity suited to the need, clear claims rules, and a payment schedule it can plan around. A breakdown anywhere in that relationship can reach the patient's home.
 
-Before expanding a major change, I would test whether the cluster can prepare its budget, manage a contract, resolve a service interruption, and explain its performance. These capabilities can be observed in actual decisions.
+The [**Saudi Model of Care**](https://www.health.sa/en/model-of-care) describes the intended separation of funding, regulation, and delivery. This creates an opportunity to measure each party's responsibilities more precisely.
 
-Readiness will vary. Support tailored to each cluster's gaps can help it assume responsibility progressively, within common standards for quality and patient rights.
+Providers should answer for quality and access. Purchasers should answer for how well the capacity they bought matches the need, how quickly they decide, whether payments arrive as agreed, and how clearly they explain rejections. When a problem arises, we need to identify who can address its cause.
 
-To review progress, follow a decision that once required a long chain of approvals. Measure what changed in its speed, quality, and consequences. That shows institution building through a leader's ability to solve the problem they are being held accountable for.
+A referral waiting for an appointment needs a different response from one waiting for approval. A contract that bought too little capacity needs a different review from a clinic struggling to use its available capacity.
 
----
-
-## 5. Follow a Spending Decision to Test a Health Cluster's Independence
-
-**Existing Arabic page:** https://www.waelkabli.com/ar/blog/bank-account-cluster-independence  
-**Podcast clip:** 04:48 to 05:28
-
-I mentioned financial accounts on the podcast while explaining the requirements for independent organizations. That detail opens a larger question: how does a cluster understand the cost of a decision and secure the resources to fund it?
-
-A bank account supports cash management. Understanding service costs requires a system that captures staff time, equipment use, materials, and administrative support. Approving expenditure requires delegated authority. These are three connected capabilities, each with its own work behind it.
-
-Take a hypothetical decision to add rehabilitation sessions. A cluster could expand its own service or contract with another provider. Comparing the price per session gives the leadership team part of the answer.
-
-Internal expansion may require recruitment, equipment, and time to reach the required capacity. An external contract requires quality oversight, information exchange, and coordination of the patient's care. Waiting time, proximity, and continuity also belong in the comparison.
-
-Leaders need to see the full cost and decide within clear approval limits. The board can then review how many patients received care, the quality achieved, and the actual cost after implementation.
-
-I connect financial independence to information that supports a choice, authority to implement it, and a review of what happened. The transformation's stated goals for [**governance, transparency, and accountability**](https://www.health.sa/en/model-of-care) support that relationship.
-
-Cash flow deserves separate attention. A service can make economic sense while requiring salaries and supplier payments well before revenue is collected. Planning that funding gap helps protect continuity of care.
-
-My practical test is to follow one spending decision from proposal to outcome. Who proposed it? Which cost assumptions supported it? Who approved it? What happened after implementation? The answers reveal how much independence has become part of daily operations.
+I want patients to have a team following any interruption in their care while these issues are resolved. Clear responsibilities should help them obtain treatment and help us identify who answers for the decisions affecting it.
 
 ---
 
-## 6. Regulatory Change Reshapes How Health Companies Do Business
+## 3. Who Looks After People Before They Reach the Clinic?
 
-**Existing Arabic page:** https://www.waelkabli.com/ar/blog/insurance-authority-transfer-confirmed  
-**Podcast clip:** 26:39 to 27:33
+**Original Arabic page:** https://www.waelkabli.com/ar/blog/health-cluster-starts-from-population  
+**Main clip:** Fajr, **12:41 to 13:38**.  
+**Suggested placement:** After the paragraph explaining the cluster's responsibility for its residents.  
+**Supporting Rimthan clip:** Rimthan, **32:58 to 34:58**, for the opening story about user calls and trust.
 
-At the end of the podcast, I discussed the possibility of responsibilities moving between the Council of Health Insurance and other institutions. On [**4 March 2024, health insurance sector responsibilities transferred to the Insurance Authority**](https://www.chi.gov.sa/en/MediaCenter/News/Pages/CHI-announces-transferring-roles-and-responsibilities-of-the-health-insurance-sector-to-IA.aspx).
+When we first opened Cura, we expected people to start consulting doctors. We had brought together enthusiastic physicians and built a service we wanted users to try. Then we discovered how little a registration told us about what a person understood or needed.
 
-The announcement also described the council's continuing work: enforcing compulsory insurance, determining mandatory coverage, accrediting and supervising providers, and operating NPHIES for health insurance transactions. Those were the roles described at the time of the announcement. Companies need to keep track of subsequent changes affecting their activities.
+I used to call users and ask about their experience. One understood the app as a directory of doctors he would visit in person. Another wanted reassurance that the doctors were real and that speaking to them was safe. Those questions deserved answers before we could expect people to use the service.
 
-I read these developments as a founder operating in a regulated sector. Institutional responsibilities shape the route a company takes: who regulates its activity, who purchases its service, which team uses the product, and who sets the conditions for data and integration.
+Understanding the need for trust changed the work ahead of us. We had to explain the service, show who delivered it, and give people an experience that helped them understand what they would receive.
 
-A single deal can involve several of those parties. A claims-management company, for example, needs to understand insurance requirements, provider operations, and information-exchange rules. Reaching the budget holder is one step. Securing approval to operate is another.
+I return to that lesson when thinking about a health cluster's responsibility for its population. Visit records show who reached the service. Understanding the population also requires knowing who postpones care and what delays them.
 
-Every health company should maintain a working map of these decisions and update it as responsibilities change. For each decision, identify the responsible institution, its requirements, and the approvals that come first. This affects product design, sales planning, and the time needed to reach revenue.
+The obstacle could be an appointment that conflicts with work, difficulty traveling, hesitation about seeking mental healthcare, or limited understanding of the available service. Each calls for a different response. More appointments help someone facing an availability problem. Clear communication helps someone trying to understand the pathway and trust it.
 
-The distinction between insurance regulation and purchasing healthcare is especially important. The [**intended funding role of the Center for National Health Insurance**](https://www.health.sa/en/model-of-care) serves a different function from supervising insurance companies. Similar names make it worth examining the actual responsibility before building a commercial assumption around it.
+A [**cluster's responsibility for its residents**](https://www.health.sa/en/clusters) includes prevention and awareness. Part of its work therefore begins before a visit is booked: identifying people who need outreach, understanding their circumstances, and giving them a suitable route to care.
 
-The value of anticipating institutional change is the opportunity to make a better decision early. A company that understands the distribution of responsibilities can approach the right party and prepare the contracting and operating requirements from the beginning. That gives it a more useful reading of the market alongside the headline spending figures.
+For chronic disease follow-up, it helps to identify overdue tests and interrupted care. Then comes a conversation about the reason. A call may reveal a change needed in service design, provided a team can act on what it learns.
 
----
+The report I would want combines service use with needs that remain outside care. It shows differences between locations and population groups, so leaders can see where outreach has worked and where the approach needs to change.
 
-## 7. Who Follows the Patient After the Referral?
-
-**Existing Arabic page:** https://www.waelkabli.com/ar/blog/patient-journey-health-transformation-unit  
-**Podcast clip:** 15:44 to 16:35
-
-A primary care doctor refers a patient to a specialist. The doctor records the referral, the request enters the system, and the patient waits for an appointment. Who remains responsible for following that patient until the required care is received?
-
-Each organization can complete its assigned task while the pathway stalls between them. The patient lives through the time between a request and an accepted referral, between a test and a review of its result, and between discharge and follow-up.
-
-On the podcast, I described the [**Model of Care**](https://www.health.sa/en/model-of-care) as a change citizens would experience directly. Its value becomes visible when responsibility for those transitions is clear.
-
-Follow the referral through. It needs acceptance, an appointment, communication with the patient, a response to a missed visit, and a specialist report returned to the team coordinating ongoing care. Timing should reflect the clinical importance of the case.
-
-I would measure the pathway from the identification of a need to care being delivered and the next treatment step beginning. The time taken to issue a referral helps assess an administrative task. The time taken to receive care reveals more of the patient's experience.
-
-Technology can track the request, display who is responsible, and flag delays. Teams then need an operating agreement: who intervenes, which alternatives are available, and when a case is escalated. Software works within those responsibilities.
-
-The response should also address the source of the delay. A shortage of specialist appointments calls for a capacity decision. Referrals stalled by incomplete information call for better referral design and communication between teams.
-
-After a referral, I want the patient to have a clear next step and a team they can contact. Knowing who follows the next stage helps several providers deliver a coherent experience of care.
+Those early calls taught me that people can explain the source of a service problem more precisely than a usage dashboard. Responsibility for population health requires that closeness to the people being served.
 
 ---
 
-## 8. Sending a Patient Outside the Cluster Can Be the Right Decision
+## 4. Building a Health System While Delivering Care
 
-**Existing Arabic page:** https://www.waelkabli.com/ar/blog/patient-exit-financial-loss-cluster  
-**Podcast clip:** 17:33 to 18:57
+**Original Arabic page:** https://www.waelkabli.com/ar/blog/health-transformation-institutional-build  
+**Main clip:** Rimthan, **01:01:24 to 01:03:54**.  
+**Suggested placement:** After the project story and before the discussion of cluster readiness.  
+**Supporting clip:** Fajr, **13:27 to 14:49**, on establishing clusters and preparing them for independence.
 
-Referring a patient outside their health cluster can be the best clinical and operating decision for that case.
+When we participated in the Ministry of Health's Seha project, we brought experience from working with doctors at Cura. We had spent time understanding what a physician needed to feel confident providing a remote consultation: the information to see, the documentation required, the service's scope, and the response when a case needed another step.
 
-On the podcast, I explained how a cluster bearing the cost of care delivered elsewhere could have a financial incentive to improve its own services. That describes a potential incentive. Applying it requires explicit rules, contracts, and settlements defining who bears the cost and when.
+We joined the project alongside other companies and worked through those details with physicians and the relevant teams. Each practical obstacle needed a solution the doctor could use and the people responsible for the service could rely on.
 
-Assessing a referral starts with the reason behind it. A patient needing a rare procedure at a specialist center differs from someone leaving to find a routine appointment. The first may benefit from concentrated expertise. The second may reveal a problem in local capacity or scheduling.
+One example I discussed in Rimthan was enabling doctors in different locations to deliver care remotely. That required organizing work, information, and responsibilities alongside the technology. Our earlier experience helped bring what we had learned into a larger operation.
 
-Treating both as the same financial loss could encourage managers to retain patients who would benefit from better expertise elsewhere. The performance measure would then pull against the purpose of care.
+This is how I look at health transformation: an institution changing while it continues delivering care every day.
 
-I would separate referrals by reason: specialist expertise, planned purchasing, a temporary capacity gap, or a service failure the cluster could have addressed. That distinction helps leaders decide where to invest.
+A cluster needs to understand its population, manage resources, run contracts, and monitor quality. The [**intended redistribution of roles among the ministry, Health Holding, and the funder**](https://www.health.sa/en/model-of-care) needs to become visible in people's ability to make daily decisions.
 
-Some services justify building capacity internally. Others may be better served through [**purchasing care from a qualified provider**](https://www.who.int/activities/promoting-strategic-purchasing). The decision requires a comparison of quality, demand, access time, and total cost. Follow-up and the return of clinical information should remain part of the referring network's responsibility.
+Who approves an additional clinic? Who purchases capacity to address a waiting list? Who intervenes when a referral stalls? Clear answers help the team act. Each new responsibility needs the data, authority, and skills that make it manageable.
 
-Performance comparisons also need to account for case complexity. A cluster serving patients with greater needs will face a different pattern of costs and referrals. Understanding that difference is essential to a fair assessment.
+During the transition, patients still need appointments and medicines. Employees need to know who to turn to. Suppliers need clear approval and payment processes. Managing these details protects the service and gives the team room to learn.
 
-Hold the cluster accountable for the quality and outcome of the referral decision, and for fixing service gaps that drive patients elsewhere. The reference point is whether the patient received appropriate care. Funding arrangements should support that decision.
+Readiness shows up in a real operating situation. Give the cluster a defined problem and follow how it diagnoses the cause, makes a decision, and measures the result. That reveals the support it needs before taking on a broader responsibility.
 
----
-
-## 9. Who Pays Today for a Disease We Prevent Years Later?
-
-**Existing Arabic page:** https://www.waelkabli.com/ar/blog/prevention-becomes-financial-decision  
-**Podcast clip:** 21:27 to 22:51
-
-A health cluster may fund a prevention program today and see its most important results years later. Leadership and budgets may change during that period. The beneficiary may move to another region. Who recognizes the return, and who has a reason to keep funding the work?
-
-That question explains part of the difficulty of prevention. Turning a health benefit into a sustained program requires agreement on the measurement period, the party funding it, and the party receiving the benefit.
-
-On the podcast, I used the example of someone at risk of diabetes. Research offers a useful reference. The [**U.S. Diabetes Prevention Program**](https://www.niddk.nih.gov/about-niddk/research-areas/diabetes/diabetes-prevention-program-dpp) found that intensive lifestyle intervention reduced the incidence of type 2 diabetes by about 58% relative to placebo over roughly three years among participants at high risk. That result comes from a U.S. trial. Local programs need to measure their effect in the populations they serve.
-
-The economics deserve the same precision. A program may produce health gains worth its cost. It may also generate financial savings. Establishing either result requires accounting for delivery and follow-up costs, the time needed for benefits to emerge, and who receives those benefits.
-
-A prevention contract should have a funding horizon suited to its purpose. It should define the target population, outreach, intensity of support, and participation measures, then track results over time. In digital health, registrations give an early measure. Continued participation and health improvement show what follows.
-
-The program also needs clear responsibility when someone moves between organizations. Continued follow-up and appropriate information sharing help preserve the value of the original investment.
-
-Giving prevention a lasting place in the budget requires funding the time needed for its effects to appear. Boards should review health and financial progress over an agreed period, with room to adjust delivery as evidence accumulates.
+In our experience, accumulated knowledge made the next step easier to execute. Institutions need that capacity: teams that learn from delivering services and turn the learning into a way of working that can continue and grow.
 
 ---
 
-## 10. Your Address Helps Define Who Answers for Your Care
+## 5. A Cluster's Independence Is Tested by Its First Purchasing Decision
 
-**Existing Arabic page:** https://www.waelkabli.com/ar/blog/address-determines-health-gateway  
-**Podcast clip:** 18:57 to 20:08
+**Original Arabic page:** https://www.waelkabli.com/ar/blog/bank-account-cluster-independence  
+**Main clip:** Fajr, **04:48 to 05:28**.  
+**Suggested placement:** After the paragraph connecting financial accounts and organizational structure to independence.  
+**Supporting Rimthan clip:** Rimthan, **10:30 to 11:30**, for the opening shared-radiology example.
 
-An address helps answer an important management question: which organization is responsible for reaching this person and following their healthcare needs?
+In Rimthan, I used the example of remote radiology reporting. Several facilities can draw on a specialist team in another location to interpret images and send reports to treating physicians. That creates another way to distribute expertise across facilities with different sizes and needs.
 
-Health Holding describes a [**cluster's geographic catchment and responsibility for residents' health**](https://www.health.sa/en/clusters). That boundary helps plan facilities, teams, and services. It also gives us a defined organization to hold accountable for gaps in access.
+If I were leading a cluster considering this option, I would want to understand demand throughout the day, the subspecialties required, and appropriate reporting times. I would then compare building the capability internally with purchasing it, including integration, quality oversight, and continuity.
 
-Consider two people needing the same treatment. One lives near a specialist center. The other faces a long journey. The service may be available to both in principle, while the time, transport, and need for a companion make access very different.
+A decision like this reveals how much independence an institution has in practice.
 
-Planning should therefore cover the whole journey. Some care can be delivered locally. Some follow-up may benefit from virtual or home care. Other needs require a coordinated referral to a specialist center, supported by arrangements that help the patient complete it.
+In Fajr, I mentioned financial accounts and organizational structure among the requirements for independent clusters. The practical test begins when leadership needs to spend money on a defined need. Does it understand the cost? Can it choose? Can it verify what it purchased once delivery starts?
 
-The cluster becomes responsible for a set of care options suited to its population. Building a specialty, purchasing it, or referring patients elsewhere requires an understanding of demand, frequency of use, clinical requirements, and the burden of reaching the service.
+A bank account helps manage cash. Costing a service requires staff time, equipment, materials, and support to be understood. Contracting requires the ability to specify what is being purchased and monitor delivery. Each capability needs expertise inside the cluster.
 
-I would also measure geographic differences within each cluster. A favorable average waiting time may combine prompt access in one neighborhood with much longer waits in surrounding villages. Results by location and population group help direct resources toward greater need.
+In the radiology example, a lower price per report gives part of the picture. Interpretation quality, reporting time, coverage during periods of demand, and communication of urgent findings all matter. The treating team needs to receive the information and act within clear responsibilities.
 
-Enrollment rules, patient choice, and movement between clusters depend on the arrangements in force at each stage. The podcast's discussion of the expected direction belongs to the context in which it was recorded. Geography provides a basis for planning and accountability, alongside clear routes to appropriate care across the wider system.
+Cash flow follows. An institution needs to meet payroll and supplier commitments and understand the period between providing care and collecting payment. Managing that interval affects the services it can sustain.
 
-The purpose of linking residents to clusters should be practical: citizens know who follows their needs, and leaders know where access breaks down. Differences between addresses then become information for distributing care more fairly.
+The transformation's aims for [**governance and accountability**](https://www.health.sa/en/model-of-care) become tangible here: leaders understand a need, decide within their authority, and present the result to the board.
+
+To assess independence, I would follow a purchasing decision through to delivery. Its record will reveal the quality of the information, the speed of approval, the ability to contract, and whether the service addressed the need that prompted the decision.
 
 ---
 
-## 11. Health Coverage Is Tested at the First Appointment
+## 6. Understanding Regulatory Responsibilities Is Part of Building a Health Product
 
-**Existing Arabic page:** https://www.waelkabli.com/ar/blog/universal-coverage-reveals-capacity-gaps  
-**Podcast clip:** 23:07 to 24:02
+**Original Arabic page:** https://www.waelkabli.com/ar/blog/insurance-authority-transfer-confirmed  
+**Main clip:** Rimthan, **01:04:54 to 01:07:24**.  
+**Suggested placement:** After the first three paragraphs about the regulatory experience.  
+**Supporting clip:** Fajr, **26:39 to 27:33**, on the possible transfer of responsibilities between institutions.
 
-People begin to understand their health coverage when they request a service. Did they get the appointment? How long did they wait? Could they complete treatment?
+While building Cura, we worked on the requirements for an organization providing remote care. We also had to understand what governed the physician's practice, consultation records, prescriptions, and responsibility when something went wrong. Each question led into another part of the service.
 
-The [**World Health Organization's definition of universal health coverage**](https://www.who.int/news-room/fact-sheets/detail/universal-health-coverage-%28uhc%29) connects access to necessary, quality services with financial protection. Actual access sits at the center of what coverage means.
+In Rimthan, I described our work with the Ministry of Health on requirements and our participation with other organizations and companies in workshops on telemedicine policies. We contributed experience from operating the service. The responsible authorities developed and adopted the frameworks within their mandates.
 
-On the podcast, I discussed specialist availability and the distribution of resources. Addressing waiting times starts with identifying the source of the gap. A service may have too few specialist hours for the population's needs. It may also have capacity that scheduling, referral processes, or geographic distribution make difficult to use.
+What I learned was that a health founder needs to understand what each institution does. That understanding affects product design from the beginning: the data collected, permissions granted, services offered, and parties involved in a contract.
 
-Those situations call for different responses. A capacity shortage may require recruitment, training, or purchasing additional care. Difficulty using existing capacity requires changes to operations and patient routing. A clearer diagnosis helps direct time and resources to the right place.
+The National Health Information Center's published [**Telehealth Application Guidelines**](https://nhic.gov.sa/standards/Telehealth/Telehealth-Application-Guidelines.pdf) address patient identity, consent, documentation, liability, and continuity. These are examples of how governance enters the patient experience and the doctor's work. The requirements applicable to a particular activity need to be established when the service is put into operation.
 
-A clinically appropriate virtual follow-up, for example, may reduce travel for the patient. The next step is to measure its effect on the team's capacity. It may expand the number of patients served, while preparation and documentation may create additional work elsewhere. The result depends on how the service fits into daily practice.
+Later, [**health insurance sector responsibilities transferred to the Insurance Authority on 4 March 2024**](https://www.chi.gov.sa/en/MediaCenter/News/Pages/CHI-announces-transferring-roles-and-responsibilities-of-the-health-insurance-sector-to-IA.aspx). The announcement also described the council's continuing roles at that time, including compulsory coverage, provider accreditation and supervision, and NPHIES operations.
 
-Referral design matters too. Complete information, clear clinical priority, and confirmation of attendance may improve the use of available appointments. That gives planners a better basis for estimating the additional capacity they need to build.
+I read that distribution of responsibilities as information affecting commercial decisions too. A company needs to understand who regulates its activity, who buys the service, and who approves its use inside a facility. Those decisions may sit with several parties.
 
-Each service plan should connect expected need, available capacity, a clinically appropriate waiting period, and an alternative when that period is exceeded. Investment requests can then address a defined gap whose resolution can be tracked.
+I advise founders to map the approval process early. What needs approval? From whom? What operating requirements follow? Keep the map current as arrangements change, and test it with specialists familiar with the activity.
 
-The final test remains close to the patient's experience: necessary care received and completed within a period appropriate to the condition. Every improvement in that pathway gives coverage a practical meaning.
+The exercise may reveal a product change worth making before approaching a client. Discovering that early improves planning for development, funding, and sales. Understanding responsibilities gives a founder a better estimate of the work and time required to make a service ready for use and contracting.
+
+---
+
+## 7. Patients Need a Complete Care Pathway
+
+**Original Arabic page:** https://www.waelkabli.com/ar/blog/patient-journey-health-transformation-unit  
+**Main clip:** Rimthan, **14:30 to 17:58**.  
+**Suggested placement:** After the description of the consultation, test, and medication sequence.  
+**Shorter supporting clip:** Fajr, **15:44 to 16:35**, on the patient journey within the Model of Care.
+
+In Rimthan, I discussed consultations, prescriptions, pharmacies, laboratories, and medicine delivery. Each service can operate separately. The patient needs them to connect so treatment can be completed.
+
+A person speaks to a doctor through a live video or audio call, explains their symptoms, and shares the information and reports needed for assessment. The doctor may request a test. A sample is collected, a result becomes available, and the doctor reviews it to determine the next step. If medication is prescribed, the patient needs to obtain it, understand its use, and receive appropriate follow-up.
+
+That sequence explains my interest in bringing services together. The value of a consultation depends in part on the patient's ability to carry out what was agreed during it.
+
+At Cura, we brought communication together with doctor profiles and information that helped people choose a physician, then developed the forms of care available. We wanted people to reach help and complete the steps they needed more easily. Every step added work in operations and accountability.
+
+This also gives us a practical way to examine the [**Saudi Model of Care**](https://www.health.sa/en/model-of-care). Patients move between primary care, specialty care, and supporting services. Each transition requires information to arrive, a request to be accepted, an appointment to be made, and someone to follow a delay.
+
+I therefore care about measuring what happens between issuing a request and receiving the service. Was the test completed? Did the doctor review the result? Did the next stage of treatment begin? These questions show whether a visit led to completed care.
+
+[**Connecting workflows, data, and decisions**](https://www.waelkabli.com/en/blog/when-everyone-has-ai) also requires agreement among teams. They need to know who intervenes, when to escalate, and how to communicate with the patient. Technology can make those responsibilities visible and track delivery.
+
+A communication platform may finish its task when the call ends. Care responsibilities continue according to the patient's needs and the service commitments. Defining them early helps purchasers choose and measure the right service.
+
+When reviewing a pathway, I follow the initial request until the patient reaches the intended result or a clear follow-up plan. The transitions between teams often reveal the most useful opportunities to improve care. They deserve leadership attention alongside the performance of individual clinics.
+
+---
+
+## 8. A Good Referral May Take the Patient Outside the Cluster
+
+**Original Arabic page:** https://www.waelkabli.com/ar/blog/patient-exit-financial-loss-cluster  
+**Main clip:** Fajr, **17:33 to 18:57**.  
+**Suggested placement:** After the paragraph explaining the financial incentive discussed in Fajr, before the assessment of referral quality.  
+**Supporting Rimthan clip:** Rimthan, **06:00 to 07:30**, for follow-up and second-opinion examples.
+
+Someone receives a diagnosis in Jeddah and needs follow-up near home in Riyadh. Another person struggles to find appointments with their doctor and looks for a suitable physician available for ongoing care. Someone else wants a second opinion before making a decision. I used these examples in Rimthan to explain the different reasons people visit doctors.
+
+Those reasons belong in any assessment of movement between providers. A change of provider may improve continuity or give the patient the expertise their condition requires.
+
+In Fajr, I explained how making a cluster financially responsible for its residents' care elsewhere could encourage it to improve its own services. That incentive depends on the funding design, contracts, and settlement arrangements. Assessing it requires looking at the behavior it encourages.
+
+A patient referred to a center with specialist expertise differs from someone forced to search elsewhere for a routine appointment after a booking failure. The first may demonstrate a good referral. The second reveals a gap to address. Placing both in the same financial category weakens our ability to distinguish them.
+
+Rewarding managers solely for keeping patients inside their facilities could encourage them to retain cases that would benefit from other expertise. The measure needs to protect the appropriate clinical decision.
+
+A cluster should understand its referral reasons: specialist care, planned purchasing of additional capacity, temporary needs, or a shortfall in a service it could provide. This helps leaders choose between building internally and [**purchasing care from another provider**](https://www.who.int/activities/promoting-strategic-purchasing).
+
+Continuity matters after the referral too. Reports should return to the team following the patient. The next step should be clear. The patient should know whom to contact. A good referral carries those arrangements with it.
+
+I want to reward the quality of the decision and its result: appropriate care, better continuity, and considered use of resources. That can happen inside the cluster or through a partner. Leadership should be able to explain why its choice served this patient best.
+
+---
+
+## 9. Prevention Needs Someone to Follow the Next Reading
+
+**Original Arabic page:** https://www.waelkabli.com/ar/blog/prevention-becomes-financial-decision  
+**Main clip:** Rimthan, **49:26 to 51:26**.  
+**Suggested placement:** After the second paragraph, as measurement leads into follow-up design.  
+**Supporting clip:** Fajr, **21:27 to 22:51**, on prevention, cluster responsibilities, and future costs.
+
+In Rimthan, I described a service in which patient measurements reach the team following their care. A reading warrants attention. The team contacts the patient, understands what is happening, determines the appropriate response, and follows the result. I was explaining how care could become better able to intervene early.
+
+The essential detail is someone acting on the information. A device captures a reading, software transmits it, and the team assesses it in the context of the patient's condition. Then the patient needs contact, a clear next step, and follow-up on what changes.
+
+The National Health Information Center's [**Telehealth Application Guidelines**](https://nhic.gov.sa/standards/Telehealth/Telehealth-Application-Guidelines.pdf) describe remote patient monitoring through information collected from patients and transmitted to healthcare professionals for treatment and management. That helps define the service needed around the measurement.
+
+Who receives the readings? What warrants review? Within what period? How are cases requiring in-person care handled? These operating questions determine how many people a team can follow and the quality it can commit to delivering.
+
+Funding follows. The purchaser pays for staff, contact, and technology today. Some health benefits may appear years later. The program needs a funding horizon suited to that period and indicators showing progress along the way.
+
+On the podcast, I discussed insurers' interest in early intervention. The economic incentive is understandable when a program protects health and reduces the use of more expensive care. Establishing what actually happened requires an appropriate comparison and a calculation including the program's own cost.
+
+Some interventions produce health benefits worth paying for. Some may also generate financial savings. Each result needs its evidence. Agreeing on the evaluation early helps clarify who funds the work and who benefits from the return.
+
+For a prevention program, I follow what happens after enrollment. Did the person continue? Did support reach them? Did the agreed indicators change? Did the plan need adjusting? Those answers help improve delivery as the program runs.
+
+A purchaser should be able to describe the human and clinical work happening between readings. That is where the service being paid for becomes clear, along with its ability to support people's health over time.
+
+---
+
+## 10. An Address Helps Define Responsibility for Access to Care
+
+**Original Arabic page:** https://www.waelkabli.com/ar/blog/address-determines-health-gateway  
+**Main clip:** Fajr, **18:57 to 20:08**.  
+**Suggested placement:** After the paragraph explaining the cluster's responsibility for its geographic population.  
+**Supporting Rimthan clip:** Rimthan, **25:28 to 25:58**, for geographic differences in specialist access.
+
+When discussing access to specialists in Rimthan, I described the concentration of some expertise in major cities and differences in specialty availability between locations. I was explaining why reaching a suitable doctor can involve much more than finding a name.
+
+Someone living near a service faces different circumstances from someone who needs to travel. The same appointment may require the second person to arrange time off, a companion, transport, and accommodation. Follow-up can repeat those demands.
+
+This is why planning needs to start from where people live. Health Holding describes [**a cluster's responsibility for its geographic population**](https://www.health.sa/en/clusters). A defined catchment gives us an organization to ask about residents' route to care.
+
+The decision varies with the need. Some follow-up can be delivered locally. A specialist opinion may be obtained remotely when clinically appropriate. A procedure may require a referral center. The cluster's responsibility is to arrange these options so the patient can complete the necessary care.
+
+The Ministry of Health describes [**telemedicine's role in connecting specialist facilities with facilities in remote areas**](https://www.moh.gov.sa/en/ministry/information-and-services/pages/telemedicine.aspx). The practical benefit becomes clearer when remote expertise connects to a local service able to examine the patient or implement a plan, then return information to the team coordinating care.
+
+That leads me to examine the whole network when assessing investment in a specialty. How much demand exists? What requires physical attendance? What could another organization provide? What will the patient need to do to complete the journey?
+
+I also want to see differences within a cluster. One average waiting time can combine a city with easy access and villages requiring additional arrangements. Results by location help direct capacity toward need.
+
+Enrollment, choice, and referral details follow the arrangements applicable at each stage. The principle I support is that geography should give citizens a team responsible for following their access to care and give leaders information they can use to address disparities.
+
+An address helps allocate responsibility and resources. The effort required for the person at that address to complete treatment deserves a place in the assessment of the service.
+
+---
+
+## 11. Health Coverage Starts With an Appointment You Can Get
+
+**Original Arabic page:** https://www.waelkabli.com/ar/blog/universal-coverage-reveals-capacity-gaps  
+**Main clip:** Rimthan, **20:58 to 21:58**.  
+**Suggested placement:** After the opening two paragraphs about Lean's birth and the founding problem.  
+**Additional Rimthan clip:** **22:58 to 24:28**, on the two needs we initially focused on.  
+**Supporting Fajr clip:** **23:07 to 24:02**, on resources and the capacity to deliver care.
+
+When my daughter Lean was born in early 2015, I returned to the experience of hospitals with a newborn: appointments, waiting, and time divided between family needs and care. I was already interested in technology's role in health. That experience gave me a personal reason to work on the problem.
+
+In Rimthan, I explained how my co-founder and I began defining the needs we wanted to serve. We focused on someone seeking timely medical help and someone trying to reach an appropriate specialist while facing appointment or distance barriers. That helped us understand the service we wanted to build.
+
+I return to this when discussing health coverage. A person will test it when requesting care: when can they get an appointment, where should they go, and how will they complete the steps after the visit?
+
+The definition of [**universal health coverage**](https://www.who.int/news-room/fact-sheets/detail/universal-health-coverage-%28uhc%29) connects access to necessary services with quality and financial protection. The system's ability to deliver is therefore central to the meaning of coverage.
+
+When waiting times grow, I first want to understand the cause. Specialist hours may fall short of need. Capacity may also be difficult to use because of scheduling, referrals, or information. Distinguishing the causes helps identify the right investment.
+
+A shortage may require another team or purchased services. Improving the use of existing capacity may start with directing patients appropriately, completing information before appointments, and arranging suitable follow-up.
+
+[**Virtual clinics**](https://www.moh.gov.sa/en/ministry/projects/pages/medical-clinics.aspx) offer a way to deliver some services according to clinical assessment. I would measure the team's time and the care completed, including preparation, documentation, and follow-up. That gives us a fuller picture of the capacity added.
+
+The pathway also needs to identify cases requiring urgent in-person attention or emergency services and direct them appropriately through clinical assessment. A clear scope is part of service quality.
+
+Each service plan should show expected need, available capacity, clinically appropriate timing, and the alternative route when access is delayed. Leaders can then explain the gap and seek resources to address it.
+
+What began as an experience of waiting became a question I keep returning to in service design: how do we give this person a clear route to the help they need, when they need it?
 
 ---
 
 ## 12. Who Will Renew Your Digital Health Contract?
 
-**Existing Arabic page:** https://www.waelkabli.com/ar/blog/digital-health-companies-sell-outcomes  
-**Podcast clip:** 17:13 to 18:57. The clip provides the funding and incentive context for the commercial analysis developed here.
+**Original Arabic page:** https://www.waelkabli.com/ar/blog/digital-health-companies-sell-outcomes  
+**Main clip:** Rimthan, **36:26 to 37:56**.  
+**Suggested placement:** After the opening three paragraphs about demand and service expectations.  
+**Supporting funding clip:** Fajr, **17:13 to 18:57**. Contract renewal is an analytical extension of the experience described.
 
-If I were preparing a proposal for a health cluster, I would start by thinking about the renewal meeting. After a year of operation, what evidence would persuade the client to keep allocating budget to us?
+One moment I remember from Cura's early days was users becoming frustrated by doctors taking too long to respond. Our earlier conversations had centered on explaining the idea and building trust. Now we had users who wanted the service and expected a particular standard of delivery.
 
-As Cura's founder, I see that as a product-design question from the beginning. The company needs to understand the problem it is taking responsibility for improving, and the decision-maker who sees the effect in their work.
+For me, that was an important sign of demand. It also created another job: operating at the quality that demand expected. In Rimthan, I explained how this stage helped me identify the need for investment, full-time commitment, and stronger operations.
 
-Consider a company providing follow-up for people with chronic conditions. It can measure completed consultations, continued participation, and changes in agreed indicators. A promise to reduce emergency visits requires broader data, an appropriate observation period, and a comparison that accounts for differences between patients. Every promise adds an obligation to prove and deliver it.
+Every founder should pay attention to that moment. A user expecting a result gives you an opportunity to build a service they return to. The opportunity brings an obligation to deliver consistently and understand what it costs.
 
-This gives the phrase "selling outcomes" a more precise meaning. Some results sit directly within the company's control, such as the time taken to complete a step its product manages. Others depend on medication, the treating team, patient participation, and additional factors. A useful contract defines each party's contribution and the result it can reasonably answer for.
+When selling to a cluster or another large organization, I like to start with the renewal meeting. After a year, what will we present that gives the budget holder a reason to continue and expand?
 
-This connects to my earlier discussion of [**competitive advantage in workflow, data, and integration**](https://www.waelkabli.com/en/blog/when-everyone-has-ai). A follow-up product needs to work within the clinical team's day. Who reviews an alert? When do they contact the patient? How does the decision reach the medical record? Those details influence sustained use.
+For a follow-up program, we need to define the population, the work we take responsibility for, and the result we will measure. Some results sit directly within the company's control, such as the time taken by a task it manages. Others depend on the clinician, medication, patient participation, and additional factors. The contract needs to clarify each party's contribution and responsibility.
 
-Then comes profitability. Revenue needs to cover integration, training, clinical support, and ongoing operations, with enough funding to bridge the collection period. Understanding that cost early helps a founder choose contracts the company can serve and expand.
+Then we need to [**connect the product to workflows, data, and decisions**](https://www.waelkabli.com/en/blog/when-everyone-has-ai). Who uses it daily? Who reviews alerts? Who acts when a process stalls? How do we know the patient completed the required step? The answers appear in operations after signing.
 
-Digital health opportunities grow as purchasers become better able to define their needs and measure the return on spending. Preparing for that market starts with a specific problem, a baseline, and agreement on measurement before delivery begins.
+The company's economics follow. Revenue needs to cover integration, training, support, clinical work, and operations, allowing for collection times. Each customization adds work that deserves an explicit estimate, so expansion remains within the company's capacity to deliver.
 
-At renewal, I want to show what changed for the client, what it cost, and where expansion makes sense. That gives the budget holder a commercial case they can defend inside their organization.
+I want a baseline and a measurement approach agreed before launch. Then we can review results during delivery, address problems, and document the change achieved.
 
----
-
-## 13. What Should Saudi Arabia Learn From Other Health Systems?
-
-**Existing Arabic page:** https://www.waelkabli.com/ar/blog/saudi-health-model-global-experience  
-**Podcast clip:** 24:19 to 25:31
-
-When asked on the podcast about systems resembling Saudi Arabia's model, I discussed similarities in specific mechanisms. Healthcare financing, provider networks, and insurance coverage can each be organized differently, including within the same country.
-
-For example, [**accountable care organizations in the United States**](https://www.cms.gov/priorities-innovation-key-concepts-accountable-care-accountable-care-organizations) bring clinicians, hospitals, and other providers together to improve coordination, outcomes, and cost management. We can study that arrangement and assess the conditions it would need in our context.
-
-What interests me in any international example is why it worked. How was it funded? What data was available? What authority did leaders have? How were disagreements resolved? Those answers help identify what needs to be built locally before expansion.
-
-Take funding a network to care for a defined population. Implementation requires an assessment of population needs, measures of service quality, arrangements for high-cost cases, and agreement on care delivered outside the network. Each detail influences the behavior the model produces.
-
-Operating a service in a dense city also differs from serving an area with widely dispersed facilities. Local design needs to account for travel time, demand, and workforce availability. Adapting the mechanism to those conditions is part of building the model.
-
-Saudi Arabia's [**twenty health clusters**](https://www.health.sa/en/clusters) provide an opportunity for organized learning. A defined improvement can be tested in a suitable setting, its effects measured, and the conditions for success documented before another cluster adopts it. Comparison benefits from shared measures and an understanding of differences in populations and resources.
-
-Publishing those results would add useful Saudi operating knowledge: what was tried, what changed, what it cost, and which adjustments implementation required. Understanding failures and their causes can help the next cluster as much as understanding successes.
-
-That is how I would approach international experience: choose a mechanism that addresses a defined problem, test it, and adapt it to local needs. As results accumulate, Saudi Arabia can contribute knowledge grounded in its own execution.
+At renewal, the company's case rests on what improved for the client, what that improvement cost, and the service it has demonstrated it can sustain. The budget holder needs that information to defend the purchase inside the organization.
 
 ---
 
-## Editorial notes
+## 13. What Should We Take From Other Health Systems?
 
-### Voice and adaptation
+**Original Arabic page:** https://www.waelkabli.com/ar/blog/saudi-health-model-global-experience  
+**Main clip:** Fajr, **24:19 to 25:31**.  
+**Suggested placement:** After the opening two paragraphs.  
+**Supporting Rimthan clip:** **56:54 to 57:24**, on local data and conditions.
 
-The English articles preserve the arguments of the revised Arabic edition. Sentence structure, titles, and transitions have been adapted for natural English. The voice centers on practical judgment: a specific situation, the mechanism behind it, and a decision that follows.
+When asked in Fajr about systems resembling Saudi Arabia's model, I discussed separate mechanisms: provider networks, financing, primary care, and coverage. A similarity in one of them needs to be understood through its function and the conditions supporting it in that country.
 
-First-person passages express a position or recommendation. Hypothetical operating examples remain clearly framed as examples. Cura appears in the established context of Wael's role as founder. The articles use affirmative sentences, short connected paragraphs, and concrete operating details.
+For example, [**accountable care organizations in the United States**](https://www.cms.gov/priorities-innovation-key-concepts-accountable-care-accountable-care-organizations) bring doctors, hospitals, and other providers together to improve coordination, outcomes, and cost management. That arrangement deserves study. Applying it locally requires defined populations, responsibilities, data, and financial relationships between participants.
 
-### Substantive editorial decisions
+In Rimthan, while discussing technology and AI, I emphasized the importance of local data. Population characteristics, behavior, and living conditions affect the problem we are trying to solve. The same lesson applies when adapting an operating or funding model.
 
-| Subject | Revision | Purpose |
-|---|---|---|
-| Population funding | Explain differences in health needs and the need to monitor access and quality | Make the funding argument more precise |
-| Payer-provider separation | Extend accountability to purchasing decisions and payment reliability | Identify responsibilities on both sides of the contract |
-| Cluster independence | Distinguish cash management, costing, and spending authority | Make independence observable in daily decisions |
-| Regulatory responsibilities | Include transferred and continuing roles as described in the March 2024 announcement | Preserve institutional accuracy and historical context |
-| External referrals | Assess the reason for a referral and its outcome; qualify financial effects by contract | Put the patient's interests at the center of the incentive discussion |
-| Prevention | Explain the funding horizon and distinguish health value from financial savings | Connect prevention to sustainable commissioning |
-| Geography | Focus on responsibility for access and refer enrollment rules to applicable arrangements | Keep planning analysis separate from claims about current entitlements |
-| Digital health | Organize the argument around renewal, evidence, and delivery cost | Give founders and investors a concrete commercial decision |
-| International learning | Examine a defined mechanism and the conditions for adapting it | Turn comparison into guidance for implementation |
+Take remote care. A patient can technically reach a doctor through a phone. At Cura, we also had to build trust, help physicians practice through the service, understand regulation, and address payment. Each condition affected people's ability to use it.
 
-### Evidence and clip use
+Similarly, funding a cluster to care for a defined population requires an assessment of need, trustworthy data, quality measurement, and arrangements for complex cases and care outside the network. Adopting the mechanism requires those conditions to be built alongside it.
 
-The timestamps identify the relevant passages in the Arabic podcast transcript. The articles extend those passages through analysis and recommendations. Article 12 applies the discussion of funding incentives to digital health contracts; its commercial argument is an editorial extension of that context.
+A service suited to a dense city may need adjustment where facilities are widely dispersed. Demand for a particular specialty may justify purchasing from a referral center, while a different volume may justify building locally. The choice depends on people's needs and the capacity available to serve them.
 
-The diabetes statistic describes a specific U.S. trial, its comparison group, approximate observation period, and relative effect. A local program would need its own evaluation. Regulatory references describe the March 2024 announcement in its historical context. Payment arrangements, enrollment rules, and referral settlements depend on the applicable framework and contracts.
+Saudi Arabia's [**health clusters**](https://www.health.sa/en/clusters) create an opportunity for organized learning. Define a problem, test an improvement, measure its effect and cost, and document the conditions that helped and the obstacles encountered. That knowledge helps another cluster assess what to adjust before implementation.
 
-For publication, use each article's title and body. Retain the tracking information and editorial notes as working references.
+There is considerable value in publishing this kind of result. How was the decision made? What changed during implementation? What did the team learn? The sector needs knowledge from operating services, shared by practitioners and leaders.
 
-### English reference sources
+That is how we can build a Saudi model that learns from international experience and contributes evidence of its own. Over time, we will have knowledge to share about how an approach developed, whom it served, and what operating it required.
 
+---
+
+## Clip editing guide
+
+The cues below locate ideas inside the transcript ranges. Arabic is retained for matching to the original audio. Spelling has been normalized for readability; the recording determines the exact wording and cut. Some ranges include a host's question or response. Trim at the relevant idea and the completion of the sentence.
+
+| Article | Podcast and range | Arabic opening cue | Arabic closing cue | What the clip supports |
+|---:|---|---|---|---|
+| 1 | Fajr 03:30 to 04:45 | المستشفيات الحكومية تأخذ مبالغها وميزانيتها | نوع من تحول المنشآت الصحية يصير عندها كفاءة مالية أفضل | Funding explanation in the episode; the article extends the incentive analysis |
+| 2 | Fajr 14:49 to 15:16 | بما إن كل هذه الأشياء راح تنتقل تحت شركة الصحة القابضة | رقابي وتشريعي | The institutional separation described in the episode; payer accountability is a recommendation |
+| 3 | Fajr 12:41 to 13:38 | كل مجموعة من المواطنين يروحوا تحت منطقة معينة | بدأت تنتقل المهام من وزارة الصحة إلى هذه التجمعات الصحية | The cluster and its geographic population; outreach to people postponing care is further analysis |
+| 4 | Rimthan 01:01:24 to 01:03:54 | قابلت معالي الوزير وقابلت معالي النائب | نقلة نوعية في طريقة إعطاء الخدمة | The project, working with doctors, and distributed delivery |
+| 5 | Fajr 04:48 to 05:28 | عشان يكون عندنا مثلًا مستشفى عندها كفاءة في تقديم الخدمات | المستشفيات أو ما يعرف بالتجمعات الصحية | Organizational requirements for independence; radiology purchasing is the article's application |
+| 6 | Rimthan 01:04:54 to 01:07:24 | هذا الترخيص يعطي حوكمة للشركات | لما اشتغلنا مع المشرعين بشكل كبير | Facility and practitioner responsibilities; the 2024 event has a separate official source |
+| 7 | Rimthan 14:30 to 17:58 | سؤال التحاليل والمختبرات وكيف نحلها | تقدم كل الخدمات هذه مع بعض | Connecting consultations and supporting services |
+| 8 | Fajr 17:33 to 18:57 | لو أنا جيت وطلبت خدمة صحية | بسبب تنافس التجمعات الصحية على رضا المستفيد | The financial incentive discussed at the time; the article qualifies it through contracts and clinical decision quality |
+| 9 | Rimthan 49:26 to 51:26 | لو واحد عنده سكر وقاعد ينظم عملية السكر | ملفك الصحي دائمًا موجود أونلاين | The connected-care vision at the time; funding and evaluation are recommendations |
+| 10 | Fajr 18:57 to 20:08 | هل عندي الخيار كمواطن إني أختار أروح لهذا التجمع أو لهذا التجمع؟ | التجمع الصحي هذا اللي أنت تنتمي إليه | Residence, cluster assignment, and the expected direction of choice at the time; current rules depend on the applicable arrangements |
+| 11 | Rimthan 20:58 to 21:58 | بداية 2015 بنتي لين اتولدت | المشكلة لها أبعاد كبيرة جدًا | The personal motivation and waiting experience |
+| 12 | Rimthan 36:26 to 37:56 | اشتغل مع الأطباء على كل مشكلة صغيرة أو كبيرة | في منتصف 2016 | Demand and user expectations; contract renewal is an analytical extension |
+| 13 | Fajr 24:19 to 25:31 | النظام اللي عندنا هو نظام خليط بين مجموعة أنظمة | ما في نظام قاعدين نتبعه ونقول ننسخه مئة في المئة | Comparing mechanisms; the article develops conditions for local learning |
+
+## Editorial and evidence notes
+
+### This edition
+
+All 13 articles follow the latest Arabic rewrite blending the two podcasts. The English preserves the experiences, arguments, qualifications, clip ranges, and insertion points, with language adapted for English readers. Personal stories appear where they contribute evidence to the article's argument.
+
+The writing uses affirmative sentences, connected paragraphs, and concrete operating details. English official references replace Arabic contextual sources. The English workflow article provides an internal link. Arabic page URLs above each article serve as editorial tracking references.
+
+### Evidence boundaries
+
+First-person Cura experiences come from Rimthan. The shared-radiology example is an illustration discussed in the podcast; the hypothetical purchasing assessment develops it further. Connected-device and follow-up passages describe a vision discussed at the time. Recommendations in the articles extend the source material.
+
+Accounts of waiting times, market development, coverage, and institutional roles retain their historical context. Applicable payment, enrollment, and referral arrangements depend on the framework and contracts in force. The published telehealth documents provide references to concepts and governance topics; activity-specific requirements should be established for implementation.
+
+The articles retain facts supported by the transcripts and use official sources for the linked concepts and the March 2024 institutional change. Broad estimates about remotely deliverable visits, AI accuracy, and global access were left out of this edition.
+
+The clip ranges are transcript references for editing. Final sentence boundaries require checking the recording. Each clip supplies the origin of an idea; the full article includes further interpretation.
+
+### English sources
+
+- [Wael Kabli: If Everyone Has AI, Who Has the Advantage?](https://www.waelkabli.com/en/blog/when-everyone-has-ai)
 - [Health Holding: Saudi Model of Care and intended institutional roles](https://www.health.sa/en/model-of-care)
-- [Health Holding: health clusters, catchment areas, and population responsibility](https://www.health.sa/en/clusters)
-- [Council of Health Insurance: transfer of health insurance sector responsibilities, 4 March 2024, and continuing council roles](https://www.chi.gov.sa/en/MediaCenter/News/Pages/CHI-announces-transferring-roles-and-responsibilities-of-the-health-insurance-sector-to-IA.aspx)
+- [Health Holding: health clusters and population responsibilities](https://www.health.sa/en/clusters)
+- [Council of Health Insurance: 4 March 2024 announcement and continuing council roles at that time](https://www.chi.gov.sa/en/MediaCenter/News/Pages/CHI-announces-transferring-roles-and-responsibilities-of-the-health-insurance-sector-to-IA.aspx)
+- [National Health Information Center: Telehealth Application Guidelines](https://nhic.gov.sa/standards/Telehealth/Telehealth-Application-Guidelines.pdf)
+- [Ministry of Health: Virtual Clinics](https://www.moh.gov.sa/en/ministry/projects/pages/medical-clinics.aspx)
+- [Ministry of Health: Telemedicine](https://www.moh.gov.sa/en/ministry/information-and-services/pages/telemedicine.aspx)
 - [World Health Organization: universal health coverage](https://www.who.int/news-room/fact-sheets/detail/universal-health-coverage-%28uhc%29)
 - [World Health Organization: strategic purchasing](https://www.who.int/activities/promoting-strategic-purchasing)
-- [World Health Organization: purchasing instruments and quality of care](https://www.who.int/publications/i/item/9789240058613)
-- [NIDDK: Diabetes Prevention Program findings, study design, and economic evaluation](https://www.niddk.nih.gov/about-niddk/research-areas/diabetes/diabetes-prevention-program-dpp)
 - [CMS: accountable care and accountable care organizations](https://www.cms.gov/priorities-innovation-key-concepts-accountable-care-accountable-care-organizations)
-- [Wael Kabli: If Everyone Has AI, Who Has the Advantage?](https://www.waelkabli.com/en/blog/when-everyone-has-ai)
 
-### Suggested sharing priorities
-
-Article 8 offers a specific argument about referral decisions. Article 2 extends the discussion to payer accountability. Article 12 gives founders and investors a clear commercial question. These priorities reflect the distinctiveness of the arguments and their relevance to the intended audience.
+**For publication:** Use each article's title and body. Retain clip instructions and evidence notes as working references for the editor. Insert footage at the indicated point. The articles express Wael's interpretation and recommendations; adjacent links document specific concepts or events.
