@@ -6,7 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.mdx": [
+      "eslint --fix"
+    ]
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.112.0",
@@ -32,6 +41,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
+    "eslint-plugin-mdx": "^3.8.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+set -e
+
+# Layer 1: ESLint on staged TS/TSX/MDX files
+npx lint-staged
+
+# Layer 2: i18n key parity (AR ↔ EN)
+node scripts/check-i18n.mjs
+
+# Layer 3: MDX frontmatter validation
+node scripts/check-frontmatter.mjs
+
+# Layer 4: LinkedIn typo guard — checks only code/content files, not docs
+TYPO="waelkabll""i"
+if git diff --cached -- "*.ts" "*.tsx" "*.mdx" "*.json" | grep -q "$TYPO"; then
+  echo ""
+  echo "LinkedIn handle typo found in staged code/content files."
+  echo "The correct handle is 'waelkabli' (2 l's, not 3)."
+  echo ""
+  exit 1
+fi
