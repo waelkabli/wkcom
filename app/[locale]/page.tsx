@@ -35,6 +35,7 @@ const personSchema = {
   sameAs: [
     'https://linkedin.com/in/waelkabli',
     'https://twitter.com/waelkabli',
+    'https://x.com/waelkabli',
   ],
   alumniOf: [
     { '@type': 'EducationalOrganization', name: 'Columbia University' },
@@ -77,11 +78,6 @@ const websiteSchema = {
   author: {
     '@type': 'Person',
     name: 'Wael A. Kabli',
-  },
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: 'https://waelkabli.com/en/blog?q={search_term_string}',
-    'query-input': 'required name=search_term_string',
   },
 };
 

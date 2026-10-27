@@ -46,7 +46,7 @@ export default async function Footer() {
           {/* Social */}
           <div className={`flex items-center gap-3 ${isAr ? 'flex-row-reverse' : ''}`}>
             {[
-              { href: 'https://linkedin.com/in/waelkablli', label: 'in', title: 'LinkedIn' },
+              { href: 'https://linkedin.com/in/waelkabli', label: 'in', title: 'LinkedIn' },
               { href: 'https://x.com/waelkabli', label: '𝕏', title: 'X / Twitter' },
               { href: 'https://www.youtube.com/waelkabli', title: 'YouTube', label: (
                 <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true">

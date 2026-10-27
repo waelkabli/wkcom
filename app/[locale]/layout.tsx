@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     metadataBase: new URL('https://waelkabli.com'),
     alternates: {
       canonical: canonicalUrl,
-      languages: { ar: '/ar', en: '/en', 'x-default': '/en' },
+      languages: { ar: '/ar', en: '/en', 'x-default': '/ar' },
     },
     keywords: isAr
       ? ['وائل كابلي', 'رائد أعمال', 'الصحة الرقمية', 'كيورا', 'مسك 2030', 'ريادة الأعمال', 'رؤية 2030', 'متحدث', 'مستشار']

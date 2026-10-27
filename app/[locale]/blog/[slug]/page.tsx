@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         ar: `/ar/blog/${slug}`,
         en: `/en/blog/${slug}`,
-        'x-default': `/en/blog/${slug}`,
+        'x-default': `/ar/blog/${slug}`,
       },
     },
     authors: [{ name: isAr ? 'وائل كابلي' : 'Wael A. Kabli', url: 'https://waelkabli.com' }],
@@ -147,6 +147,16 @@ export default async function BlogPostPage({ params }: Props) {
   const isAr = locale === 'ar';
   const cleanContent = stripCoverImageFromContent(post.content, post.coverImage);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: isAr ? 'الرئيسية' : 'Home', item: `https://waelkabli.com/${locale}` },
+      { '@type': 'ListItem', position: 2, name: isAr ? 'المدونة' : 'Blog', item: `https://waelkabli.com/${locale}/blog` },
+      { '@type': 'ListItem', position: 3, name: post.title, item: `https://waelkabli.com/${locale}/blog/${slug}` },
+    ],
+  };
+
   // JSON-LD for blog post (Article schema)
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -176,6 +186,10 @@ export default async function BlogPostPage({ params }: Props) {
       '@type': 'WebPage',
       '@id': `https://waelkabli.com/${locale}/blog/${slug}`,
     },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', '.post-excerpt'],
+    },
   };
 
   return (
@@ -183,6 +197,10 @@ export default async function BlogPostPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Navigation />
       <main className="min-h-screen bg-[#f8f7ff] pt-20">

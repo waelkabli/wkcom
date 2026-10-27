@@ -32,7 +32,7 @@ export default function Contact() {
 
   const contacts = [
     { icon: MapPin, label: t('location'), href: null },
-    { icon: Link2, label: t('linkedin'), href: 'https://linkedin.com/in/waelkablli' },
+    { icon: Link2, label: t('linkedin'), href: 'https://linkedin.com/in/waelkabli' },
   ];
 
   return (
@@ -75,7 +75,7 @@ export default function Contact() {
               <p className={`text-white/40 text-sm mb-4 ${isAr ? 'text-right' : ''}`}>{t('orConnect')}</p>
               <div className={`flex gap-3 ${isAr ? 'flex-row-reverse' : ''}`}>
                 {[
-                  { href: 'https://linkedin.com/in/waelkablli', label: 'LinkedIn', icon: 'in' },
+                  { href: 'https://linkedin.com/in/waelkabli', label: 'LinkedIn', icon: 'in' },
                   { href: 'https://x.com/waelkabli', label: 'X', icon: '𝕏' },
                 ].map((s) => (
                   <a

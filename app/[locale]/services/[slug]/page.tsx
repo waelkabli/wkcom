@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: tagline,
     alternates: {
       canonical: `https://waelkabli.com/${locale}/services/${slug}`,
-      languages: { ar: `/ar/services/${slug}`, en: `/en/services/${slug}` },
+      languages: { ar: `/ar/services/${slug}`, en: `/en/services/${slug}`, 'x-default': `/ar/services/${slug}` },
     },
   };
 }
@@ -54,8 +54,49 @@ export default async function ServicePage({ params }: Props) {
 
   const t = (obj: { ar: string; en: string }) => (isAr ? obj.ar : obj.en);
 
+  const canonicalUrl = `https://waelkabli.com/${locale}/services/${slug}`;
+
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: t(service.title),
+    description: t(service.tagline),
+    url: canonicalUrl,
+    provider: {
+      '@type': 'Person',
+      name: 'Wael A. Kabli',
+      url: 'https://waelkabli.com',
+      sameAs: ['https://linkedin.com/in/waelkabli', 'https://twitter.com/waelkabli'],
+    },
+    inLanguage: isAr ? 'ar' : 'en',
+    areaServed: { '@type': 'Country', name: 'Saudi Arabia' },
+  };
+
+  const faqSchema = service.faq.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: service.faq.map((item) => ({
+      '@type': 'Question',
+      name: t(item.q),
+      acceptedAnswer: { '@type': 'Answer', text: t(item.a) },
+    })),
+  } : null;
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: isAr ? 'الرئيسية' : 'Home', item: `https://waelkabli.com/${locale}` },
+      { '@type': 'ListItem', position: 2, name: isAr ? 'الخدمات' : 'Services', item: `https://waelkabli.com/${locale}#services` },
+      { '@type': 'ListItem', position: 3, name: t(service.title), item: canonicalUrl },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Navigation />
       <main className={`min-h-screen ${isAr ? 'text-right' : ''}`} dir={isAr ? 'rtl' : 'ltr'}>
 

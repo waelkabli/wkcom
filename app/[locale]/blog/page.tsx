@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : 'Articles and insights from Wael Kabli on entrepreneurship, digital health, leadership, and innovation.',
     alternates: {
       canonical: canonicalUrl,
-      languages: { ar: '/ar/blog', en: '/en/blog', 'x-default': '/en/blog' },
+      languages: { ar: '/ar/blog', en: '/en/blog', 'x-default': '/ar/blog' },
     },
     openGraph: {
       title: isAr ? 'المدونة — وائل كابلي' : 'Blog — Wael Kabli',
